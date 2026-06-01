@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welgo — Tucson Short-Term Rental Management</title>
+<style>
+  :root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e6e3dd;--bg:#faf9f6;--accent:#1f7a6b;--card:#ffffff;--warm:#f4f0e8;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;}
+  .wrap{max-width:980px;margin:0 auto;padding:48px 24px;}
+  .mono{font-family:"SF Mono",ui-monospace,Menlo,monospace;}
+  h1{font-size:2.3rem;font-weight:750;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.15;}
+  h1 .num{color:var(--accent);}
+  h2{font-size:1.4rem;font-weight:650;margin:48px 0 16px;letter-spacing:-0.01em;}
+  .sub{color:var(--muted);font-size:1.12rem;max-width:660px;}
+  .tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px;}
+  @media(max-width:760px){.tiers{grid-template-columns:1fr;}h1{font-size:1.9rem;}}
+  .tier{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;display:flex;flex-direction:column;}
+  .tier.feature{border-color:var(--accent);box-shadow:0 4px 24px rgba(31,122,107,.10);}
+  .tier .name{font-weight:650;font-size:1.05rem;}
+  .tier .rate{font-size:2.4rem;font-weight:750;margin:10px 0 4px;letter-spacing:-0.03em;}
+  .tier .rate small{font-size:1rem;color:var(--muted);font-weight:500;}
+  .tier .who{color:var(--muted);font-size:.92rem;margin-bottom:14px;min-height:38px;}
+  .tier ul{list-style:none;font-size:.93rem;}
+  .tier li{padding:6px 0;border-top:1px solid var(--line);}
+  .tier li:first-child{border-top:none;}
+  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:.7rem;font-weight:650;padding:3px 9px;border-radius:99px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:10px;width:fit-content;}
+  .volume{margin-top:14px;font-size:.92rem;color:var(--muted);background:var(--warm);border-radius:10px;padding:12px 16px;}
+  .volume b{color:var(--ink);}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.92rem;}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);}
+  th{font-weight:650;color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.03em;}
+  th.us{color:var(--accent);}
+  .g{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-top:18px;}
+  .g h3{font-size:1.05rem;margin-bottom:6px;}
+  .hero-g{background:var(--accent);color:#fff;border:none;}
+  .hero-g h3{font-size:1.25rem;}
+  .cta{margin-top:40px;background:var(--ink);color:var(--bg);border-radius:16px;padding:34px;text-align:center;}
+  .cta a{display:inline-block;margin-top:16px;background:var(--accent);color:#fff;text-decoration:none;font-weight:650;padding:13px 28px;border-radius:10px;}
+  .refer{margin-top:18px;background:var(--warm);border-radius:14px;padding:20px 24px;}
+  .refer b{color:var(--ink);}
+  .foot{color:var(--muted);font-size:.82rem;margin-top:40px;border-top:1px solid var(--line);padding-top:18px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Owners earn <span class="num mono">~15% more</span> and pay up to <span class="num mono">half</span> the fee of a traditional manager.</h1>
+  <p class="sub">AI runs the pricing and the round-the-clock guest engine, so a real Tucson team delivers hotel-standard service at a co-host price. Pick your level of support. No long contracts.</p>
+
+  <h2>Pricing</h2>
+  <div class="tiers">
+
+    <div class="tier">
+      <div class="name">Essentials</div>
+      <div class="rate mono">6%<small> of bookings</small></div>
+      <div class="who">Software-led. You keep your own cleaners. We run the engine.</div>
+      <ul>
+        <li>Dynamic nightly pricing</li>
+        <li>Listing + channel management</li>
+        <li>Automated guest messaging</li>
+        <li>Monthly performance report</li>
+      </ul>
+    </div>
+
+    <div class="tier feature">
+      <span class="badge">Most popular</span>
+      <div class="name">Co-Host</div>
+      <div class="rate mono">12%<small> of bookings</small></div>
+      <div class="who">We run revenue + guests. You keep cleaning + maintenance.</div>
+      <ul>
+        <li>Everything in Essentials</li>
+        <li>Real 24/7 guest support, under 5-minute response</li>
+        <li>Review management</li>
+        <li>Upsells + pet fees captured</li>
+      </ul>
+    </div>
+
+    <div class="tier">
+      <div class="name">Full-Service</div>
+      <div class="rate mono">18.75%<small> of bookings</small></div>
+      <div class="who">We run everything. You collect a check.</div>
+      <ul>
+        <li>Everything in Co-Host</li>
+        <li>Cleaning + maintenance coordination</li>
+        <li>Supplies + restocking</li>
+        <li>Inspections, compliance, owner reporting</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="volume"><b>3 or more units?</b> Ask about volume pricing. Multi-unit owners get a custom rate.</div>
+
+  <h2>How we compare</h2>
+  <table>
+    <tr><th>&nbsp;</th><th>DIY (you)</th><th>Software-only (~4%)</th><th class="us">Welgo</th><th>Traditional PM (20-35%)</th></tr>
+    <tr><td>Dynamic pricing</td><td>Manual</td><td>Yes</td><td>Yes</td><td>Sometimes</td></tr>
+    <tr><td>Real 24/7 human guest team</td><td>You</td><td>No (you run it)</td><td>Yes</td><td>Yes</td></tr>
+    <tr><td>Cleaning + maintenance</td><td>You</td><td>You arrange + pay</td><td>Optional (Co-Host) / included (Full)</td><td>Included</td></tr>
+    <tr><td>Hotel-standard reviews push</td><td>No</td><td>No</td><td>Yes</td><td>Varies</td></tr>
+    <tr><td>Fee</td><td>0% + your time</td><td>~4%, software only</td><td>6-18.75%, real service</td><td>20-35%</td></tr>
+  </table>
+  <p class="sub" style="margin-top:12px;">Cheap software leaves you to run it. Traditional managers take a third. We sit in the middle: real service, fair fee.</p>
+
+  <h2>Our promise</h2>
+  <div class="g hero-g">
+    <h3>Beat your last 3 months, or your management fees are free.</h3>
+    We measure against your own recent numbers. If we don't beat them, you don't pay our fee for the shortfall period. (Co-Host and Full-Service.)
+  </div>
+  <div class="g"><h3>72-hour listing launch</h3>from the day we get access. Every tier.</div>
+  <div class="g"><h3>70% occupancy floor</h3>measured against your market and season. Full-Service.</div>
+
+  <div class="cta">
+    <div style="font-size:1.3rem;font-weight:650;">See what your place could earn.</div>
+    <div style="opacity:.8;margin-top:6px;">Free revenue estimate on your unit. No commitment.</div>
+    <a href="mailto:ed@welgo.space?subject=Welgo%20revenue%20estimate">Get my estimate</a>
+  </div>
+
+  <div class="refer">
+    <b>Know an owner who should be earning more?</b> Refer them. When they sign, you both get paid. Ask us about the referral program.
+  </div>
+
+  <div class="foot">Welgo. Tucson short-term rental management. Are you an operator? A partner page is coming. [DRAFT v2 — 2026-06-01. Rates locked 6 / 12 / 18.75. Guarantees pending deliverability confirm. Not yet published.]</div>
+
+</div>
+</body>
+</html>
