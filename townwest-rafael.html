@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Town West × Welgo — Operator Partnership</title>
+<style>
+  :root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e6e3dd;--bg:#faf9f6;--accent:#1f7a6b;--card:#fff;--warm:#f4f0e8;--gold:#b8862f;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;}
+  .wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
+  .mono{font-family:"SF Mono",ui-monospace,Menlo,monospace;}
+  h1{font-size:2.5rem;font-weight:750;letter-spacing:-0.02em;margin-bottom:12px;line-height:1.1;}
+  h1 .num{color:var(--accent);}
+  h2{font-size:1.45rem;font-weight:680;margin:50px 0 8px;}
+  h3{font-size:1.05rem;font-weight:650;}
+  .sub{color:var(--muted);font-size:1.12rem;max-width:760px;}
+  p{margin:10px 0;max-width:780px;}
+  .gg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
+  @media(max-width:760px){.gg{grid-template-columns:1fr;}h1{font-size:1.95rem;}}
+  .gg .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;}
+  .gg .box b{display:block;margin-bottom:6px;color:var(--accent);}
+  .pay{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  @media(max-width:760px){.pay{grid-template-columns:1fr;}}
+  .pcard{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:20px;}
+  .pcard .n{font-size:1.7rem;font-weight:750;color:var(--accent);letter-spacing:-0.02em;}
+  .pcard h3{margin:4px 0;}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.93rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-weight:650;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;}
+  th.us{color:var(--accent);}
+  td.big{font-size:1.25rem;font-weight:750;color:var(--accent);}
+  .note{background:var(--warm);border-radius:10px;padding:16px 18px;margin-top:16px;font-size:.96rem;}
+  .big-money{background:var(--ink);color:var(--bg);border-radius:14px;padding:26px;margin-top:18px;text-align:center;}
+  .big-money .m{font-size:2.4rem;font-weight:750;letter-spacing:-0.02em;}
+  .big-money .m span{color:#5fd0bd;}
+  .vals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;}
+  @media(max-width:760px){.vals{grid-template-columns:1fr;}}
+  .val{background:var(--accent);color:#fff;border-radius:12px;padding:18px;text-align:center;font-weight:650;}
+  .cta{margin-top:44px;background:var(--ink);color:var(--bg);border-radius:16px;padding:32px;text-align:center;}
+  .cta a{display:inline-block;margin-top:16px;background:var(--accent);color:#fff;text-decoration:none;font-weight:650;padding:13px 28px;border-radius:10px;}
+  .foot{color:var(--muted);font-size:.82rem;margin-top:44px;border-top:1px solid var(--line);padding-top:16px;}
+  .pill{display:inline-block;background:var(--warm);color:var(--gold);font-weight:650;font-size:.8rem;padding:5px 12px;border-radius:999px;margin-bottom:18px;letter-spacing:.02em;}
+  .hl{color:var(--accent);font-weight:700;}
+  /* calculator */
+  .calc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;margin-top:18px;}
+  .calc .row{display:flex;align-items:center;gap:14px;margin:14px 0;flex-wrap:wrap;}
+  .calc label{flex:1 1 230px;font-weight:600;font-size:.95rem;}
+  .calc label small{display:block;color:var(--muted);font-weight:400;font-size:.8rem;}
+  .calc input[type=number]{width:120px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;font-size:1rem;font-family:inherit;}
+  .calc input[type=range]{flex:1 1 200px;accent-color:var(--accent);}
+  .homeval{font-size:1.6rem;font-weight:750;color:var(--accent);min-width:60px;text-align:right;}
+  .out{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;}
+  @media(max-width:680px){.out{grid-template-columns:1fr;}}
+  .ocard{border-radius:12px;padding:22px;text-align:center;}
+  .ocard.b{background:var(--ink);color:var(--bg);}
+  .ocard.a{background:var(--warm);}
+  .ocard .lbl{font-size:.85rem;text-transform:uppercase;letter-spacing:.04em;opacity:.85;}
+  .ocard .big2{font-size:2.2rem;font-weight:750;letter-spacing:-0.02em;margin:6px 0 2px;}
+  .ocard.b .big2{color:#5fd0bd;}
+  .ocard.a .big2{color:var(--accent);}
+  .ocard .yr1{font-size:.9rem;opacity:.8;}
+  .subnav{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;}
+  .subnav a{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 16px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem;}
+  .subnav a:hover{border-color:var(--accent);color:var(--accent);}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:14px;overflow:hidden;}
+  summary{cursor:pointer;padding:16px 20px;font-weight:650;list-style:none;display:flex;justify-content:space-between;}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";font-size:1.3rem;color:var(--accent);}
+  details[open] summary::after{content:"\2013";}
+  details .body{padding:0 20px 18px;font-size:.93rem;color:#333;}
+  details .body code{background:var(--warm);padding:2px 6px;border-radius:5px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="pill">TOWN WEST REALTY × WELGO — OPERATOR PARTNERSHIP</div>
+  <h1>Make your owners ~4× more.<br>Keep your brand. <span class="num">Get paid three ways.</span></h1>
+  <p class="sub">Rafael, we've worked together for years. Welgo is stepping back from running Arizona directly, but we kept the engine that makes short-term rentals print. Rather than walk away from these owners, we'd rather build with you. You stay the local face. We run the revenue machine behind you.</p>
+
+  <div class="subnav">
+    <a href="index.html">→ What your owners get (pricing)</a>
+    <a href="operator.html">→ The operator program</a>
+    <a href="#calc">→ Your earnings calculator</a>
+    <a href="townwest-faq.html">→ FAQ</a>
+  </div>
+
+  <h2>The proof — our real Tucson book</h2>
+  <div class="pay">
+    <div class="pcard"><div class="n">61%</div><h3>Occupancy</h3><p style="font-size:.9rem;color:var(--muted);">Our live Tucson homes. The market averages ~15%.</p></div>
+    <div class="pcard"><div class="n">$29.3K</div><h3>Gross / home / yr</h3><p style="font-size:.9rem;color:var(--muted);">26 homes, $762K total, $131 nightly.</p></div>
+    <div class="pcard"><div class="n">~4×</div><h3>vs the market</h3><p style="font-size:.9rem;color:var(--muted);">Same house, our engine. That's your owner pitch.</p></div>
+  </div>
+
+  <h2>Three ways you get paid</h2>
+  <div class="pay">
+    <div class="pcard"><div class="n">Finder</div><h3>Bring owners</h3><p style="font-size:.9rem;color:var(--muted);">Signing bonus per owner, <span class="hl">plus a recurring cut of our fee</span> for as long as the home stays on. Passive. Compounds.</p></div>
+    <div class="pcard"><div class="n">7%</div><h3>Run the ground</h3><p style="font-size:.9rem;color:var(--muted);">Of gross, on homes your crew handles (turnover QC, owner face, access). We do the heavy ops.</p></div>
+    <div class="pcard"><div class="n">Markup</div><h3>Maintenance</h3><p style="font-size:.9rem;color:var(--muted);">Repairs route through your vendors. You keep your margin.</p></div>
+  </div>
+
+  <h2 id="calc">Your earnings — adjust anything</h2>
+  <p>Pre-filled with our real Tucson numbers. Change any assumption. The math updates live.</p>
+  <div class="calc">
+    <div class="row">
+      <label>Homes you bring</label>
+      <input type="range" id="homes" min="1" max="50" value="10">
+      <span class="homeval" id="homesVal">10</span>
+    </div>
+    <div class="row">
+      <label>Gross revenue / home / yr <small>Welgo Tucson avg = $29,314</small></label>
+      <input type="number" id="gross" value="29314" step="500">
+    </div>
+    <div class="row">
+      <label>Welgo management fee <small>% of gross (full-service)</small></label>
+      <input type="number" id="mgmt" value="18.5" step="0.5">
+    </div>
+    <div class="row">
+      <label>Finder — recurring <small>% of Welgo's fee, ongoing</small></label>
+      <input type="number" id="finderPct" value="12" step="1">
+    </div>
+    <div class="row">
+      <label>Finder — signing bonus <small>$ per owner, year 1</small></label>
+      <input type="number" id="bounty" value="500" step="100">
+    </div>
+    <div class="row">
+      <label>Boots fee <small>% of gross, homes you run ground on</small></label>
+      <input type="number" id="boots" value="7" step="1">
+    </div>
+    <div class="row">
+      <label>Maintenance margin <small>$ / home / yr (your markup)</small></label>
+      <input type="number" id="maint" value="1200" step="100">
+    </div>
+
+    <div class="out">
+      <div class="ocard a">
+        <div class="lbl">Path A — Finder Light (refer only)</div>
+        <div class="big2" id="aRec">$6,510</div>
+        <div class="yr1">recurring / yr · <span id="aYr1">$11,510</span> year 1</div>
+      </div>
+      <div class="ocard b">
+        <div class="lbl">Path B — Full Operator (all 3 lines)</div>
+        <div class="big2" id="bRec">$39,030</div>
+        <div class="yr1">recurring / yr · <span id="bYr1">$44,030</span> year 1</div>
+      </div>
+    </div>
+  </div>
+
+  <details>
+    <summary>Show the math</summary>
+    <div class="body">
+      <p>Per home, per year:</p>
+      <p><b>Welgo fee</b> = gross × mgmt% → <code id="mFee">$5,423</code></p>
+      <p><b>Finder recurring</b> = Welgo fee × finder% → <code id="mFinder">$651</code></p>
+      <p><b>Boots</b> = gross × boots% → <code id="mBoots">$2,052</code></p>
+      <p><b>Maintenance</b> = your markup → <code id="mMaint">$1,200</code></p>
+      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0;">
+      <p><b>Path A / home</b> = finder recurring → <code id="mA">$651</code> (+ bonus yr 1)</p>
+      <p><b>Path B / home</b> = finder + boots + maintenance → <code id="mB">$3,903</code> (+ bonus yr 1)</p>
+      <p style="color:var(--muted);">Totals = per-home × homes. Year 1 adds the signing bonus × homes. Numbers illustrative + negotiable; exact splits papered once we pick the first units.</p>
+    </div>
+  </details>
+
+  <div class="big-money">
+    <div>Full Operator at scale</div>
+    <div class="m" id="heroNum">~$195K / yr</div>
+    <div style="opacity:.8;margin-top:4px;">at 50 homes — your brand, your owners, your crew on the ground, our engine doing the heavy lift.</div>
+  </div>
+
+  <h2>The Zero-Risk Trial</h2>
+  <div class="gg">
+    <div class="box"><b>Prove it in 90 days</b>Pick 2-3 of your units. We run them. You see real numbers in 90 days. Scale only if it works.</div>
+    <div class="box"><b>Revenue floor guarantee</b>On those first units, if a home comes in under target, we cover the gap. <span class="hl">$0 to find out.</span></div>
+  </div>
+
+  <h2>You keep your shop</h2>
+  <div class="gg">
+    <div class="box"><b>White-label</b>Town West stays the brand your owners see. Welgo is the invisible engine. Your relationships stay yours.</div>
+    <div class="box"><b>Or co-brand</b>"Town West, powered by Welgo" — if you'd rather show it. Your call.</div>
+  </div>
+
+  <h2>Why now</h2>
+  <p>We're taking on five Tucson operators total. You'd be among the first. Early operators lock the best terms and territory. After our years together, you're who we want in that circle.</p>
+
+  <h2>How we work</h2>
+  <div class="vals">
+    <div class="val">Speed is King</div>
+    <div class="val">Do the Right Thing</div>
+    <div class="val">Say It Straight</div>
+  </div>
+  <p style="margin-top:14px;">Welgo runs pricing, calendars, guest comms, the booking system, 24/7 escalation, channel distribution, and owner reporting. You bring the local relationships and the crew. We make your owners more than they make today.</p>
+
+  <div class="cta">
+    <div style="font-size:1.35rem;font-weight:680;">Bring me 2-3 units. Let's prove it.</div>
+    <div style="opacity:.8;margin-top:6px;">90-day proof. Revenue floor. Your brand intact. $0 to find out.</div>
+    <a href="mailto:ed@welgo.space?subject=Town%20West%20%C3%97%20Welgo%20Partnership">Start the conversation</a>
+  </div>
+
+  <div class="foot">Town West Realty × Welgo. Tucson operator partnership. Numbers modeled on Welgo's live Tucson portfolio; illustrative and negotiable. DRAFT v2 — 2026-06-02.</div>
+
+</div>
+
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => '$' + Math.round(n).toLocaleString();
+  const ids = ['homes','gross','mgmt','finderPct','bounty','boots','maint'];
+  function calc(){
+    const homes = +$('homes').value;
+    const gross = +$('gross').value || 0;
+    const mgmt = (+$('mgmt').value||0)/100;
+    const finderPct = (+$('finderPct').value||0)/100;
+    const bounty = +$('bounty').value || 0;
+    const boots = (+$('boots').value||0)/100;
+    const maint = +$('maint').value || 0;
+
+    const fee = gross * mgmt;
+    const finder = fee * finderPct;
+    const bootsAmt = gross * boots;
+    const perA = finder;
+    const perB = finder + bootsAmt + maint;
+
+    $('homesVal').textContent = homes;
+    $('aRec').textContent = fmt(perA*homes);
+    $('aYr1').textContent = fmt(perA*homes + bounty*homes);
+    $('bRec').textContent = fmt(perB*homes);
+    $('bYr1').textContent = fmt(perB*homes + bounty*homes);
+    $('heroNum').textContent = '~' + fmt(perB*50);
+
+    // math panel
+    $('mFee').textContent = fmt(fee);
+    $('mFinder').textContent = fmt(finder);
+    $('mBoots').textContent = fmt(bootsAmt);
+    $('mMaint').textContent = fmt(maint);
+    $('mA').textContent = fmt(perA);
+    $('mB').textContent = fmt(perB);
+  }
+  ids.forEach(i => { $(i).addEventListener('input', calc); });
+  calc();
+</script>
+</body>
+</html>
