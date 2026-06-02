@@ -38,6 +38,15 @@
   .cta{text-align:center;}
   .btn{display:inline-block;margin-top:22px;background:var(--accent);color:#06120f;text-decoration:none;font-weight:700;padding:15px 34px;border-radius:11px;font-size:1.05rem;}
   .foot{color:#5d666e;font-size:.82rem;text-align:center;padding:30px;}
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:12px;overflow:hidden;}
+  summary{cursor:pointer;padding:15px 18px;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);}
+  summary::-webkit-details-marker{display:none;}
+  summary::after{content:"+";color:var(--accent);font-size:1.4rem;font-weight:400;}
+  details[open] summary::after{content:"\2013";}
+  details .d{padding:2px 18px 18px;color:var(--muted);font-size:1rem;}
+  details .d p{font-size:1rem;margin:8px 0;}
+  details .d table{margin-top:10px;font-size:.95rem;}
+  details .d li{margin:6px 0;color:var(--muted);}
 </style>
 </head>
 <body>
@@ -85,6 +94,48 @@
     <tr><td>Risk</td><td>all on you, one channel</td><td class="us">shared, multi-channel</td></tr>
   </table>
   <p style="margin-top:14px;">Push the calendar to 65% and it's ~3.4x. Even a conservative 40% is ~2.1x. Built on your fee, not the gross — these are your real, conservative numbers.</p>
+
+  <details><summary>How your ~$81,800 is built (open)</summary><div class="d">
+    <p>Four streams. Today you earn from one (your 15% fee). With Welgo you earn from all four, and three of them you make ~$0 from now:</p>
+    <table>
+      <tr><th>Stream</th><th class="us">You earn / yr</th><th>Where it comes from</th></tr>
+      <tr><td>Boots fee (7% of gross)</td><td class="us">~$50,500</td><td>Your ground work, paid clean: cleaning + maintenance coordination, inspections, local presence, owner relationships.</td></tr>
+      <tr><td>Cleaning margin</td><td class="us">~$9,000</td><td>You keep the spread between the guest cleaning fee and what you pay housekeepers. Was $0.</td></tr>
+      <tr><td>Upsell share (2.5%)</td><td class="us">~$18,000</td><td>We build + run the upsell engine (early/late checkout, pets, parking). 5% of gross, split with you 50/50. Was $0.</td></tr>
+      <tr><td>Direct-booking margin (2%)</td><td class="us">~$4,300</td><td>~30% of bookings move to your own direct site, off-platform. Your margin on those. Was $0.</td></tr>
+      <tr><td><b>Total</b></td><td class="us"><b>~$81,800</b></td><td>+ equity (separate). + 1% finder if you bring new owners.</td></tr>
+    </table>
+  </div></details>
+
+  <details><summary>How we get from 15% to 55% occupancy</summary><div class="d">
+    <ul>
+      <li><b>Multi-channel:</b> today 99% of bookings are Airbnb. We turn on Booking, VRBO, Expedia, Google. New demand pools, especially for your empty units.</li>
+      <li><b>Instant Book on:</b> it's off now, so search buries your listings. Turning it on lifts rank at zero cost.</li>
+      <li><b>Dynamic pricing:</b> rates tuned daily to demand, not set once a month. ~+15% nightly rate.</li>
+      <li><b>Reviews:</b> sub-5-minute 24/7 response pushes ratings past 9.5, which lifts rank and rate again.</li>
+    </ul>
+    <p>Honest note: 15% to 55% is a big jump. It's why we lead with the base case and treat 65% as upside, not a promise. We'd rather under-commit and beat it.</p>
+  </div></details>
+
+  <details><summary>What everyone keeps (base case, 55%)</summary><div class="d">
+    <table>
+      <tr><th>Party</th><th class="us">Keeps / yr</th><th>How</th></tr>
+      <tr><td>Your owners</td><td class="us">~$602,000</td><td>The gross grows so much that their absolute payout rises even at the higher management fee. They make more, not less.</td></tr>
+      <tr><td>You (Felix)</td><td class="us">~$81,800</td><td>The four streams above, plus equity, at ~2-3 hours a week.</td></tr>
+      <tr><td>Welgo</td><td class="us">~$86,900</td><td>The engine share of the fee + our upsell half. We earn by growing your pie, not by taking from you.</td></tr>
+    </table>
+    <p>The point: nobody loses. The occupancy + rate lift grows the whole pie, so owners keep more, you earn ~3x, and Welgo earns by making it happen.</p>
+  </div></details>
+
+  <details><summary>The full three scenarios</summary><div class="d">
+    <table>
+      <tr><th>&nbsp;</th><th>40% conservative</th><th class="us">55% base</th><th>65% upside</th></tr>
+      <tr><td>Accommodation gross</td><td>$524K</td><td class="us">$721K</td><td>$852K</td></tr>
+      <tr><td>Owners keep</td><td>$438K</td><td class="us">$602K</td><td>$711K</td></tr>
+      <tr><td>Your income</td><td>~$59,500</td><td class="us">~$81,800</td><td>~$96,700</td></tr>
+      <tr><td>vs today ($28,700)</td><td>2.1x</td><td class="us">2.85x</td><td>3.4x</td></tr>
+    </table>
+  </div></details>
 </section>
 
 <section>
@@ -116,11 +167,53 @@
 <section>
   <div class="kicker">How we turn it on</div>
   <h2>You grant access. We do the rest. ~2 weeks. Nothing breaks.</h2>
-  <ol class="steps">
-    <li>Week 1 — connect every channel, Instant Book, pricing, direct site, 24/7 ops live.</li>
-    <li>Week 1-2 — map every listing, cleaning, upsells, financials into our system.</li>
-    <li>Week 2 — paper the agreement. You keep your brand and your owners.</li>
-  </ol>
+  <p>The whole roadmap, walked through. Open each step to see exactly what happens.</p>
+
+  <details><summary>Step 1 — Tech &amp; architecture (week 1)</summary><div class="d">
+    <p>You do nothing but grant access. We connect the engine to your existing Hostaway (already linked).</p>
+    <ul>
+      <li>Turn on every channel: Booking, VRBO, Expedia, Google. Today it's Airbnb only.</li>
+      <li>Instant Book on, per listing.</li>
+      <li>Dynamic pricing engine live across all channels.</li>
+      <li>Direct-booking site stood up so you own the guest and cut platform fees.</li>
+      <li>Listings onboarded to our 24/7 guest team. Your per-tool software bills drop (~$11K/yr back to you).</li>
+    </ul>
+  </div></details>
+
+  <details><summary>Step 2 — Mapping (week 1-2)</summary><div class="d">
+    <p>We map your whole book into our system so nothing falls through.</p>
+    <ul>
+      <li>Per listing: channels, pricing rules, photos, access/keys, supplies.</li>
+      <li>Cleaning: map your crews to our ops (rates, schedule, quality control). Cleaning becomes your profit line.</li>
+      <li>Upsell menu set per unit (checkouts, pets, parking).</li>
+      <li>Financial flow + owner reporting wired in so the team runs it without you in the loop.</li>
+    </ul>
+  </div></details>
+
+  <details><summary>Step 3 — Contracts (week 2)</summary><div class="d">
+    <p>Papered clean, in order.</p>
+    <ul>
+      <li>NDA — already signed.</li>
+      <li>Management partnership agreement — the core. Shape decided together: co-host, white-label, or under our brand.</li>
+      <li>Owner consents where any of your owners need to sign off.</li>
+      <li>Account access formalized (Hostaway, Airbnb co-host).</li>
+      <li>Cleaning + upsell terms. Equity path documented separately, later, only if you go under our brand.</li>
+    </ul>
+  </div></details>
+
+  <details><summary>Who delivers what (Welgo vs you)</summary><div class="d">
+    <table>
+      <tr><th>Area</th><th class="us">Welgo (engine)</th><th>You (ground, 7%)</th></tr>
+      <tr><td>Pricing + channels</td><td class="us">All of it</td><td>—</td></tr>
+      <tr><td>24/7 guests + reviews</td><td class="us">All of it</td><td>—</td></tr>
+      <tr><td>Upsell + direct engine</td><td class="us">All of it</td><td>—</td></tr>
+      <tr><td>Tech + reporting</td><td class="us">All of it</td><td>—</td></tr>
+      <tr><td>Cleaning + maintenance</td><td>—</td><td>You coordinate</td></tr>
+      <tr><td>Inspections + quality</td><td>standard + tools</td><td>You own it</td></tr>
+      <tr><td>Local presence + owners</td><td>—</td><td>You</td></tr>
+    </table>
+    <p>You stop doing pricing, guest messages, channel admin, software, reporting (~25 hrs/week → ~2-3). You keep the relationship and local work you're already great at, now paid cleanly.</p>
+  </div></details>
 </section>
 
 <section class="cta">
