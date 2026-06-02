@@ -143,12 +143,12 @@
     <div class="row"><label>Welgo management fee <small>% of gross, full-service</small></label><input type="number" id="mgmt" value="18.5" step="0.5"></div>
 
     <div class="seg">Finder: bringing owners</div>
-    <div class="row"><label>Your slice of Welgo's fee <small>% of the fee, recurring</small></label><input type="number" id="finderPct" value="12" step="1"></div>
-    <div class="row"><label>Signing bonus <small>$ per owner, year 1 only</small></label><input type="number" id="bounty" value="500" step="100"></div>
+    <div class="row"><label>Your slice of Welgo's fee <small>stepped, auto: 10% on homes 1-10, 12% on 11-25, 15% on 26+. The more you bring, the higher your rate.</small></label><span class="homeval" style="font-size:1.05rem;">stepped</span></div>
+    <div class="row"><label>Signing bonus <small>$ per owner, paid on the home's first booking revenue</small></label><input type="number" id="bounty" value="500" step="100"></div>
 
     <div class="seg">Maintenance: your repair margin</div>
     <div class="row"><label>Maintenance spend per home / yr <small>typical repairs and upkeep</small></label><input type="number" id="maintSpend" value="2500" step="250"></div>
-    <div class="row"><label>Your markup on that work <small>%</small></label><input type="number" id="maintMarkup" value="15" step="1"></div>
+    <div class="row"><label>Your markup on that work <small>% (capped at 15% to protect the owner)</small></label><input type="number" id="maintMarkup" value="15" step="1" max="15"></div>
 
     <div class="seg">Owner liaison: optional</div>
     <div class="row"><label>Liaison fee per home / yr <small>set 0 if you only want to refer</small></label><input type="number" id="liaison" value="600" step="100"></div>
@@ -214,20 +214,25 @@
 <script>
   const $ = id => document.getElementById(id);
   const fmt = n => '$' + Math.round(n).toLocaleString();
-  const ids = ['homes','gross','mgmt','finderPct','bounty','maintSpend','maintMarkup','liaison'];
+  const ids = ['homes','gross','mgmt','bounty','maintSpend','maintMarkup','liaison'];
+  // stepped finder: 10% on homes 1-10, 12% on 11-25, 15% on 26+
+  function stepRate(h){ return h<=10?0.10 : h<=25?0.12 : 0.15; }
+  function finderTotal(homes, fee){ let t=0; for(let h=1;h<=homes;h++) t+=fee*stepRate(h); return t; }
   function calc(){
     const homes=+$('homes').value, gross=+$('gross').value||0, mgmt=(+$('mgmt').value||0)/100,
-      finderPct=(+$('finderPct').value||0)/100, bounty=+$('bounty').value||0,
-      mSpend=+$('maintSpend').value||0, mMark=(+$('maintMarkup').value||0)/100, lia=+$('liaison').value||0;
-    const fee=gross*mgmt, finder=fee*finderPct, maint=mSpend*mMark;
-    const perA=finder, perB=finder+maint+lia;
+      bounty=+$('bounty').value||0, mSpend=+$('maintSpend').value||0, mMark=(+$('maintMarkup').value||0)/100, lia=+$('liaison').value||0;
+    const fee=gross*mgmt, maint=mSpend*mMark;
+    const fTot=finderTotal(homes,fee), maintTot=maint*homes, liaTot=lia*homes;
+    const aTot=fTot, bTot=fTot+maintTot+liaTot;
     $('homesVal').textContent=homes;
-    $('aRec').textContent=fmt(perA*homes); $('aYr1').textContent=fmt(perA*homes+bounty*homes);
-    $('bRec').textContent=fmt(perB*homes); $('bYr1').textContent=fmt(perB*homes+bounty*homes);
-    $('heroNum').textContent='~'+fmt(perB*50);
-    $('mFee').textContent=fmt(fee); $('mFinder').textContent=fmt(finder);
+    $('aRec').textContent=fmt(aTot); $('aYr1').textContent=fmt(aTot+bounty*homes);
+    $('bRec').textContent=fmt(bTot); $('bYr1').textContent=fmt(bTot+bounty*homes);
+    const f50=finderTotal(50,fee), b50=f50+maint*50+lia*50;
+    $('heroNum').textContent='~'+fmt(b50);
+    $('mFee').textContent=fmt(fee);
+    $('mFinder').textContent=fmt(fee*stepRate(homes))+' at '+Math.round(stepRate(homes)*100)+'% (your current tier)';
     $('mMaint').textContent=fmt(maint); $('mLia').textContent=fmt(lia);
-    $('mA').textContent=fmt(perA); $('mB').textContent=fmt(perB);
+    $('mA').textContent=fmt(homes>0?aTot/homes:0)+' blended'; $('mB').textContent=fmt(homes>0?bTot/homes:0)+' blended';
   }
   ids.forEach(i=>$(i).addEventListener('input',calc)); calc();
 </script>

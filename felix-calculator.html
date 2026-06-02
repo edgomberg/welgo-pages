@@ -72,11 +72,11 @@
     <div class="row"><label>Welgo management fee <small>% of gross, full-service</small></label><input type="number" id="mgmt" value="18.5" step="0.5"></div>
 
     <div class="seg">Finder: owners you source</div>
-    <div class="row"><label>Your slice of Welgo's fee <small>% of the fee, recurring, on owners you bring</small></label><input type="number" id="finderPct" value="12" step="1"></div>
-    <div class="row"><label>Signing bonus <small>$ per new owner, year 1</small></label><input type="number" id="bounty" value="500" step="100"></div>
+    <div class="row"><label>Your slice of Welgo's fee <small>stepped, auto: 10% on homes 1-10, 12% on 11-25, 15% on 26+</small></label><span class="homeval" style="font-size:1.05rem;">stepped</span></div>
+    <div class="row"><label>Signing bonus <small>$ per new owner, paid on first booking revenue</small></label><input type="number" id="bounty" value="500" step="100"></div>
 
     <div class="seg">Boots: you run the ground</div>
-    <div class="row"><label>Boots fee <small>% of gross, homes your crew runs</small></label><input type="number" id="boots" value="7" step="1"></div>
+    <div class="row"><label>Boots fee <small>6% base plus up to 2% green-week bonus when you hit the SLA (5-min acks, photo proof, low complaints)</small></label><input type="number" id="boots" value="6" step="1"></div>
 
     <div class="seg">Maintenance: your repair margin</div>
     <div class="row"><label>Maintenance spend per home / yr</label><input type="number" id="maintSpend" value="2500" step="250"></div>
@@ -109,19 +109,24 @@
 <script>
   const $ = id => document.getElementById(id);
   const fmt = n => '$' + Math.round(n).toLocaleString();
-  const ids = ['homes','gross','mgmt','finderPct','bounty','boots','maintSpend','maintMarkup'];
+  const ids = ['homes','gross','mgmt','bounty','boots','maintSpend','maintMarkup'];
+  function stepRate(h){ return h<=10?0.10 : h<=25?0.12 : 0.15; }
+  function finderTotal(homes, fee){ let t=0; for(let h=1;h<=homes;h++) t+=fee*stepRate(h); return t; }
   function calc(){
     const homes=+$('homes').value, gross=+$('gross').value||0, mgmt=(+$('mgmt').value||0)/100,
-      finderPct=(+$('finderPct').value||0)/100, bounty=+$('bounty').value||0,
-      boots=(+$('boots').value||0)/100, mSpend=+$('maintSpend').value||0, mMark=(+$('maintMarkup').value||0)/100;
-    const fee=gross*mgmt, finder=fee*finderPct, bootsAmt=gross*boots, maint=mSpend*mMark;
-    const perA=bootsAmt+maint, perB=bootsAmt+maint+finder;
+      bounty=+$('bounty').value||0, boots=(+$('boots').value||0)/100,
+      mSpend=+$('maintSpend').value||0, mMark=(+$('maintMarkup').value||0)/100;
+    const fee=gross*mgmt, bootsAmt=gross*boots, maint=mSpend*mMark;
+    const fTot=finderTotal(homes,fee);
+    const aTot=(bootsAmt+maint)*homes;
+    const bTot=(bootsAmt+maint)*homes+fTot;
     $('homesVal').textContent=homes;
-    $('aRec').textContent=fmt(perA*homes);
-    $('bRec').textContent=fmt(perB*homes); $('bYr1').textContent=fmt(perB*homes+bounty*homes);
+    $('aRec').textContent=fmt(aTot);
+    $('bRec').textContent=fmt(bTot); $('bYr1').textContent=fmt(bTot+bounty*homes);
     $('mFee').textContent=fmt(fee); $('mBoots').textContent=fmt(bootsAmt);
-    $('mMaint').textContent=fmt(maint); $('mFinder').textContent=fmt(finder);
-    $('mA').textContent=fmt(perA); $('mB').textContent=fmt(perB);
+    $('mMaint').textContent=fmt(maint);
+    $('mFinder').textContent=fmt(fee*stepRate(homes))+' at '+Math.round(stepRate(homes)*100)+'% (your tier)';
+    $('mA').textContent=fmt(bootsAmt+maint); $('mB').textContent=fmt(homes>0?bTot/homes:0)+' blended';
   }
   ids.forEach(i=>$(i).addEventListener('input',calc)); calc();
 </script>
