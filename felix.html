@@ -3,240 +3,158 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RealtyFelix × Welgo — Partnership</title>
+<title>RealtyFelix × Welgo</title>
 <style>
-  :root{--ink:#15171a;--bg:#0f1419;--panel:#171c22;--card:#1d242c;--accent:#2fae9b;--cream:#faf9f6;--muted:#aeb6bf;--line:#2a323b;}
+  :root{--paper:#f6f3ec;--ink:#221f1a;--soft:#6f665b;--sage:#3f6b5a;--rule:#e2dccf;--warm:#efe9dd;--terra:#a8623c;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--bg);color:var(--cream);line-height:1.6;}
-  .mono{font-family:"SF Mono",ui-monospace,Menlo,monospace;}
-  section{max-width:920px;margin:0 auto;padding:64px 24px;border-bottom:1px solid var(--line);}
-  .kicker{color:var(--accent);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;}
-  h1{font-size:2.7rem;font-weight:780;letter-spacing:-0.03em;line-height:1.08;}
-  h1 .a{color:var(--accent);}
-  h2{font-size:1.9rem;font-weight:740;letter-spacing:-0.02em;margin-bottom:10px;}
-  p{color:var(--muted);font-size:1.12rem;max-width:680px;margin:10px 0;}
-  .big{font-size:3.2rem;font-weight:780;color:var(--accent);letter-spacing:-0.03em;}
-  @media(max-width:680px){h1{font-size:2rem;}h2{font-size:1.5rem;}.big{font-size:2.3rem;}}
-  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
-  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px;}
-  @media(max-width:680px){.grid3,.grid2{grid-template-columns:1fr;}}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;}
-  .card h3{font-size:1.05rem;margin-bottom:6px;}
-  .card p{font-size:.95rem;margin:0;}
-  .card .n{font-size:1.8rem;font-weight:750;color:var(--accent);}
-  table{width:100%;border-collapse:collapse;margin-top:20px;font-size:1rem;}
-  th,td{text-align:left;padding:13px 14px;border-bottom:1px solid var(--line);}
-  th{color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em;}
-  th.us{color:var(--accent);}
-  td.us{color:var(--accent);font-weight:700;}
-  td.b{font-size:1.4rem;font-weight:760;}
-  .pill{display:inline-block;background:var(--accent);color:#06120f;font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:99px;}
-  .steps{counter-reset:s;list-style:none;margin-top:18px;}
-  .steps li{counter-increment:s;padding:14px 0 14px 46px;position:relative;border-top:1px solid var(--line);color:var(--cream);}
-  .steps li:first-child{border-top:none;}
-  .steps li::before{content:counter(s);position:absolute;left:0;top:13px;width:30px;height:30px;background:var(--accent);color:#06120f;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;}
-  .cta{text-align:center;}
-  .btn{display:inline-block;margin-top:22px;background:var(--accent);color:#06120f;text-decoration:none;font-weight:700;padding:15px 34px;border-radius:11px;font-size:1.05rem;}
-  .foot{color:#5d666e;font-size:.82rem;text-align:center;padding:30px;}
-  details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-top:12px;overflow:hidden;}
-  summary{cursor:pointer;padding:15px 18px;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--cream);}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .serif{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;}
+  .wrap{max-width:680px;margin:0 auto;padding:0 26px;}
+  header{padding:60px 0 8px;}
+  .mark{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:.95rem;letter-spacing:.02em;color:var(--soft);}
+  .mark b{color:var(--ink);}
+  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:2.5rem;font-weight:600;line-height:1.18;letter-spacing:-0.01em;margin:24px 0 16px;}
+  @media(max-width:600px){h1{font-size:1.95rem;}}
+  .lede{font-size:1.2rem;color:var(--ink);}
+  section{padding:40px 0;border-top:1px solid var(--rule);}
+  section:first-of-type{border-top:none;}
+  h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.55rem;font-weight:600;margin-bottom:6px;letter-spacing:-0.01em;}
+  p{color:var(--soft);font-size:1.06rem;margin:12px 0;}
+  p strong, p b{color:var(--ink);}
+  .num{color:var(--sage);font-weight:600;}
+  .pull{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.45rem;line-height:1.4;color:var(--ink);border-left:3px solid var(--sage);padding:4px 0 4px 20px;margin:18px 0;}
+  table{width:100%;border-collapse:collapse;margin:18px 0 6px;font-size:1rem;}
+  td,th{text-align:left;padding:12px 4px;border-bottom:1px solid var(--rule);vertical-align:top;}
+  th{font-weight:600;font-size:.82rem;color:var(--soft);letter-spacing:.02em;text-transform:none;}
+  th.r,td.r{text-align:right;}
+  td.now{color:var(--soft);}
+  td.then{color:var(--sage);font-weight:600;text-align:right;}
+  .twocol{font-size:1.55rem;font-family:"Iowan Old Style",Palatino,Georgia,serif;}
+  details{border-top:1px solid var(--rule);}
+  summary{cursor:pointer;padding:16px 0;font-weight:600;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink);font-size:1.05rem;}
   summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";color:var(--accent);font-size:1.4rem;font-weight:400;}
+  summary::after{content:"+";color:var(--sage);font-size:1.4rem;font-weight:300;}
   details[open] summary::after{content:"\2013";}
-  details .d{padding:2px 18px 18px;color:var(--muted);font-size:1rem;}
-  details .d p{font-size:1rem;margin:8px 0;}
-  details .d table{margin-top:10px;font-size:.95rem;}
-  details .d li{margin:6px 0;color:var(--muted);}
+  details .d{padding:0 0 20px;color:var(--soft);}
+  details .d p{margin:8px 0;}
+  details .d li{margin:7px 0;color:var(--soft);}
+  details .d ul{padding-left:18px;}
+  details .d table td.then{color:var(--sage);}
+  .ask{background:var(--warm);border-radius:4px;padding:36px 30px;margin:44px 0;}
+  .ask h2{margin-bottom:10px;}
+  .ask a{color:var(--terra);font-weight:600;}
+  .deeper a{color:var(--sage);text-decoration:none;font-weight:600;}
+  .deeper p{margin:6px 0;}
+  .sig{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.15rem;color:var(--ink);margin-top:8px;}
+  footer{color:#9a9081;font-size:.82rem;padding:30px 0 60px;border-top:1px solid var(--rule);}
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<section>
-  <div class="kicker">RealtyFelix × Welgo</div>
-  <h1>Right now, 99% of your income depends on <span class="a">one company's algorithm.</span></h1>
-  <p>$229,928 of your $232K last year came from Airbnb alone. One policy change, one suspension, one ranking shift, and most of it is gone. It's fixable.</p>
-</section>
+  <header>
+    <div class="mark"><b>RealtyFelix</b> &times; <b>Welgo</b></div>
+    <h1>You built RealtyFelix over 15 years. The hard part shouldn't be the part that never scales.</h1>
+    <p class="lede">Felix, we pulled your book and looked at the real numbers, not a template. Here's what we found and what a partnership would actually do for you.</p>
+  </header>
 
-<section>
-  <div class="kicker">Where you are</div>
-  <h2>You built RealtyFelix over 15+ years.</h2>
-  <p>Real local trust, ~19 active rentals you manage for owners. But it's all on one channel, the calendar sits about 85% empty (~15% occupancy), and you and your team run it 24/7. 15+ years of work should compound, not keep you on call.</p>
-</section>
+  <section>
+    <h2>What we found</h2>
+    <p class="pull">Last year, 99% of your income came from Airbnb alone. $229,928 of your $232K, one channel.</p>
+    <p>That's a quiet risk. One policy change, one ranking shift, and most of it moves without warning. It's also a ceiling: half your calendar sits empty (one home ran 31 nights all year) because you're fishing in one pond. Neither is a pricing problem. Both are fixable.</p>
+  </section>
 
-<section>
-  <div class="kicker">What we do</div>
-  <h2>You don't lift a finger. We run the engine.</h2>
-  <div class="grid3">
-    <div class="card"><h3>End the dependency</h3><p>Every channel: Booking, VRBO, Expedia, Google. Instant Book on. New demand, less risk.</p></div>
-    <div class="card"><h3>Fill the calendar</h3><p>Dynamic pricing (+15% nightly rate) + 24/7 guest ops fill the empty units.</p></div>
-    <div class="card"><h3>New income</h3><p>Direct-booking site, cleaning turned to profit, upsell + pet-fee engine, reviews past 9.5.</p></div>
-  </div>
-</section>
+  <section>
+    <h2>The shape of it</h2>
+    <p>You keep what you're good at and what you built: the ground, the local relationships, your owners. We take the part that eats your nights and doesn't scale: pricing, every channel, 24/7 guests, the direct site, the upsells. You run the ground. We run the engine. Each gets paid for their half.</p>
+  </section>
 
-<section>
-  <div class="kicker">Who does what</div>
-  <h2>You run the ground. We run the engine. Each paid for their half.</h2>
-  <div class="grid2">
-    <div class="card"><h3>Welgo (the engine)</h3><p>Pricing, all channels, 24/7 guests, reviews, upsells, tech stack, owner reporting.</p></div>
-    <div class="card"><h3>You (the ground — 7% boots fee)</h3><p>Cleaning + maintenance coordination, inspections, local presence, owner relationships. What you're already great at, freed from the grind.</p></div>
-  </div>
-</section>
-
-<section>
-  <div class="kicker">Your money</div>
-  <h2>Before ➜ After</h2>
-  <table>
-    <tr><th>&nbsp;</th><th>Today (on your own)</th><th class="us">With Welgo (base case)</th></tr>
-    <tr><td>Your income / yr</td><td class="b">~$28,700</td><td class="b us">~$81,800</td></tr>
-    <tr><td>Multiple</td><td>1.0x</td><td class="us">~2.85x · + equity</td></tr>
-    <tr><td>Hours / week</td><td>~25 (the grind)</td><td class="us">~2-3</td></tr>
-    <tr><td>Hours back / yr</td><td>&mdash;</td><td class="us">~1,150</td></tr>
-    <tr><td>Risk</td><td>all on you, one channel</td><td class="us">shared, multi-channel</td></tr>
-  </table>
-  <p style="margin-top:14px;">Push the calendar to 65% and it's ~3.4x. Even a conservative 40% is ~2.1x. Built on your fee, not the gross — these are your real, conservative numbers.</p>
-
-  <details><summary>How your ~$81,800 is built — every number shown (open)</summary><div class="d">
-    <p><b>Starting point (base case, 55% occupancy):</b> your managed book = ~$720,930 accommodation gross/yr, ~409 turnovers, ~30% of bookings direct (~$216,279). Every line below is calculated off those.</p>
+  <section>
+    <h2>What changes for you</h2>
     <table>
-      <tr><th>Stream</th><th>The math</th><th class="us">You earn / yr</th></tr>
-      <tr><td>Boots fee (7% of gross)</td><td>7% × $720,930</td><td class="us">$50,465</td></tr>
-      <tr><td>Cleaning margin</td><td>~409 turns × ~$22 margin/turn</td><td class="us">$8,998</td></tr>
-      <tr><td>Upsell share (2.5%)</td><td>5% of gross (split 50/50) → your 2.5% × $720,930</td><td class="us">$18,023</td></tr>
-      <tr><td>Direct-booking margin (2%)</td><td>2% × $216,279 (the 30% that's direct)</td><td class="us">$4,326</td></tr>
-      <tr><td><b>Total</b></td><td>sum of the four</td><td class="us"><b>~$81,812</b></td></tr>
-      <tr><td>+ Finder (optional)</td><td>1% × gross on owners you bring</td><td>+$7,209</td></tr>
-      <tr><td>+ Equity</td><td>separate agreement, later</td><td>—</td></tr>
+      <tr><th>&nbsp;</th><th class="r">Today, on your own</th><th class="r">With Welgo</th></tr>
+      <tr><td>Your income a year</td><td class="now r twocol">~$28,700</td><td class="then twocol">~$81,800</td></tr>
+      <tr><td>&nbsp;</td><td class="now r">your 15% fee</td><td class="then">~2.85&times; · plus equity</td></tr>
+      <tr><td>Your week</td><td class="now r">~25 hrs, the grind</td><td class="then">~2-3 hrs</td></tr>
+      <tr><td>Time back a year</td><td class="now r">&mdash;</td><td class="then">~1,150 hrs</td></tr>
+      <tr><td>Your risk</td><td class="now r">all on you, one channel</td><td class="then">shared, many channels</td></tr>
     </table>
-    <p style="font-size:.9rem;">What each is: <b>Boots</b> = your ground work (cleaning + maintenance coordination, inspections, local presence, owner relationships), paid clean. <b>Cleaning margin</b> = the spread between the guest cleaning fee and what you pay housekeepers, was $0. <b>Upsells</b> = we build + run the engine (early/late checkout, pets, parking), was $0. <b>Direct</b> = bookings on your own off-platform site, you own the guest, was $0.</p>
-    <p style="font-size:.9rem;">Conservative on purpose. At 40% occupancy you're ~$59,500; at 65% you're ~$96,700. Full per-scenario math in the breakdown below.</p>
-  </div></details>
+    <p>Conservative, base case. A cautious 40% occupancy is still ~2.1&times;; push to 65% and it's ~3.4&times;. These are built on your fee, not the gross, so they're your real numbers.</p>
 
-  <details><summary>How we get from 15% to 55% occupancy</summary><div class="d">
-    <ul>
-      <li><b>Multi-channel:</b> today 99% of bookings are Airbnb. We turn on Booking, VRBO, Expedia, Google. New demand pools, especially for your empty units.</li>
-      <li><b>Instant Book on:</b> it's off now, so search buries your listings. Turning it on lifts rank at zero cost.</li>
-      <li><b>Dynamic pricing:</b> rates tuned daily to demand, not set once a month. ~+15% nightly rate.</li>
-      <li><b>Reviews:</b> sub-5-minute 24/7 response pushes ratings past 9.5, which lifts rank and rate again.</li>
-    </ul>
-    <p>Honest note: 15% to 55% is a big jump. It's why we lead with the base case and treat 65% as upside, not a promise. We'd rather under-commit and beat it.</p>
-  </div></details>
+    <details><summary>How the ~$81,800 is built, line by line</summary><div class="d">
+      <p>Off a base case of ~$720,930 in managed bookings, ~409 turnovers, ~30% of stays direct:</p>
+      <table>
+        <tr><th>Stream</th><th>The math</th><th class="r">A year</th></tr>
+        <tr><td>Boots fee, 7% of gross</td><td>7% &times; $720,930</td><td class="then">$50,465</td></tr>
+        <tr><td>Cleaning margin</td><td>~409 turns &times; ~$22</td><td class="then">$8,998</td></tr>
+        <tr><td>Upsell share, 2.5%</td><td>your half of 5% &times; $720,930</td><td class="then">$18,023</td></tr>
+        <tr><td>Direct margin, 2%</td><td>2% &times; $216,279 direct</td><td class="then">$4,326</td></tr>
+        <tr><td><b>Total</b></td><td>the four together</td><td class="then"><b>~$81,800</b></td></tr>
+      </table>
+      <p>Three of those four you earn nothing from today. Add a 1% finder on owners you bring (~$7,200) and equity on top.</p>
+    </div></details>
 
-  <details><summary>What everyone keeps (base case, 55%)</summary><div class="d">
-    <table>
-      <tr><th>Party</th><th class="us">Keeps / yr</th><th>How</th></tr>
-      <tr><td>Your owners</td><td class="us">~$602,000</td><td>The gross grows so much that their absolute payout rises even at the higher management fee. They make more, not less.</td></tr>
-      <tr><td>You (Felix)</td><td class="us">~$81,800</td><td>The four streams above, plus equity, at ~2-3 hours a week.</td></tr>
-      <tr><td>Welgo</td><td class="us">~$86,900</td><td>The engine share of the fee + our upsell half. We earn by growing your pie, not by taking from you.</td></tr>
-    </table>
-    <p>The point: nobody loses. The occupancy + rate lift grows the whole pie, so owners keep more, you earn ~3x, and Welgo earns by making it happen.</p>
-  </div></details>
+    <details><summary>How we get from 15% to 55% occupancy</summary><div class="d">
+      <ul>
+        <li><b>Every channel.</b> Booking, VRBO, Expedia, Google. Today it's just Airbnb. New demand for your empty homes.</li>
+        <li><b>Instant Book on.</b> It's off now, so search buries you. Turning it on lifts rank for free.</li>
+        <li><b>Daily pricing.</b> Rates tuned to demand, not set once a month. About +15% a night.</li>
+        <li><b>Reviews.</b> Five-minute replies, round the clock, push ratings past 9.5, which lifts rank again.</li>
+      </ul>
+      <p>Straight talk: 15% to 55% is a real jump. That's why we lead with the base case and treat 65% as upside, not a promise.</p>
+    </div></details>
 
-  <details><summary>The full three scenarios</summary><div class="d">
-    <table>
-      <tr><th>&nbsp;</th><th>40% conservative</th><th class="us">55% base</th><th>65% upside</th></tr>
-      <tr><td>Accommodation gross</td><td>$524K</td><td class="us">$721K</td><td>$852K</td></tr>
-      <tr><td>Owners keep</td><td>$438K</td><td class="us">$602K</td><td>$711K</td></tr>
-      <tr><td>Your income</td><td>~$59,500</td><td class="us">~$81,800</td><td>~$96,700</td></tr>
-      <tr><td>vs today ($28,700)</td><td>2.1x</td><td class="us">2.85x</td><td>3.4x</td></tr>
-    </table>
-  </div></details>
-</section>
+    <details><summary>What everyone keeps</summary><div class="d">
+      <table>
+        <tr><th>&nbsp;</th><th class="r">A year</th><th>Why</th></tr>
+        <tr><td>Your owners</td><td class="then">~$601,600</td><td>The pie grows so much their payout rises even at a higher fee. They make more, not less.</td></tr>
+        <tr><td>You</td><td class="then">~$81,800</td><td>The four streams, plus equity, at a few hours a week.</td></tr>
+        <tr><td>Welgo</td><td class="then">~$86,900</td><td>Our share of the fee plus our upsell half. We earn by growing it.</td></tr>
+      </table>
+      <p>Nobody loses. That's the whole point.</p>
+    </div></details>
+  </section>
 
-<section>
-  <div class="kicker">The numbers, in full</div>
-  <h2>Base case (calendar to 55%)</h2>
-  <table>
-    <tr><th>Line</th><th class="us">Amount / yr</th></tr>
-    <tr><td>Accommodation gross (your book)</td><td class="us">~$721,000</td></tr>
-    <tr><td>Your owners keep (after fees)</td><td>~$602,000</td></tr>
-    <tr><td>Boots fee (7% of gross)</td><td class="us">~$50,500</td></tr>
-    <tr><td>Cleaning margin</td><td class="us">~$9,000</td></tr>
-    <tr><td>Upsell share (your 2.5%)</td><td class="us">~$18,000</td></tr>
-    <tr><td>Direct-booking margin (your 2%)</td><td class="us">~$4,300</td></tr>
-    <tr><td><b>Your total</b></td><td class="b us">~$81,800</td></tr>
-  </table>
-</section>
+  <section>
+    <h2>How we'd turn it on</h2>
+    <p>You grant access. We do the rest, in about two weeks, with nothing breaking.</p>
+    <details><summary>Week 1 — the engine</summary><div class="d"><ul>
+      <li>Connect every channel; Instant Book on.</li>
+      <li>Daily pricing live across all of them.</li>
+      <li>Your direct-booking site stood up.</li>
+      <li>Your homes onto our 24/7 guest team. Your software bills drop, ~$11K a year back.</li>
+    </ul></div></details>
+    <details><summary>Week 1-2 — mapping your book</summary><div class="d"><ul>
+      <li>Each home: channels, pricing, photos, access, supplies.</li>
+      <li>Cleaning mapped to your crews and turned into your margin.</li>
+      <li>Upsell menu per home; financials and owner reporting wired in.</li>
+    </ul></div></details>
+    <details><summary>Week 2 — the paperwork</summary><div class="d"><ul>
+      <li>NDA, done.</li>
+      <li>Management agreement, shape decided together: co-host, white-label, or under our brand.</li>
+      <li>Owner consents where needed; access formalized. Equity documented later, only if you go under our brand.</li>
+    </ul></div></details>
+    <details><summary>Who does what</summary><div class="d">
+      <p><b>Welgo:</b> pricing, channels, 24/7 guests, reviews, upsells, tech, reporting.</p>
+      <p><b>You:</b> cleaning and maintenance coordination, inspections, local presence, owner relationships. The work you already do well, now paid clean and free of the rest.</p>
+    </div></details>
+  </section>
 
-<section>
-  <div class="kicker">The hidden upside</div>
-  <h2>Three income streams you earn ~$0 from today.</h2>
-  <div class="grid3">
-    <div class="card"><div class="n">~$18K</div><h3>Upsells</h3><p>We build + run the engine (early/late checkout, pets, parking). 5% of gross, split 50/50. Your half.</p></div>
-    <div class="card"><div class="n">~$4.3K</div><h3>Direct bookings</h3><p>~30% of bookings on your own direct site, off-platform. Your 2% margin. You own the guest.</p></div>
-    <div class="card"><div class="n">~$9K</div><h3>Cleaning margin</h3><p>Cleaning flips from a chore into profit you keep, every turnover.</p></div>
+  <section class="deeper">
+    <h2>The full detail</h2>
+    <p><a href="felix-leverage.html">Where the money is &rarr;</a> &nbsp; the seven moves we'd run on your book, each with its impact.</p>
+    <p><a href="felix-numbers.html">The numbers, in full &rarr;</a> &nbsp; every figure calculated, all three scenarios, what each party keeps.</p>
+    <p><a href="https://edgomberg.github.io/welgo-pages/">What we offer your owners &rarr;</a></p>
+  </section>
+
+  <div class="ask">
+    <h2>The ask is small.</h2>
+    <p>Come walk through a couple of our homes. Meet the team. Let's grab a quick call this week. Then we shape the deal together, on your terms.</p>
+    <p class="sig">Ed<br><a href="mailto:ed@welgo.space">ed@welgo.space</a></p>
   </div>
-  <p style="margin-top:18px;"><span class="pill">~$31K in add-ons alone</span> &nbsp; more than your entire income today — and you make none of it now.</p>
-</section>
 
-<section>
-  <div class="kicker">How we turn it on</div>
-  <h2>You grant access. We do the rest. ~2 weeks. Nothing breaks.</h2>
-  <p>The whole roadmap, walked through. Open each step to see exactly what happens.</p>
+  <footer>RealtyFelix &times; Welgo. Built from your live book. Conservative, base case. Draft, June 2026.</footer>
 
-  <details><summary>Step 1 — Tech &amp; architecture (week 1)</summary><div class="d">
-    <p>You do nothing but grant access. We connect the engine to your existing Hostaway (already linked).</p>
-    <ul>
-      <li>Turn on every channel: Booking, VRBO, Expedia, Google. Today it's Airbnb only.</li>
-      <li>Instant Book on, per listing.</li>
-      <li>Dynamic pricing engine live across all channels.</li>
-      <li>Direct-booking site stood up so you own the guest and cut platform fees.</li>
-      <li>Listings onboarded to our 24/7 guest team. Your per-tool software bills drop (~$11K/yr back to you).</li>
-    </ul>
-  </div></details>
-
-  <details><summary>Step 2 — Mapping (week 1-2)</summary><div class="d">
-    <p>We map your whole book into our system so nothing falls through.</p>
-    <ul>
-      <li>Per listing: channels, pricing rules, photos, access/keys, supplies.</li>
-      <li>Cleaning: map your crews to our ops (rates, schedule, quality control). Cleaning becomes your profit line.</li>
-      <li>Upsell menu set per unit (checkouts, pets, parking).</li>
-      <li>Financial flow + owner reporting wired in so the team runs it without you in the loop.</li>
-    </ul>
-  </div></details>
-
-  <details><summary>Step 3 — Contracts (week 2)</summary><div class="d">
-    <p>Papered clean, in order.</p>
-    <ul>
-      <li>NDA — already signed.</li>
-      <li>Management partnership agreement — the core. Shape decided together: co-host, white-label, or under our brand.</li>
-      <li>Owner consents where any of your owners need to sign off.</li>
-      <li>Account access formalized (Hostaway, Airbnb co-host).</li>
-      <li>Cleaning + upsell terms. Equity path documented separately, later, only if you go under our brand.</li>
-    </ul>
-  </div></details>
-
-  <details><summary>Who delivers what (Welgo vs you)</summary><div class="d">
-    <table>
-      <tr><th>Area</th><th class="us">Welgo (engine)</th><th>You (ground, 7%)</th></tr>
-      <tr><td>Pricing + channels</td><td class="us">All of it</td><td>—</td></tr>
-      <tr><td>24/7 guests + reviews</td><td class="us">All of it</td><td>—</td></tr>
-      <tr><td>Upsell + direct engine</td><td class="us">All of it</td><td>—</td></tr>
-      <tr><td>Tech + reporting</td><td class="us">All of it</td><td>—</td></tr>
-      <tr><td>Cleaning + maintenance</td><td>—</td><td>You coordinate</td></tr>
-      <tr><td>Inspections + quality</td><td>standard + tools</td><td>You own it</td></tr>
-      <tr><td>Local presence + owners</td><td>—</td><td>You</td></tr>
-    </table>
-    <p>You stop doing pricing, guest messages, channel admin, software, reporting (~25 hrs/week → ~2-3). You keep the relationship and local work you're already great at, now paid cleanly.</p>
-  </div></details>
-</section>
-
-<section>
-  <div class="kicker">Go deeper</div>
-  <h2>The full detail, two clicks away.</h2>
-  <div class="grid2">
-    <div class="card"><h3><a href="felix-numbers.html" style="color:var(--accent);text-decoration:none;">The numbers, in full →</a></h3><p>Every figure calculated and shown: gross, fees, what you / your owners / Welgo each keep, all three scenarios.</p></div>
-    <div class="card"><h3><a href="felix-leverage.html" style="color:var(--accent);text-decoration:none;">Where the money is →</a></h3><p>The 7 leverage moves we run on your book, ranked by impact, each quantified. The 99% dependency finding.</p></div>
-  </div>
-</section>
-
-<section class="cta">
-  <div class="kicker">The one ask</div>
-  <h2>Come see how we run it.</h2>
-  <p style="margin:10px auto 0;">Inspect a couple of our properties. Meet the team. A three-way call with Eliran, you, and Ed this week. Then we decide the shape together.</p>
-  <a class="btn" href="mailto:ed@welgo.space?subject=RealtyFelix%20x%20Welgo">Let's talk</a>
-</section>
-
-<div class="foot">RealtyFelix × Welgo. Built from your live book. Conservative numbers, base case. [DRAFT — 2026-06-01.]</div>
-
+</div>
 </body>
 </html>
