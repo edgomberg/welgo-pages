@@ -15,6 +15,13 @@ The v1 site is built and works with placeholders. Drop these in and it goes from
 6. **Microsoft Clarity project ID** (free, one line). Paste into the commented snippet in `index.html` head to turn on heatmaps + session replays so we see where homeowners drop off.
 7. **Form backend** (optional): a Formspree (or similar) endpoint URL for `contact.html` so the form captures without a backend. Until then it falls back to a mailto.
 
+## Conversion (added in v2)
+
+- **Current Welgo phone number** for a visible click-to-call in the header (research: a visible phone lifts trust on an unknown brand even if nobody calls). Old live site used +1 520 600 0130. Confirm it or give the current one.
+- **Google reviews + real star rating.** The credibility bar shows placeholder stars. Wire your Google Business reviews widget, or I remove the stars.
+- **Confirm "Listed on Airbnb / VRBO / Booking.com"** is true for the homes (it is on the credibility bar).
+- **Confirm the scarcity line is true** ("limited portfolio"). Fake scarcity backfires with the 45 to 65 owner demographic. If not true, I cut it.
+
 ## Lower impact
 
 8. Real photography of managed homes for proof sections (beats stock).
