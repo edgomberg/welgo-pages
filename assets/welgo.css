@@ -133,6 +133,31 @@ details .body{padding:0 20px 18px;color:var(--w-sub)}
 .sticky-cta span{font-weight:600;font-size:.95rem}
 .sticky-cta b{color:var(--w-gold)}
 @media(max-width:560px){.sticky-cta span{display:none}}
+/* Credibility bar */
+.cred{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;justify-content:center;padding:18px 22px;border-bottom:1px solid var(--w-line);background:#fff}
+.cred span{font-size:.92rem;color:var(--w-sub);font-weight:600;display:flex;align-items:center;gap:7px}
+.cred b{color:var(--w-ink)}
+.cred .star{color:var(--w-gold);letter-spacing:1px}
+/* Problem / empathy list */
+.prob{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin-top:22px}
+@media(max-width:820px){.prob{grid-template-columns:1fr}}
+.prob .p{padding:18px 20px;border:1px solid var(--w-line);border-radius:var(--w-radius);background:#fff}
+.prob .p b{display:block;margin-bottom:4px;font-family:var(--w-head)}
+.prob .p span{color:var(--w-sub);font-size:.95rem}
+/* Number hook band */
+.hook{background:var(--w-ink);color:#fff;border-radius:var(--w-radius);padding:34px;text-align:center}
+.hook .n{font-family:var(--w-head);font-weight:800;font-size:clamp(2rem,5vw,3rem);color:var(--w-gold);letter-spacing:-.02em}
+.hook p{color:rgba(255,255,255,.85);margin:8px auto 0;max-width:60ch}
+/* Founder strip */
+.founder{display:flex;gap:22px;align-items:center;flex-wrap:wrap;border:1px solid var(--w-line);border-radius:var(--w-radius);padding:24px;background:var(--w-bg-soft)}
+.founder .ph{width:96px;height:96px;border-radius:50%;background:#fff;border:1px solid var(--w-line);display:flex;align-items:center;justify-content:center;font-family:var(--w-head);font-weight:800;color:var(--w-gold-deep);font-size:1.5rem;flex:0 0 auto}
+.founder .who{flex:1;min-width:240px}
+/* Scarcity */
+.scar{display:inline-block;background:var(--w-bg-soft);border:1px solid var(--w-line);border-left:4px solid var(--w-gold);border-radius:var(--w-radius-sm);padding:12px 18px;font-weight:600;font-size:.95rem}
+/* Quote / testimonial */
+.quote{border-left:4px solid var(--w-gold);background:#fff;border:1px solid var(--w-line);border-radius:var(--w-radius);padding:22px 26px}
+.quote p{font-size:1.1rem;max-width:60ch}
+.quote .by{color:var(--w-sub);font-weight:600;font-size:.92rem;margin-top:8px}
 /* Footer */
 .foot{background:var(--w-ink);color:rgba(255,255,255,.75);padding:48px 0 40px}
 .foot a{color:rgba(255,255,255,.85);text-decoration:none}

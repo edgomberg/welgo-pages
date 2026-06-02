@@ -43,7 +43,27 @@
     <p class="lead">We run pricing, guest texts, cleaning, and repairs end to end. You reclaim your weekends and earn the same or more. Your home stays protected with $1M damage and $3M liability cover.</p>
     <div class="hero-cta">
       <a class="btn" href="#calc">See what your home could earn</a>
-      <a class="btn btn-ghost" href="#plans">See pricing</a>
+      <a class="btn btn-ghost" href="#start">See if your home qualifies</a>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY BAR -->
+<div class="cred">
+  <span>Listed on <b>Airbnb · VRBO · Booking.com</b></span>
+  <span class="star">★★★★★</span>
+  <span><b>26</b> Tucson homes managed</span>
+  <span><b>15%</b> lift or fees refunded</span>
+</div>
+
+<!-- PROBLEM -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>You did not buy a home to run a hotel front desk</h2>
+    <div class="prob">
+      <div class="p"><b>Pricing is guesswork</b><span>Set once, left behind every week the market moves.</span></div>
+      <div class="p"><b>The 2am calls</b><span>Lockouts and broken AC do not wait for business hours.</span></div>
+      <div class="p"><b>No local eyes</b><span>Damage found in October a guest never reported.</span></div>
     </div>
   </div>
 </section>
@@ -92,10 +112,11 @@
           <div class="row"><span>If you self-managed</span><b id="gSelf">$0</b></div>
           <div class="row" style="border-bottom:none"><span>The difference</span><b id="delta" style="color:var(--w-gold)">$0</b></div>
           <div class="gate" id="gate">
-            <div style="font-weight:700;font-family:var(--w-head)">Want the full breakdown + a free home analysis?</div>
+            <div style="font-weight:700;font-family:var(--w-head)">Get the full breakdown + a free exact analysis</div>
+            <input type="text" id="addr" placeholder="Home address or neighborhood" aria-label="Home address">
             <input type="email" id="email" placeholder="you@email.com" aria-label="Your email">
-            <a class="btn" id="gateBtn" href="#" style="width:100%;text-align:center">Email me my breakdown</a>
-            <div style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:8px">No spam. Ed replies within 24 hours.</div>
+            <a class="btn" id="gateBtn" href="#" style="width:100%;text-align:center">Send me my breakdown</a>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:8px">Your info is never shared or sold. Ed replies within 4 hours.</div>
           </div>
         </div>
       </div>
@@ -199,6 +220,24 @@
   </div>
 </section>
 
+<!-- 3-WAY COMPARISON -->
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="bar"></span>Do it yourself, a national platform, or Welgo</h2>
+    <table style="margin-top:14px">
+      <tr><th>&nbsp;</th><th>Self-manage</th><th>National platform</th><th class="us">Welgo</th></tr>
+      <tr><td>Who runs it</td><td>you, nights + weekends</td><td>remote team, another state</td><td class="yes">a local owner you reach</td></tr>
+      <tr><td>Occupancy</td><td>around 15 to 25%</td><td>varies, opaque</td><td class="yes">61% across our book</td></tr>
+      <tr><td>Fee</td><td>$0, but it costs your time</td><td>often 25 to 35% + markups</td><td class="yes">6 / 12 / 18.5%, no markups</td></tr>
+      <tr><td>Guest replies</td><td>when you're free</td><td>call-center</td><td class="yes">under 5 min, 24/7</td></tr>
+      <tr><td>Pricing</td><td>set once</td><td>one-size algorithm</td><td class="yes">tuned daily</td></tr>
+      <tr><td>Guarantee</td><td>none</td><td>rarely</td><td class="yes">15% lift or refunded</td></tr>
+      <tr><td>Lock-in</td><td>n/a</td><td>often</td><td class="yes">cancel with 30 days' notice</td></tr>
+    </table>
+    <p class="sub" style="margin-top:14px"><a href="switch.html">Already with a national manager? See how switching works.</a></p>
+  </div>
+</section>
+
 <!-- COMPLIANCE -->
 <section class="sec sec-soft">
   <div class="wrap">
@@ -222,8 +261,27 @@
   </div>
 </section>
 
+<!-- TESTIMONIAL + FOUNDER -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="quote">
+      <!-- ASSET: replace with a real named Tucson owner quote + dollar number + consent. -->
+      <p>"Placeholder for one real owner quote with a dollar number, e.g. 'Our Oro Valley home went from $14K to $27K in year one, and the 2am calls stopped.'"</p>
+      <div class="by">Name, neighborhood. Ed to confirm a named owner.</div>
+    </div>
+    <div class="founder" style="margin-top:22px">
+      <div class="ph">Ed</div>
+      <div class="who">
+        <h3>You reach the person who runs it</h3>
+        <p style="margin-top:4px">Welgo is run by Ed, a local operator. One contact, backed by a 24/7 operations team. <a href="about.html">Who's behind Welgo</a>.</p>
+      </div>
+    </div>
+    <div style="margin-top:20px"><span class="scar">Limited Tucson portfolio for hands-on service. Onboard before peak winter season to capture the full window.</span></div>
+  </div>
+</section>
+
 <!-- CTA -->
-<section class="sec dark center">
+<section class="sec dark center" id="start">
   <div class="wrap">
     <h2>Get your free home analysis</h2>
     <p class="sub" style="margin:10px auto 22px">A 15-minute fit call with Ed, a free listing audit, and your exact revenue estimate. No commitment.</p>
@@ -274,11 +332,12 @@
   $('gateBtn').addEventListener('click', function(e){
     e.preventDefault();
     var email = $('email').value.trim();
+    var addr = $('addr').value.trim();
     var beds = $('beds').options[$('beds').selectedIndex].text;
     var area = $('area').options[$('area').selectedIndex].text;
     var est = $('ownerNet').textContent;
     var subj = encodeURIComponent('Welgo home analysis request');
-    var body = encodeURIComponent('Hi Ed,\n\nSend me my full breakdown + a free analysis.\n\nMy email: ' + email + '\nBedrooms: ' + beds + '\nArea: ' + area + '\nCalculator estimate: ' + est + '\nAddress: ___\n');
+    var body = encodeURIComponent('Hi Ed,\n\nSend me my full breakdown + a free analysis.\n\nMy email: ' + email + '\nAddress: ' + addr + '\nBedrooms: ' + beds + '\nArea: ' + area + '\nCalculator estimate: ' + est + '\n');
     window.location.href = 'mailto:ed@welgo.space?subject=' + subj + '&body=' + body;
   });
   var s=document.getElementById('sticky');
