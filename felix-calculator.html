@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RealtyFelix × Welgo · Earnings Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#eda800;--gold-dark:#d08700;--gold-deep:#a65f00;--ink:#202020;--bg:#ffffff;--soft:#fafafa;--line:#ededed;--sub:#646464;--sub2:#838383;--fh:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif;--r:14px;--rs:10px;--sh:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--fb);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:920px;margin:0 auto;padding:52px 24px;}
+  h1,h2,h3{font-family:var(--fh);letter-spacing:-.01em;}
+  h1{font-size:2.3rem;font-weight:800;margin-bottom:12px;} h1 .g{color:var(--gold-deep);}
+  h2{font-size:1.4rem;font-weight:700;margin:46px 0 10px;}
+  .bar{display:inline-block;width:26px;height:3px;background:var(--gold);border-radius:2px;vertical-align:middle;margin-right:10px;}
+  .sub{color:var(--sub);font-size:1.1rem;max-width:740px;}
+  p{margin:10px 0;max-width:780px;}
+  a{color:var(--gold-deep);}
+  .subnav{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px;}
+  .subnav a{background:#fff;border:1px solid var(--line);border-radius:var(--rs);padding:10px 16px;text-decoration:none;color:var(--ink);font-family:var(--fh);font-weight:600;font-size:.92rem;}
+  .subnav a:hover{border-color:var(--gold);color:var(--gold-deep);}
+  .calc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;margin-top:18px;box-shadow:var(--sh);}
+  .calc .row{display:flex;align-items:center;gap:14px;margin:14px 0;flex-wrap:wrap;}
+  .calc label{flex:1 1 250px;font-weight:600;font-size:.95rem;}
+  .calc label small{display:block;color:var(--sub);font-weight:400;font-size:.8rem;}
+  .calc input[type=number]{width:120px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--rs);font-size:1rem;font-family:var(--fb);}
+  .calc input[type=range]{flex:1 1 200px;accent-color:var(--gold);}
+  .homeval{font-size:1.6rem;font-weight:800;color:var(--gold-deep);font-family:var(--fh);min-width:60px;text-align:right;}
+  .seg{border-top:1px dashed var(--line);margin:18px 0 6px;padding-top:10px;font-family:var(--fh);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-deep);}
+  .out{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;}
+  @media(max-width:680px){.out{grid-template-columns:1fr;}}
+  .ocard{border-radius:var(--r);padding:22px;text-align:center;}
+  .ocard.b{background:var(--ink);color:#fff;} .ocard.a{background:var(--soft);border:1px solid var(--line);}
+  .ocard .lbl{font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);font-family:var(--fh);font-weight:600;} .ocard.b .lbl{color:var(--sub2);}
+  .ocard .big2{font-size:2.2rem;font-weight:800;font-family:var(--fh);margin:6px 0 2px;} .ocard.b .big2{color:var(--gold);} .ocard.a .big2{color:var(--gold-deep);}
+  .ocard .yr1{font-size:.9rem;color:var(--sub);} .ocard.b .yr1{color:#cfcfcf;}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.93rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-weight:700;color:var(--sub);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;font-family:var(--fh);}
+  td.r{text-align:right;font-family:var(--fh);font-weight:700;}
+  .note{background:var(--soft);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px;margin-top:16px;font-size:.95rem;}
+  .hl{color:var(--gold-deep);font-weight:700;}
+  details{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-top:14px;overflow:hidden;box-shadow:var(--sh);}
+  summary{cursor:pointer;padding:16px 20px;font-weight:700;font-family:var(--fh);list-style:none;display:flex;justify-content:space-between;}
+  summary::-webkit-details-marker{display:none;} summary::after{content:"+";font-size:1.3rem;color:var(--gold-deep);}
+  details[open] summary::after{content:"\2013";}
+  details .body{padding:0 20px 18px;font-size:.93rem;color:#333;} details .body code{background:var(--soft);padding:2px 6px;border-radius:5px;}
+  .foot{color:var(--sub2);font-size:.82rem;margin-top:44px;border-top:1px solid var(--line);padding-top:16px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>RealtyFelix × Welgo <span class="g">earnings calculator</span></h1>
+  <p class="sub">Felix, plug in your own numbers. You run the local ground, we run the engine, and you earn three ways on every home. Today your book runs near 15% occupancy. Our live Tucson homes run 61%. The calculator shows what your income looks like once the engine is behind your listings.</p>
+
+  <div class="subnav">
+    <a href="felix.html">← Felix overview</a>
+    <a href="felix-numbers.html">The numbers</a>
+    <a href="felix-leverage.html">Leverage moves</a>
+    <a href="townwest-credibility.html">Who's behind Welgo</a>
+  </div>
+
+  <h2><span class="bar"></span>Your earnings, every number adjustable</h2>
+  <p>Pre-filled with our real Tucson averages. Change anything. The math updates live.</p>
+  <div class="calc">
+    <div class="row"><label>Listings under Welgo</label><input type="range" id="homes" min="1" max="30" value="19"><span class="homeval" id="homesVal">19</span></div>
+
+    <div class="seg">The home</div>
+    <div class="row"><label>Gross revenue per home / yr <small>Welgo Tucson avg is $29,314. Your current avg runs lower, that is the upside.</small></label><input type="number" id="gross" value="29314" step="500"></div>
+    <div class="row"><label>Welgo management fee <small>% of gross, full-service</small></label><input type="number" id="mgmt" value="18.5" step="0.5"></div>
+
+    <div class="seg">Finder: owners you source</div>
+    <div class="row"><label>Your slice of Welgo's fee <small>% of the fee, recurring, on owners you bring</small></label><input type="number" id="finderPct" value="12" step="1"></div>
+    <div class="row"><label>Signing bonus <small>$ per new owner, year 1</small></label><input type="number" id="bounty" value="500" step="100"></div>
+
+    <div class="seg">Boots: you run the ground</div>
+    <div class="row"><label>Boots fee <small>% of gross, homes your crew runs</small></label><input type="number" id="boots" value="7" step="1"></div>
+
+    <div class="seg">Maintenance: your repair margin</div>
+    <div class="row"><label>Maintenance spend per home / yr</label><input type="number" id="maintSpend" value="2500" step="250"></div>
+    <div class="row"><label>Your markup on that work <small>%</small></label><input type="number" id="maintMarkup" value="15" step="1"></div>
+
+    <div class="out">
+      <div class="ocard a"><div class="lbl">Boots + maintenance (your existing book)</div><div class="big2" id="aRec">$46,116</div><div class="yr1">recurring / yr</div></div>
+      <div class="ocard b"><div class="lbl">Full operator (+ finder on new owners)</div><div class="big2" id="bRec">$58,485</div><div class="yr1">recurring / yr · <span id="bYr1">$67,985</span> year 1</div></div>
+    </div>
+  </div>
+
+  <details><summary>See the full breakdown (per home, per year)</summary><div class="body">
+    <table>
+      <tr><th>Line</th><th>How it is built</th><th style="text-align:right;">Per home / yr</th></tr>
+      <tr><td>Welgo management fee</td><td>gross × mgmt%</td><td class="r" id="mFee">$5,423</td></tr>
+      <tr><td>Boots</td><td>gross × boots%</td><td class="r" id="mBoots">$2,052</td></tr>
+      <tr><td>Maintenance margin</td><td>spend × markup%</td><td class="r" id="mMaint">$375</td></tr>
+      <tr><td>Finder (recurring, new owners)</td><td>fee × finder%</td><td class="r" id="mFinder">$651</td></tr>
+      <tr><td><b>Existing book / home</b></td><td>boots + maintenance</td><td class="r" id="mA">$2,427</td></tr>
+      <tr><td><b>Full operator / home</b></td><td>boots + maintenance + finder</td><td class="r" id="mB">$3,078</td></tr>
+    </table>
+    <p style="color:var(--sub);margin-top:10px;">Totals are per-home times homes. Year 1 adds the signing bonus once per new owner you source. Your current book is already yours, so boots and maintenance apply to it from day one. Finder applies to owners you bring on top. All rates illustrative and negotiable.</p>
+  </div></details>
+
+  <p class="note">The real lever is occupancy. Your listings sit near 15% today. Our engine runs Tucson homes at 61%. Every line above scales with that. Same homes, more revenue, more for you.</p>
+
+  <div class="foot">RealtyFelix × Welgo. Earnings model on Welgo's live Tucson portfolio, illustrative and negotiable. DRAFT v1 · 2026-06-02.</div>
+
+</div>
+<script>
+  const $ = id => document.getElementById(id);
+  const fmt = n => '$' + Math.round(n).toLocaleString();
+  const ids = ['homes','gross','mgmt','finderPct','bounty','boots','maintSpend','maintMarkup'];
+  function calc(){
+    const homes=+$('homes').value, gross=+$('gross').value||0, mgmt=(+$('mgmt').value||0)/100,
+      finderPct=(+$('finderPct').value||0)/100, bounty=+$('bounty').value||0,
+      boots=(+$('boots').value||0)/100, mSpend=+$('maintSpend').value||0, mMark=(+$('maintMarkup').value||0)/100;
+    const fee=gross*mgmt, finder=fee*finderPct, bootsAmt=gross*boots, maint=mSpend*mMark;
+    const perA=bootsAmt+maint, perB=bootsAmt+maint+finder;
+    $('homesVal').textContent=homes;
+    $('aRec').textContent=fmt(perA*homes);
+    $('bRec').textContent=fmt(perB*homes); $('bYr1').textContent=fmt(perB*homes+bounty*homes);
+    $('mFee').textContent=fmt(fee); $('mBoots').textContent=fmt(bootsAmt);
+    $('mMaint').textContent=fmt(maint); $('mFinder').textContent=fmt(finder);
+    $('mA').textContent=fmt(perA); $('mB').textContent=fmt(perB);
+  }
+  ids.forEach(i=>$(i).addEventListener('input',calc)); calc();
+</script>
+</body>
+</html>
