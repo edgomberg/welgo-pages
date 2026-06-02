@@ -3,210 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welgo — Tucson Short-Term Rental Management</title>
-<style>
-  :root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e6e3dd;--bg:#faf9f6;--accent:#1f7a6b;--card:#ffffff;--warm:#f4f0e8;--gold:#b8862f;}
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55;}
-  .wrap{max-width:1000px;margin:0 auto;padding:48px 24px;}
-  .mono{font-family:"SF Mono",ui-monospace,Menlo,monospace;}
-  h1{font-size:2.4rem;font-weight:750;letter-spacing:-0.02em;margin-bottom:14px;line-height:1.12;}
-  h1 .num{color:var(--accent);}
-  h2{font-size:1.5rem;font-weight:680;margin:52px 0 8px;letter-spacing:-0.01em;}
-  h3{font-size:1.05rem;font-weight:650;margin:8px 0;}
-  .sub{color:var(--muted);font-size:1.1rem;max-width:720px;}
-  p{margin:10px 0;max-width:760px;}
-  .lead{font-size:1.12rem;}
-  .guars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px;}
-  @media(max-width:760px){.guars{grid-template-columns:1fr;}h1{font-size:1.9rem;}}
-  .guar{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:18px 20px;}
-  .guar b{display:block;margin-bottom:4px;}
-  .launch{margin-top:16px;background:var(--warm);border-radius:10px;padding:14px 18px;font-weight:600;}
-  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.93rem;}
-  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
-  th{font-weight:650;color:var(--muted);font-size:.8rem;text-transform:uppercase;letter-spacing:.03em;}
-  th.us{color:var(--accent);}
-  .grp td{background:var(--warm);font-weight:650;font-size:.82rem;text-transform:uppercase;letter-spacing:.03em;color:var(--ink);}
-  .plans{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px;}
-  @media(max-width:760px){.plans{grid-template-columns:1fr;}}
-  .plan{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;}
-  .plan.feature{border-color:var(--accent);box-shadow:0 4px 24px rgba(31,122,107,.10);}
-  .plan .name{font-weight:680;font-size:1.1rem;}
-  .plan .rate{font-size:2.2rem;font-weight:750;margin:8px 0 2px;letter-spacing:-0.03em;}
-  .plan .rate small{font-size:.95rem;color:var(--muted);font-weight:500;}
-  .plan .strike{color:var(--muted);text-decoration:line-through;font-size:.9rem;}
-  .badge{display:inline-block;background:var(--accent);color:#fff;font-size:.68rem;font-weight:650;padding:3px 9px;border-radius:99px;letter-spacing:.03em;text-transform:uppercase;margin-bottom:8px;}
-  details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0;margin-top:12px;overflow:hidden;}
-  summary{cursor:pointer;padding:16px 20px;font-weight:650;list-style:none;display:flex;justify-content:space-between;align-items:center;}
-  summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";font-size:1.3rem;color:var(--accent);font-weight:400;}
-  details[open] summary::after{content:"\2013";}
-  details .body{padding:0 20px 18px;}
-  .faq summary{font-weight:600;font-size:.98rem;}
-  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:18px;}
-  @media(max-width:760px){.cards{grid-template-columns:1fr;}}
-  .ccard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;}
-  .ccard b{color:var(--accent);}
-  .note{background:var(--warm);border-radius:10px;padding:14px 18px;margin-top:14px;font-size:.95rem;}
-  .cta{margin-top:44px;background:var(--ink);color:var(--bg);border-radius:16px;padding:34px;text-align:center;}
-  .cta a{display:inline-block;margin-top:16px;background:var(--accent);color:#fff;text-decoration:none;font-weight:650;padding:13px 28px;border-radius:10px;}
-  .steps{counter-reset:s;list-style:none;margin-top:14px;}
-  .steps li{counter-increment:s;padding:12px 0 12px 42px;position:relative;border-top:1px solid var(--line);}
-  .steps li:first-child{border-top:none;}
-  .steps li::before{content:counter(s);position:absolute;left:0;top:11px;width:26px;height:26px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:650;font-size:.82rem;}
-  .offer{margin-top:20px;background:linear-gradient(90deg,#fbf6ea,#f4f0e8);border:1px solid var(--gold);border-radius:12px;padding:18px 22px;font-weight:600;}
-  .foot{color:var(--muted);font-size:.82rem;margin-top:44px;border-top:1px solid var(--line);padding-top:18px;}
-  .chk{color:var(--accent);font-weight:700;} .opt{color:var(--muted);}
-</style>
+<title>Welgo · Tucson Short-Term Rental Management</title>
+<meta name="description" content="Welgo runs Tucson short-term rentals end to end. 26 homes, 61% occupancy, 15% revenue lift or your fees refunded. Local owner, 24/7 ops team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/welgo.css">
+<!-- Microsoft Clarity (free heatmaps/replays). Ed: paste your Clarity project ID below to enable.
+<script>(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y)})(window,document,"clarity","script","CLARITY_PROJECT_ID");</script>
+-->
 </head>
 <body>
-<div class="wrap">
 
-  <h1>Zero chaos. More money. <span class="num">Or we refund our fees.</span></h1>
-  <p class="lead sub">Self-managing a Tucson home burns one full Saturday a month on "Wi-Fi?" texts, cleaner chases, and price changes. Welgo's local crew + 24/7 ops hub wipes that away. 5-minute replies anytime, cleaners dispatched same day, prices tuned daily. Get your weekends back and bring in as much or more revenue. Guest ID checks, fraud scans, plus $1M damage and $3M liability protection. Your property stays safe, damage avoided, vacancies prevented.</p>
-
-  <h2>Guaranteed results for every owner</h2>
-  <div class="guars">
-    <div class="guar"><b>Existing Airbnb?</b> 15%+ revenue lift in 6 months, or every Welgo fee is refunded.</div>
-    <div class="guar"><b>Never listed?</b> Earn ≥70% of market RevPAR (similar-listing revenue), or your management fee is waived.</div>
-    <div class="guar"><b>70% occupancy promise</b> From month 2, we keep you above 70% occupancy or credit the miss. High season or low. (7 years hosting in the desert. We're this confident.)</div>
+<!-- NAV -->
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Wel<b>go</b></a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <nav id="nav">
+      <a href="homeowners.html">Homeowners</a>
+      <a href="results.html">Results</a>
+      <a href="about.html">Who we are</a>
+      <a href="switch.html">Switching managers?</a>
+      <a href="operator.html">Operators</a>
+      <a class="btn" href="homeowners.html#calc">Get your number</a>
+    </nav>
   </div>
-  <div class="launch">List &amp; Launch: new homes in <span class="num mono">72 hrs</span> · already a short-term rental in <span class="num mono">24 hrs</span>.</div>
+</header>
 
-  <h2>🎯 Before ➜ After</h2>
-  <table>
-    <tr><th>&nbsp;</th><th>Before — Do it yourself</th><th class="us">After — Welgo</th></tr>
-    <tr><td>Monthly payout</td><td>your number</td><td><b>≈ +15%</b></td></tr>
-    <tr><td>Hours you spend</td><td>6-8 / week</td><td>~0.5 / week</td></tr>
-    <tr><td>Guest reply time</td><td>20 min</td><td>&lt;5 min, 24/7</td></tr>
-    <tr><td>Price updates</td><td>1× / month</td><td>Daily (AI + human)</td></tr>
-    <tr><td>Repair speed</td><td>Days</td><td>&lt;24 h</td></tr>
-    <tr><td>Stress (1-10)</td><td>6</td><td>1</td></tr>
-  </table>
-
-  <h2>Pricing &amp; plans: two ways to work with us</h2>
-  <div class="plans">
-    <div class="plan feature">
-      <span class="badge">Most owners</span>
-      <div class="name">Full-Service</div>
-      <div class="rate mono">18.5%<small> of bookings</small></div>
-      <div class="strike">industry standard ~25%</div>
-      <p style="font-size:.93rem;color:var(--muted);margin-top:8px;">We run everything. You collect a check.</p>
-      <div class="launch" style="margin-top:12px;font-size:.9rem;">Turn-Key Launch: <b>$249</b> (existing Airbnb) + photoshoot at cost (one-time, no markup)</div>
+<!-- HERO (picture-element pattern: poster shows instantly, video fades in over it on desktop) -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="assets/hero-poster.svg" alt="Tucson short-term rental home at dusk" fetchpriority="high" width="1600" height="900">
+    <!-- VIDEO: Ed to supply hero.mp4 (B-roll: Tucson homes, clean turnovers, happy guests, owner dashboard). Drop hero.mp4 + hero.webm in /assets and it works with zero code change. -->
+    <video autoplay muted loop playsinline preload="none" poster="assets/hero-poster.svg" aria-hidden="true">
+      <source src="assets/hero.webm" type="video/webm">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-in">
+    <span class="kicker" style="color:var(--w-gold)">Tucson short-term rental management</span>
+    <h1 style="margin-top:14px">Your home, run like a hotel. <span class="g">More money, or we refund our fees.</span></h1>
+    <p class="lead">Self-managing a Tucson rental eats a Saturday a month. We run pricing, guests, cleaning, and repairs end to end. You get your weekends back and the same or more revenue, with your home protected.</p>
+    <div class="hero-cta">
+      <a class="btn" href="homeowners.html#calc">See what your home could earn</a>
+      <a class="btn btn-ghost" href="about.html">Who's behind Welgo</a>
     </div>
-    <div class="plan">
-      <div class="name">Co-Host</div>
-      <div class="rate mono">12%<small> of bookings</small></div>
-      <div class="strike">industry standard 15%</div>
-      <p style="font-size:.93rem;color:var(--muted);margin-top:8px;">We run revenue + guests. You keep cleaning + maintenance.</p>
-      <div class="launch" style="margin-top:12px;font-size:.9rem;">Turn-Key Launch: <b>$99</b> + photographer at cost (one-time, no markup)</div>
+    <div class="trust-strip">
+      <span><b>$1M</b> damage / <b>$3M</b> liability protection</span>
+      <span><b>61%</b> occupancy across our book</span>
+      <span><b>15%</b> lift in 6 months or fees refunded</span>
     </div>
   </div>
+</section>
 
-  <details>
-    <summary>See exactly what's included in each plan</summary>
-    <div class="body">
-    <table>
-      <tr><th>Feature</th><th class="us">Full-Service 18.5%</th><th>Co-Host 12%</th></tr>
-      <tr class="grp"><td colspan="3">Listing management</td></tr>
-      <tr><td>Turn-Key Listing Launch</td><td><span class="chk">✅</span> $249 + photoshoot at cost</td><td><span class="chk">✅</span> $99 + photographer at cost</td></tr>
-      <tr><td>Multi-platform listings</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-      <tr><td>Listing creation &amp; rank optimisation</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-      <tr><td>Dynamic pricing</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-      <tr><td>Professional photography (at cost)</td><td class="chk">✅</td><td class="opt">▢</td></tr>
-      <tr class="grp"><td colspan="3">Guest management</td></tr>
-      <tr><td>Guest vetting (ID &amp; fraud)</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-      <tr><td>Guest self-check-ins</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-      <tr><td>Linen &amp; hotel toiletries</td><td class="chk">✅</td><td class="opt">▢ owner stocks</td></tr>
-      <tr><td>24/7 guest communications</td><td class="chk">✅</td> response &lt;5 min</td><td class="chk">✅ response &lt;10 min</td></tr>
-      <tr class="grp"><td colspan="3">Property management</td></tr>
-      <tr><td>Cleaning &amp; housekeeping (Welgo collects cleaning fee &amp; remits to cleaner)</td><td class="chk">✅</td><td class="opt">▢ owner books cleaner</td></tr>
-      <tr><td>Independent inspections (20% of stays)</td><td class="chk">✅</td><td class="opt">▢</td></tr>
-      <tr><td>Preventative maintenance (quarterly)</td><td class="chk">✅</td><td class="opt">▢</td></tr>
-      <tr><td>Quick-fix repairs ≤$500</td><td class="chk">✅</td><td class="opt">▢</td></tr>
-      <tr><td>Supplies restock ≤$500 (10% admin margin)</td><td class="chk">✅</td><td class="opt">▢</td></tr>
-      <tr><td>Owner dashboard (Occ% · ADR · RevPAR)</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-      <tr class="grp"><td colspan="3">Optional value-add</td></tr>
-      <tr><td>Welgo Kick-Start™ yard upgrade (ROI pack)</td><td class="chk">✅</td><td class="chk">✅</td></tr>
-    </table>
-    <p style="font-size:.85rem;color:var(--muted);margin-top:10px;">✅ = included · ▢ = owner handles / pay-as-you-go</p>
+<!-- PROOF STRIP -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <div class="grid g4">
+      <div><div class="stat">26<small> homes</small></div><div class="sub" style="font-size:.92rem">managed in Tucson today</div></div>
+      <div><div class="stat">61%<small> occupancy</small></div><div class="sub" style="font-size:.92rem">vs ~15% for self-managed</div></div>
+      <div><div class="stat">$29,314<small> avg</small></div><div class="sub" style="font-size:.92rem">gross per home, last year</div></div>
+      <div><div class="stat">$131<small> ADR</small></div><div class="sub" style="font-size:.92rem">average nightly rate</div></div>
     </div>
-  </details>
+  </div>
+</section>
 
-  <p class="note">We're upfront: our industry-low fees (18.5% full / 12% co-host) work because Welgo retains upsells and resolutions. We create, market, and deliver guest upsells (pet fees, early check-ins) to keep operations lean. You pocket the same or more while reclaiming ~6 hrs/week for family. Total peace, no surprises.</p>
-
-  <details>
-    <summary>What we handle — full deliverables + SLAs</summary>
-    <div class="body">
-    <table>
-      <tr><th>Deliverable</th><th class="us">Full-Service 18.5%</th><th>Co-Host 12%</th><th>Cadence / SLA</th></tr>
-      <tr><td>Launch &amp; list</td><td>225-pt audit · pro photos · OTA sync · go-live ≤5 d</td><td>OTA sync · go-live ≤24 h</td><td>One-time</td></tr>
-      <tr><td>Smart pricing</td><td>AI daily rates + daily human review</td><td>AI daily rates + weekly human tweak</td><td>7×/wk · 1×/wk</td></tr>
-      <tr><td>Guest help 24/7</td><td>Live agents &lt;5 min · local runner dispatch</td><td>Live agents &lt;10 min · owner arranges runner</td><td>24/7</td></tr>
-      <tr><td>Peace-of-mind vetting</td><td>Autohost ID + fraud scan</td><td>Same</td><td>Per booking</td></tr>
-      <tr><td>Hotel turnovers</td><td>Welgo books cleaners + hotel linen &amp; toiletries</td><td>Owner books cleaners; Welgo sends turnover brief</td><td>Every stay</td></tr>
-      <tr><td>Quality inspections</td><td>Independent inspector audits 20% of stays</td><td>Add-on</td><td>Photo report</td></tr>
-      <tr><td>Preventative care</td><td>Quarterly 40-pt walk-through (filters, leaks, safety)</td><td>Add-on</td><td>4×/yr</td></tr>
-      <tr><td>Repairs ≤$500</td><td>Trusted techs; 10% admin margin</td><td>Owner books tech</td><td>≤24 h dispatch</td></tr>
-      <tr><td>Supplies ≤$500</td><td>Auto-restock; 10% margin</td><td>Owner restocks</td><td>Weekly</td></tr>
-      <tr><td>Permits &amp; tax filing</td><td>Welgo files &amp; remits lodging tax</td><td>Owner handles (we give links)</td><td>Monthly / annual</td></tr>
-      <tr><td>Owner dashboard</td><td>Live Occ%, ADR, RevPAR vs market, response time</td><td>Same</td><td>Real-time</td></tr>
-      <tr><td>Kick-Start™ yard pack</td><td>50/50 cost split; install ≤14 d</td><td>Same</td><td>Optional</td></tr>
-    </table>
-    <p style="font-size:.85rem;color:var(--muted);margin-top:10px;">Co-Host excludes rows tagged "owner books / add-on."</p>
+<!-- DUAL AUDIENCE ROUTING -->
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="bar"></span>Two ways to work with Welgo</h2>
+    <p class="sub">Own a Tucson home? Run a local real-estate book? Pick your path.</p>
+    <div class="grid g2" style="margin-top:26px">
+      <div class="route">
+        <span class="kicker">For homeowners</span>
+        <h3>Hand us the keys. Keep the upside.</h3>
+        <ul>
+          <li>We run pricing, guests, cleaning, repairs.</li>
+          <li>15% revenue lift in 6 months, or fees refunded.</li>
+          <li>$1M damage / $3M liability protection.</li>
+          <li>No long-term lock-in. Cancel with 30 days' notice.</li>
+        </ul>
+        <a class="btn" href="homeowners.html">For homeowners</a>
+      </div>
+      <div class="route">
+        <span class="kicker">For operators &amp; agents</span>
+        <h3>Bring the listings. We run the operation.</h3>
+        <ul>
+          <li>You keep the relationship. We build the ops.</li>
+          <li>Three income lines: finder, boots, maintenance.</li>
+          <li>White-label or under the Welgo brand.</li>
+          <li>90-day zero-risk trial.</li>
+        </ul>
+        <a class="btn btn-line" href="operator.html">For operators</a>
+      </div>
     </div>
-  </details>
-
-  <h2>FAQ</h2>
-  <div class="faq">
-    <details><summary>How fast will my home go live?</summary><div class="body">Full-Service 3-10 days, Co-Host 72 hrs from e-sign to first booking (audit, photos, OTA sync). Most companies quote 14-21; we beat that.</div></details>
-    <details><summary>What if revenue doesn't improve?</summary><div class="body">Existing listings: +15% in six months or every fee refunded. Mirrors Houst's guarantee, but we pay cash back.</div></details>
-    <details><summary>Do you guarantee results for new listings?</summary><div class="body">Yes. Hit 70% of market RevPAR or 70% occupancy by day 90, or we waive the month-3 fee.</div></details>
-    <details><summary>When do I get paid?</summary><div class="body">ACH on the 10th business day each month (same cadence as GuestReady).</div></details>
-    <details><summary>Who pays cleaners and handymen?</summary><div class="body">Full-Service: Welgo collects the guest cleaning fee and pays the cleaner; repairs ≤$500 pass through at cost + 10%. Co-Host: you pay vendors direct.</div></details>
-    <details><summary>Can I exit if it's not working?</summary><div class="body">Anytime with 30-day notice. You only settle any unpaid Launch or Kick-Start balance.</div></details>
-    <details><summary>How are guests screened?</summary><div class="body">Autohost checks ID match, biometrics, fraud score, and party risk on every booking.</div></details>
-    <details><summary>What if something breaks?</summary><div class="body">Repairs under $500 fixed within 24 h; larger jobs quoted first. Receipts appear in your dashboard.</div></details>
-    <details><summary>Do pets really help bookings?</summary><div class="body">Yes. Pet-friendly homes see ~27% more demand (AirDNA data). Guests pay a $45 pet fee you keep.</div></details>
-    <details><summary>Do you handle permits and lodging tax?</summary><div class="body">Full-Service: Welgo files and remits monthly. Co-Host: we give step-by-step links; filing stays with you.</div></details>
   </div>
+</section>
 
-  <h2>Why Welgo</h2>
-  <p class="lead"><b>Less work, more money, or we work for free.</b></p>
-  <p>We handle pricing, guest texts, cleaners, and quick fixes. You get nightly rates tuned every day, 5-minute replies round-the-clock, and a yard upgrade that pays for itself. If your payouts over the first 6 months aren't at least what you make today, we refund every management fee. No lock-ins. Cancel anytime.</p>
-  <div class="cards">
-    <div class="ccard"><b>Fast, local, niche</b><br>Yard-focused wellness, pet-friendly by default, no corporate bloat.</div>
-    <div class="ccard"><b>Simplicity</b><br>One flat fee, no hidden mark-ups.</div>
-    <div class="ccard"><b>Proof-first</b><br>Publicly visible 70% RevPAR floor &amp; inspection rate.</div>
-    <div class="ccard"><b>Data-driven</b><br>Live dashboard; RevPAR vs market updated daily.</div>
-  </div>
-
-  <h2>Built for homes with yards &amp; pets</h2>
-  <p>We specialise in stand-alone houses with outdoor space; every listing is pet-friendly by default. Pet-friendly homes attract 27% more bookings (AirDNA). Stock-tank pool and fenced-yard photos trigger Airbnb "family" and "pets allowed" filters, widening your demand funnel.</p>
-
-  <h2>Local eyes, tight ops</h2>
-  <p>Independent inspector checks 20% of turnovers; preventative walk-through every quarter. Few managers publish their inspection %. We make ours public. A quarterly 40-point checklist catches leaks, batteries, and HVAC filters before they hit reviews.</p>
-
-  <h2>Transparent &amp; data-driven</h2>
-  <p>Your daily dashboard shows Occupancy %, ADR, RevPAR vs market, guest rating, and response time. Owners see exactly where the 70% RevPAR floor comes from: an AirDNA comp-set snapshot each month. We build in the open and publish our metrics.</p>
-
-  <div class="cta">
-    <div style="font-size:1.3rem;font-weight:680;">More revenue. Happier guests. Zero hassle.</div>
-    <div style="opacity:.8;margin-top:6px;">Free listing audit + quick revenue estimate. No commitment.</div>
-    <ol class="steps" style="text-align:left;max-width:520px;margin:18px auto 0;color:var(--bg);">
-      <li>15-min fit call with founder Ed</li>
-      <li>Free listing audit + revenue estimate &amp; Q&amp;A</li>
-      <li>Sign &amp; launch: e-sign + schedule pro photos → go-live in ≤3 days</li>
+<!-- HOW IT WORKS -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>How it works</h2>
+    <ol class="steps" style="max-width:640px">
+      <li><b>Get your number.</b> Free revenue estimate for your address. No commitment.</li>
+      <li><b>We launch your home.</b> Photos, listings, pricing, guest screening. Live in 24-72 hours.</li>
+      <li><b>You collect a check.</b> We run it day to day. You watch the dashboard and get paid.</li>
     </ol>
-    <a href="mailto:ed@welgo.space?subject=Welgo%20listing%20audit">Get my free audit</a>
   </div>
+</section>
 
-  <div class="offer">Special offer for the first 25 homes (limited availability). Message Ed to find out. Welgo Wellness Kit™ in progress.</div>
+<!-- GUARANTEE -->
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="bar"></span>The Welgo Owner Promise</h2>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="promise"><b>15% lift or refunded</b>Already on Airbnb? Earn 15%+ more in 6 months, or every Welgo fee comes back.</div>
+      <div class="promise"><b>70% occupancy floor</b>From month 2 we keep you above 70% occupancy or we credit the miss.</div>
+      <div class="promise"><b>No surprise spending</b>We never spend over $500 on your home without your say-so. Every receipt on your dashboard.</div>
+    </div>
+  </div>
+</section>
 
-  <div class="refer note">Know an owner who should be earning more? Refer them. When they sign, you both get paid. Ask about the referral program.</div>
+<!-- WHY / NOT VACASA short -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>Local owner, not a national call center</h2>
+    <p class="sub">The big platforms run your home from another state with a rotating team and fees buried in the fine print. Welgo is run by a local owner you can reach, with one transparent fee and a 24/7 operations team behind it.</p>
+    <div style="margin-top:18px"><a class="btn btn-line" href="switch.html">Switching from Vacasa or Evolve? Read this</a></div>
+  </div>
+</section>
 
-  <div class="foot">Welgo. Tucson short-term rental management. Ed, founder · ed@welgo.space · +1 520 600 0130. Operator or agency? Ask about partnership. [v3 — 2026-06-01. Canonical pricing source. Plans 18.5% / 12%. Guarantees pending final deliverability confirm.]</div>
+<!-- CTA -->
+<section class="sec dark center">
+  <div class="wrap">
+    <h2>More revenue. Happier guests. Zero hassle.</h2>
+    <p class="sub" style="margin:10px auto 22px">Free listing audit and revenue estimate. No commitment.</p>
+    <a class="btn" href="homeowners.html#calc">See what your home could earn</a>
+  </div>
+</section>
 
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html">Wel<b style="color:var(--w-gold)">go</b></a>
+        <p style="color:rgba(255,255,255,.7);max-width:34ch">Tucson short-term rental management. Run like a hotel. Owned by a local.</p>
+      </div>
+      <div>
+        <h4>Homeowners</h4>
+        <ul>
+          <li><a href="homeowners.html">Pricing &amp; plans</a></li>
+          <li><a href="homeowners.html#calc">Earnings calculator</a></li>
+          <li><a href="results.html">Results</a></li>
+          <li><a href="switch.html">Switching managers</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Who's behind Welgo</a></li>
+          <li><a href="operator.html">Operators &amp; agents</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mailto:ed@welgo.space">ed@welgo.space</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">Welgo. Tucson short-term rental management. Ed, founder · ed@welgo.space. Backed by a 24/7 operations team. $1M damage / $3M liability protection. Guarantee terms confirmed at signing.</div>
+  </div>
+</footer>
+
+<!-- STICKY CTA -->
+<div class="sticky-cta" id="sticky">
+  <span>Curious what your Tucson home could earn? <b>Get your number free.</b></span>
+  <a class="btn" href="homeowners.html#calc">Get your number</a>
 </div>
+<script>
+  var s=document.getElementById('sticky');
+  window.addEventListener('scroll',function(){ if(window.scrollY>640){s.classList.add('show')}else{s.classList.remove('show')} });
+</script>
 </body>
 </html>

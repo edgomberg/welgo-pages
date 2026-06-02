@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Homeowners · Welgo Tucson Rental Management</title>
+<meta name="description" content="See what your Tucson home could earn. Transparent pricing (6% / 12% / 18.5%), 15% lift or fees refunded, $1M/$3M protection. Run by a local owner.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/welgo.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Wel<b>go</b></a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <nav id="nav">
+      <a href="homeowners.html">Homeowners</a>
+      <a href="results.html">Results</a>
+      <a href="about.html">Who we are</a>
+      <a href="switch.html">Switching managers?</a>
+      <a href="operator.html">Operators</a>
+      <a class="btn" href="#calc">Get your number</a>
+    </nav>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="assets/hero-poster.svg" alt="Tucson home" fetchpriority="high" width="1600" height="900">
+    <video autoplay muted loop playsinline preload="none" poster="assets/hero-poster.svg" aria-hidden="true">
+      <source src="assets/hero.webm" type="video/webm">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-in">
+    <span class="kicker" style="color:var(--w-gold)">For Tucson homeowners</span>
+    <h1 style="margin-top:14px">Zero chaos. More money. <span class="g">Or we refund our fees.</span></h1>
+    <p class="lead">We run pricing, guest texts, cleaning, and repairs end to end. You reclaim your weekends and earn the same or more. Your home stays protected with $1M damage and $3M liability cover.</p>
+    <div class="hero-cta">
+      <a class="btn" href="#calc">See what your home could earn</a>
+      <a class="btn btn-ghost" href="#plans">See pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="sec" id="calc">
+  <div class="wrap">
+    <h2><span class="bar"></span>What could your home earn?</h2>
+    <p class="sub">A quick estimate based on our live Tucson book. Your real number depends on your home and location. Ed runs a free, exact analysis before you decide.</p>
+    <div class="calc" style="margin-top:24px">
+      <div class="calc-in">
+        <div class="calc-controls">
+          <div class="field">
+            <label for="beds">Bedrooms</label>
+            <select id="beds">
+              <option value="1">Studio or 1 bedroom</option>
+              <option value="2" selected>2 bedrooms</option>
+              <option value="3">3 bedrooms</option>
+              <option value="4">4 bedrooms</option>
+              <option value="5">5+ bedrooms</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="area">Area</label>
+            <select id="area">
+              <option value="1">Central / University / Midtown</option>
+              <option value="1.15">Foothills / Oro Valley / Marana</option>
+              <option value="0.95">Other Tucson / Pima County</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="tier">Plan</label>
+            <select id="tier">
+              <option value="0.185" selected>Full-Service 18.5% (we run everything)</option>
+              <option value="0.12">Co-Host 12% (we run revenue + guests)</option>
+              <option value="0.06">Software-led 6% (pricing + listing engine)</option>
+            </select>
+          </div>
+          <p class="assumptions">Estimate uses our live Tucson average: 61% occupancy and a $131 average nightly rate, adjusted for size and area. Self-managed comparison assumes 25% occupancy and lower pricing, in line with the Tucson market. Not a guarantee. Your free analysis gives the exact number.</p>
+        </div>
+        <div class="calc-out">
+          <div style="font-size:.85rem;color:rgba(255,255,255,.7);text-transform:uppercase;letter-spacing:.05em;font-family:var(--w-head);font-weight:700">Your estimated take-home with Welgo</div>
+          <div class="big" id="ownerNet">$0</div>
+          <div style="color:rgba(255,255,255,.75);font-size:.9rem;margin-bottom:14px">per year, after our fee</div>
+          <div class="row"><span>Gross bookings (Welgo-run)</span><b id="gMgmt">$0</b></div>
+          <div class="row"><span>If you self-managed</span><b id="gSelf">$0</b></div>
+          <div class="row" style="border-bottom:none"><span>The difference</span><b id="delta" style="color:var(--w-gold)">$0</b></div>
+          <div class="gate" id="gate">
+            <div style="font-weight:700;font-family:var(--w-head)">Want the full breakdown + a free home analysis?</div>
+            <input type="email" id="email" placeholder="you@email.com" aria-label="Your email">
+            <a class="btn" id="gateBtn" href="#" style="width:100%;text-align:center">Email me my breakdown</a>
+            <div style="font-size:.78rem;color:rgba(255,255,255,.6);margin-top:8px">No spam. Ed replies within 24 hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>Before and after</h2>
+    <table>
+      <tr><th>&nbsp;</th><th>Do it yourself</th><th class="us">With Welgo</th></tr>
+      <tr><td>Monthly payout</td><td>your number</td><td class="yes">about +15%</td></tr>
+      <tr><td>Hours you spend</td><td>6 to 8 / week</td><td>about 0.5 / week</td></tr>
+      <tr><td>Guest reply time</td><td>20 min</td><td>under 5 min, 24/7</td></tr>
+      <tr><td>Price updates</td><td>1x / month</td><td>daily (AI + human)</td></tr>
+      <tr><td>Repair speed</td><td>days</td><td>under 24 hours</td></tr>
+      <tr><td>Stress (1 to 10)</td><td>6</td><td>1</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- OWNER PROMISE -->
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="bar"></span>The Welgo Owner Promise</h2>
+    <div class="grid g3" style="margin-top:22px">
+      <div class="promise"><b>15% lift or refunded</b>Already on Airbnb? Earn 15%+ more in 6 months, or every Welgo fee comes back.</div>
+      <div class="promise"><b>70% occupancy floor</b>From month 2 we keep you above 70% occupancy or we credit the miss.</div>
+      <div class="promise"><b>No surprise spending</b>We never spend over $500 on your home without your say-so. Every receipt on your dashboard.</div>
+    </div>
+    <p class="sub" style="margin-top:18px">Never listed before? Hit 70% of market revenue by day 90 or your month-3 fee is waived. No long-term lock-in. Cancel with 30 days' notice.</p>
+  </div>
+</section>
+
+<!-- PROTECTION -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>Your home, protected</h2>
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h3>$1M / $3M cover</h3><p>$1M damage and $3M liability protection on every stay.</p></div>
+      <div class="card"><h3>Every guest screened</h3><p>ID match, biometrics, fraud score, and party-risk check on every booking.</p></div>
+      <div class="card"><h3>Local eyes</h3><p>Independent inspector audits 20% of turnovers. Quarterly 40-point walk-through catches problems early.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANS -->
+<section class="sec" id="plans">
+  <div class="wrap">
+    <h2><span class="bar"></span>Pricing: pick how hands-off you want to be</h2>
+    <p class="sub">One transparent fee. No hidden markups. Industry standard runs 25%+. We do not nickel-and-dime.</p>
+    <div class="grid g3" style="margin-top:24px">
+      <div class="plan feature">
+        <span class="badge">Most owners</span>
+        <div class="name">Full-Service</div>
+        <div class="rate">18.5%<small> of bookings</small></div>
+        <div class="strike">industry standard ~25%</div>
+        <p style="font-size:.93rem;color:var(--w-sub);margin-top:8px">We run everything. You collect a check.</p>
+      </div>
+      <div class="plan">
+        <div class="name">Co-Host</div>
+        <div class="rate">12%<small> of bookings</small></div>
+        <div class="strike">industry standard 15%</div>
+        <p style="font-size:.93rem;color:var(--w-sub);margin-top:8px">We run revenue + guests. You keep cleaning + maintenance.</p>
+      </div>
+      <div class="plan">
+        <div class="name">Software-led</div>
+        <div class="rate">6%<small> of bookings</small></div>
+        <div class="strike">DIY tools charge ~4% and leave you to run it</div>
+        <p style="font-size:.93rem;color:var(--w-sub);margin-top:8px">Our pricing + listing engine. You run the ground game.</p>
+      </div>
+    </div>
+    <details style="margin-top:20px">
+      <summary>See exactly what is included in each plan</summary>
+      <div class="body">
+        <table>
+          <tr><th>Feature</th><th class="us">Full-Service 18.5%</th><th>Co-Host 12%</th></tr>
+          <tr class="grp"><td colspan="3">Listing management</td></tr>
+          <tr><td>Multi-platform listings</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td>Listing creation + rank optimization</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td>Dynamic pricing</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td>Professional photography (at cost)</td><td class="yes">Yes</td><td class="no">Owner option</td></tr>
+          <tr class="grp"><td colspan="3">Guest management</td></tr>
+          <tr><td>Guest vetting (ID + fraud)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+          <tr><td>24/7 guest communications</td><td class="yes">Under 5 min</td><td class="yes">Under 10 min</td></tr>
+          <tr><td>Linen + hotel toiletries</td><td class="yes">Yes</td><td class="no">Owner stocks</td></tr>
+          <tr class="grp"><td colspan="3">Property management</td></tr>
+          <tr><td>Cleaning + housekeeping</td><td class="yes">Yes</td><td class="no">Owner books cleaner</td></tr>
+          <tr><td>Independent inspections (20% of stays)</td><td class="yes">Yes</td><td class="no">Add-on</td></tr>
+          <tr><td>Preventative maintenance (quarterly)</td><td class="yes">Yes</td><td class="no">Add-on</td></tr>
+          <tr><td>Quick-fix repairs under $500</td><td class="yes">Yes (10% admin)</td><td class="no">Owner books tech</td></tr>
+          <tr><td>Permits + lodging tax filing</td><td class="yes">Welgo files + remits</td><td class="no">We send the links</td></tr>
+          <tr><td>Owner dashboard (Occ% · ADR · RevPAR)</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+        </table>
+        <p style="font-size:.85rem;color:var(--w-sub);margin-top:10px">Co-Host excludes rows marked "owner books / add-on."</p>
+      </div>
+    </details>
+    <p class="sub" style="margin-top:16px">Our fees work because we keep operations lean and retain guest upsells (pet fees, early check-ins). You pocket the same or more while reclaiming about 6 hours a week.</p>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>We handle the Tucson rules so you don't have to</h2>
+    <p class="sub">Arizona protects short-term rentals at the state level, but your TPT license, lodging tax, 24/7 contact requirement, and any HOA restrictions still have to be handled right. On Full-Service we file and remit your lodging tax and keep you compliant. Most owners do not know an HOA can quietly restrict a rental. We check before you list.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="bar"></span>Common questions</h2>
+    <details><summary>How fast will my home go live?</summary><div class="body">Full-Service 3 to 10 days. Co-Host 72 hours from e-sign to first booking. Most companies quote 14 to 21 days.</div></details>
+    <details><summary>What if revenue does not improve?</summary><div class="body">Existing listings: 15% more in six months or every fee refunded. New listings: hit 70% of market revenue by day 90 or your month-3 fee is waived.</div></details>
+    <details><summary>Can I still use my own home?</summary><div class="body">Yes. Block off any dates you want on your dashboard. It is your home.</div></details>
+    <details><summary>When do I get paid?</summary><div class="body">ACH on the 10th business day of each month.</div></details>
+    <details><summary>Who pays cleaners and handymen?</summary><div class="body">Full-Service: Welgo collects the guest cleaning fee and pays the cleaner. Repairs under $500 pass through at cost plus 10%. Co-Host: you pay vendors direct.</div></details>
+    <details><summary>Can I exit if it is not working?</summary><div class="body">Anytime with 30 days' notice. No long-term lock-in.</div></details>
+    <details><summary>What if something breaks?</summary><div class="body">Repairs under $500 are fixed within 24 hours. Larger jobs are quoted to you first. Every receipt shows on your dashboard.</div></details>
+    <details><summary>Do you handle permits and lodging tax?</summary><div class="body">Full-Service: Welgo files and remits monthly. Co-Host: we give you step-by-step links and filing stays with you.</div></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec dark center">
+  <div class="wrap">
+    <h2>Get your free home analysis</h2>
+    <p class="sub" style="margin:10px auto 22px">A 15-minute fit call with Ed, a free listing audit, and your exact revenue estimate. No commitment.</p>
+    <a class="btn" href="mailto:ed@welgo.space?subject=Welgo%20free%20home%20analysis&body=Hi%20Ed%2C%20I%27d%20like%20a%20free%20analysis%20for%20my%20Tucson%20home.%20Address%3A%20___%2C%20Bedrooms%3A%20___">Get my free analysis</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="brand" href="index.html">Wel<b style="color:var(--w-gold)">go</b></a><p style="color:rgba(255,255,255,.7);max-width:34ch">Tucson short-term rental management. Run like a hotel. Owned by a local.</p></div>
+      <div><h4>Homeowners</h4><ul><li><a href="homeowners.html">Pricing &amp; plans</a></li><li><a href="#calc">Earnings calculator</a></li><li><a href="results.html">Results</a></li><li><a href="switch.html">Switching managers</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="about.html">Who's behind Welgo</a></li><li><a href="operator.html">Operators &amp; agents</a></li><li><a href="contact.html">Contact</a></li><li><a href="mailto:ed@welgo.space">ed@welgo.space</a></li></ul></div>
+    </div>
+    <div class="fine">Welgo. Tucson short-term rental management. Ed, founder · ed@welgo.space. $1M damage / $3M liability protection. Guarantee terms confirmed at signing.</div>
+  </div>
+</footer>
+
+<div class="sticky-cta" id="sticky">
+  <span>See your estimate, then get a free exact analysis. <b>No commitment.</b></span>
+  <a class="btn" href="#calc">Get your number</a>
+</div>
+
+<script>
+  var $ = function(id){return document.getElementById(id)};
+  var fmt = function(n){return '$' + Math.round(n).toLocaleString()};
+  // Tucson ADR anchors by bedrooms (grounded near $131 live average), adjusted by area.
+  var ADR = {1:95, 2:120, 3:145, 4:175, 5:205};
+  var MGMT_OCC = 0.61;   // Welgo live book
+  var SELF_OCC = 0.25;   // Tucson self-managed market
+  var SELF_PRICE = 0.82; // self-managers underprice
+  function calc(){
+    var beds = +$('beds').value;
+    var area = +$('area').value;
+    var fee = +$('tier').value;
+    var adr = ADR[beds] * area;
+    var grossMgmt = adr * 365 * MGMT_OCC;
+    var grossSelf = (adr * SELF_PRICE) * 365 * SELF_OCC;
+    var ownerNet = grossMgmt * (1 - fee);
+    $('ownerNet').textContent = fmt(ownerNet);
+    $('gMgmt').textContent = fmt(grossMgmt);
+    $('gSelf').textContent = fmt(grossSelf);
+    $('delta').textContent = '+' + fmt(grossMgmt - grossSelf);
+  }
+  ['beds','area','tier'].forEach(function(i){$(i).addEventListener('change',calc)});
+  calc();
+  // email gate: prefill a mailto with the owner's inputs so Ed gets a real lead
+  $('gateBtn').addEventListener('click', function(e){
+    e.preventDefault();
+    var email = $('email').value.trim();
+    var beds = $('beds').options[$('beds').selectedIndex].text;
+    var area = $('area').options[$('area').selectedIndex].text;
+    var est = $('ownerNet').textContent;
+    var subj = encodeURIComponent('Welgo home analysis request');
+    var body = encodeURIComponent('Hi Ed,\n\nSend me my full breakdown + a free analysis.\n\nMy email: ' + email + '\nBedrooms: ' + beds + '\nArea: ' + area + '\nCalculator estimate: ' + est + '\nAddress: ___\n');
+    window.location.href = 'mailto:ed@welgo.space?subject=' + subj + '&body=' + body;
+  });
+  var s=document.getElementById('sticky');
+  window.addEventListener('scroll',function(){ if(window.scrollY>640){s.classList.add('show')}else{s.classList.remove('show')} });
+</script>
+</body>
+</html>

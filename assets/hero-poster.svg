@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Welgo Tucson short-term rental management">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+<stop offset="0" stop-color="#2a2a2a"/><stop offset="1" stop-color="#202020"/>
+</linearGradient>
+<linearGradient id="glow" x1="0" y1="1" x2="1" y2="0">
+<stop offset="0" stop-color="#a65f00" stop-opacity="0.5"/><stop offset="1" stop-color="#eda800" stop-opacity="0.08"/>
+</linearGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<rect width="1600" height="900" fill="url(#glow)"/>
+<g fill="none" stroke="#eda800" stroke-opacity="0.22" stroke-width="6">
+<path d="M120 760 v-150 a40 40 0 0 1 40 -40 h120 v-90 l70 -55 70 55 v90 h120 a40 40 0 0 1 40 40 v150 z"/>
+<path d="M1080 780 v-110 h70 v-70 l60 -46 60 46 v70 h70 v110 z"/>
+</g>
+<g fill="#eda800" fill-opacity="0.14">
+<path d="M780 800 q40 -120 0 -240 q40 90 60 130 q-10 -60 -20 -110 q40 70 60 120 q-30 90 -10 240 z"/>
+</g>
+</svg>
