@@ -8,8 +8,7 @@
 <style>
   :root{
     --gold:#eda800;--gold-dark:#d08700;--gold-deep:#a65f00;
-    --ink:#202020;--bg:#ffffff;--soft:#fafafa;--line:#ededed;--sub:#646464;--sub2:#838383;
-    --green:#00a63e;
+    --ink:#202020;--bg:#ffffff;--soft:#fafafa;--line:#ededed;--sub:#646464;--sub2:#838383;--green:#00a63e;
     --fh:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif;
     --r:14px;--rs:10px;--sh:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
   }
@@ -23,7 +22,7 @@
   h3{font-size:1.05rem;font-weight:700;}
   .bar{display:inline-block;width:26px;height:3px;background:var(--gold);border-radius:2px;vertical-align:middle;margin-right:10px;}
   .sub{color:var(--sub);font-size:1.14rem;max-width:760px;}
-  p{margin:10px 0;max-width:780px;}
+  p{margin:10px 0;max-width:800px;}
   a{color:var(--gold-deep);}
   .pill{display:inline-block;background:var(--soft);border:1px solid var(--line);color:var(--gold-deep);font-family:var(--fh);font-weight:700;font-size:.78rem;padding:6px 14px;border-radius:999px;margin-bottom:20px;letter-spacing:.05em;}
   .subnav{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px;}
@@ -37,53 +36,46 @@
   @media(max-width:760px){.pay{grid-template-columns:1fr;}}
   .pcard{background:#fff;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:var(--r);padding:20px;box-shadow:var(--sh);}
   .pcard .n{font-size:1.7rem;font-weight:800;color:var(--gold-deep);font-family:var(--fh);}
-  .pcard h3{margin:4px 0;}
-  .pcard p{font-size:.9rem;color:var(--sub);}
-  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.93rem;}
-  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
-  th{font-weight:700;color:var(--sub);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;font-family:var(--fh);}
-  th.us{color:var(--gold-deep);}
-  td.big{font-size:1.25rem;font-weight:800;color:var(--gold-deep);font-family:var(--fh);}
+  .pcard h3{margin:4px 0;} .pcard p{font-size:.9rem;color:var(--sub);}
   .note{background:var(--soft);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px;margin-top:16px;font-size:.95rem;}
   .hl{color:var(--gold-deep);font-weight:700;}
-  /* dark vision + cta */
   .dark{background:var(--ink);color:#fff;border-radius:var(--r);padding:38px;margin-top:24px;}
-  .dark h2{margin-top:0;color:#fff;}
-  .dark .g{color:var(--gold);}
-  .dark p{color:#dcdcdc;}
+  .dark h2{margin-top:0;color:#fff;} .dark .g{color:var(--gold);} .dark p{color:#dcdcdc;}
   .vrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;}
   @media(max-width:760px){.vrow{grid-template-columns:1fr;}}
   .vcell{border:1px solid #3a3a3a;border-radius:var(--rs);padding:16px 18px;}
-  .vcell .from{color:var(--sub2);font-size:.85rem;}
-  .vcell .to{color:var(--gold);font-weight:700;font-family:var(--fh);font-size:1.05rem;margin-top:3px;}
+  .vcell .from{color:var(--sub2);font-size:.85rem;} .vcell .to{color:var(--gold);font-weight:700;font-family:var(--fh);font-size:1.05rem;margin-top:3px;}
   .big-money{background:var(--ink);color:#fff;border-radius:var(--r);padding:28px;margin-top:18px;text-align:center;}
-  .big-money .m{font-size:2.5rem;font-weight:800;font-family:var(--fh);}
-  .big-money .m span{color:var(--gold);}
-  /* calculator */
+  .big-money .m{font-size:2.5rem;font-weight:800;font-family:var(--fh);} .big-money .m span{color:var(--gold);}
   .calc{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:24px;margin-top:18px;box-shadow:var(--sh);}
   .calc .row{display:flex;align-items:center;gap:14px;margin:14px 0;flex-wrap:wrap;}
-  .calc label{flex:1 1 240px;font-weight:600;font-size:.95rem;}
+  .calc label{flex:1 1 250px;font-weight:600;font-size:.95rem;}
   .calc label small{display:block;color:var(--sub);font-weight:400;font-size:.8rem;}
   .calc input[type=number]{width:120px;padding:8px 10px;border:1px solid var(--line);border-radius:var(--rs);font-size:1rem;font-family:var(--fb);}
   .calc input[type=range]{flex:1 1 200px;accent-color:var(--gold);}
   .homeval{font-size:1.6rem;font-weight:800;color:var(--gold-deep);font-family:var(--fh);min-width:60px;text-align:right;}
+  .seg{border-top:1px dashed var(--line);margin:18px 0 6px;padding-top:10px;font-family:var(--fh);font-weight:700;font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-deep);}
   .out{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;}
   @media(max-width:680px){.out{grid-template-columns:1fr;}}
   .ocard{border-radius:var(--r);padding:22px;text-align:center;}
-  .ocard.b{background:var(--ink);color:#fff;}
-  .ocard.a{background:var(--soft);border:1px solid var(--line);}
-  .ocard .lbl{font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);font-family:var(--fh);font-weight:600;}
-  .ocard.b .lbl{color:var(--sub2);}
-  .ocard .big2{font-size:2.2rem;font-weight:800;font-family:var(--fh);margin:6px 0 2px;}
-  .ocard.b .big2{color:var(--gold);} .ocard.a .big2{color:var(--gold-deep);}
+  .ocard.b{background:var(--ink);color:#fff;} .ocard.a{background:var(--soft);border:1px solid var(--line);}
+  .ocard .lbl{font-size:.82rem;text-transform:uppercase;letter-spacing:.04em;color:var(--sub);font-family:var(--fh);font-weight:600;} .ocard.b .lbl{color:var(--sub2);}
+  .ocard .big2{font-size:2.2rem;font-weight:800;font-family:var(--fh);margin:6px 0 2px;} .ocard.b .big2{color:var(--gold);} .ocard.a .big2{color:var(--gold-deep);}
   .ocard .yr1{font-size:.9rem;color:var(--sub);} .ocard.b .yr1{color:#cfcfcf;}
-  details{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-top:14px;overflow:hidden;}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.93rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-weight:700;color:var(--sub);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;font-family:var(--fh);}
+  td.r{text-align:right;font-family:var(--fh);font-weight:700;}
+  details{background:#fff;border:1px solid var(--line);border-radius:var(--r);margin-top:14px;overflow:hidden;box-shadow:var(--sh);}
   summary{cursor:pointer;padding:16px 20px;font-weight:700;font-family:var(--fh);list-style:none;display:flex;justify-content:space-between;}
-  summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";font-size:1.3rem;color:var(--gold-deep);}
+  summary::-webkit-details-marker{display:none;} summary::after{content:"+";font-size:1.3rem;color:var(--gold-deep);}
   details[open] summary::after{content:"\2013";}
-  details .body{padding:0 20px 18px;font-size:.93rem;color:#333;}
-  details .body code{background:var(--soft);padding:2px 6px;border-radius:5px;}
+  details .body{padding:0 20px 18px;font-size:.93rem;color:#333;} details .body code{background:var(--soft);padding:2px 6px;border-radius:5px;}
+  .steps{counter-reset:s;list-style:none;margin-top:8px;}
+  .steps li{counter-increment:s;padding:12px 0 12px 42px;position:relative;border-top:1px solid var(--line);}
+  .steps li:first-child{border-top:none;}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:11px;width:28px;height:28px;background:var(--gold);color:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:.85rem;}
+  .steps .t{font-family:var(--fh);font-weight:700;} .steps .when{color:var(--gold-deep);font-size:.85rem;font-weight:600;}
   .cta{margin-top:44px;background:var(--ink);color:#fff;border-radius:var(--r);padding:34px;text-align:center;}
   .cta a{display:inline-block;margin-top:16px;background:var(--gold);color:var(--ink);text-decoration:none;font-family:var(--fh);font-weight:700;padding:13px 28px;border-radius:var(--rs);}
   .cta a:hover{background:var(--gold-dark);}
@@ -99,25 +91,23 @@
 
   <div class="subnav">
     <a href="townwest-credibility.html">→ Who's behind Welgo</a>
+    <a href="#listing">→ How to bring a listing</a>
+    <a href="#calc">→ Earnings calculator</a>
     <a href="index.html">→ What your owners get</a>
-    <a href="operator.html">→ The operator program</a>
-    <a href="#calc">→ Your earnings calculator</a>
-    <a href="townwest-faq.html">→ FAQ</a>
+    <a href="townwest-faq.html">→ FAQ + how the model works</a>
   </div>
 
-  <!-- VISION -->
   <div class="dark">
     <h2 style="border:none;"><span class="g">Be your own boss</span> — with an engine that never sleeps.</h2>
     <p>Today you're a generalist, juggling sales, long-term, STR, guests at midnight, pricing you don't have time to optimize. STR is the heaviest, least scalable part of your shop. It eats your nights and caps your growth.</p>
-    <p>Bring your short-term rentals under our command and that flips. You command a Tucson STR operation. Your name on the door. Welgo's engine runs pricing, 24/7 guest support, channels, and reviews behind you, 24 hours a day. You own the relationships and the upside. Every door you add compounds your income instead of your workload.</p>
+    <p>Bring your short-term rentals under our command and that flips. You command a Tucson STR operation. Your name on the door. Welgo's engine runs pricing, 24/7 guest support, channels, and reviews behind you, around the clock. You own the relationships and the upside. Every door you add compounds your income instead of your workload.</p>
     <div class="vrow">
       <div class="vcell"><div class="from">Today</div><div class="to">Doing every job yourself</div></div>
-      <div class="vcell"><div class="from">With Welgo</div><div class="to">Running a business that runs itself</div></div>
+      <div class="vcell"><div class="from">With Welgo</div><div class="to">A business that runs itself</div></div>
       <div class="vcell"><div class="from">Today</div><div class="to">STR caps your growth</div></div>
-      <div class="vcell"><div class="from">With Welgo</div><div class="to">Each door compounds your income</div></div>
+      <div class="vcell"><div class="from">With Welgo</div><div class="to">Each door compounds income</div></div>
       <div class="vcell"><div class="from">Today</div><div class="to">Generalist, spread thin</div></div>
       <div class="vcell"><div class="from">With Welgo</div><div class="to">The Tucson STR operator</div></div>
-      <div class="vcell"><div class="from">Either way</div><div class="to">You stay front and center</div></div>
     </div>
   </div>
 
@@ -128,49 +118,87 @@
     <div class="pcard"><div class="n">~4×</div><h3>vs the market</h3><p>Same house, our engine. That's your owner pitch.</p></div>
   </div>
 
-  <h2><span class="bar"></span>Three ways you get paid</h2>
-  <div class="pay">
-    <div class="pcard"><div class="n">Finder</div><h3>Bring owners</h3><p>Signing bonus per owner, <span class="hl">plus a recurring cut of our fee</span> for as long as the home stays on. Passive. Compounds.</p></div>
-    <div class="pcard"><div class="n">7%</div><h3>Run the ground</h3><p>Of gross, on homes your crew handles (turnover QC, owner face, access). We do the heavy ops.</p></div>
-    <div class="pcard"><div class="n">Markup</div><h3>Maintenance</h3><p>Repairs route through your vendors. You keep your margin.</p></div>
-  </div>
+  <h2><span class="bar"></span>Three ways you get paid — in plain terms</h2>
+  <p>One owner pays one management fee. We split that fee, plus maintenance, by who does what. Here's each piece, what it means, and why it exists.</p>
+  <details open><summary>1. Finder — you bring the owner</summary><div class="body">
+    <p><b>What you get:</b> a one-time signing bonus when an owner you introduced comes on, plus a <span class="hl">recurring slice of the management fee Welgo earns on that home</span>, every year it stays with us.</p>
+    <p><b>Why it exists:</b> origination is valuable and durable. You opened the door once; you keep earning while we keep the owner happy. It rewards you for growing the book.</p>
+    <p><b>The math:</b> <code>Welgo fee = gross × 18.5%</code>. Your finder slice = <code>Welgo fee × 12%</code>. On a $29,314 home that's <code>~$651/yr</code> + a $500 bonus in year one.</p>
+  </div></details>
+  <details><summary>2. Boots — your crew runs the ground</summary><div class="body">
+    <p><b>What you get:</b> a percent of the home's gross revenue, on homes where your crew handles the local work: turnover quality checks, owner face-time, key/access.</p>
+    <p><b>Why it exists:</b> someone local has to own quality on the ground. That's real, recurring work, so it's paid as a share of what the home earns, which keeps you aligned with revenue.</p>
+    <p><b>The math:</b> <code>gross × 7%</code>. On a $29,314 home that's <code>~$2,052/yr</code>. We handle pricing, guest comms, channels, reviews. You handle local presence.</p>
+  </div></details>
+  <details><summary>3. Maintenance — your margin on repairs</summary><div class="body">
+    <p><b>What you get:</b> repairs and upkeep route through your vendors and crew. You charge your normal markup on that work and <span class="hl">keep the margin</span>.</p>
+    <p><b>Why it's a margin, not a flat fee:</b> it depends on real spend. If a home needs ~$2,500 of maintenance in a year and you run it at a 15% markup, your margin is <code>~$375</code> on that home. More work, more margin. No work, no charge. It's honest because it tracks reality.</p>
+    <p><b>The math:</b> <code>annual maintenance spend × your markup %</code>. Adjust both in the calculator below.</p>
+  </div></details>
 
-  <h2 id="calc"><span class="bar"></span>Your earnings — adjust anything</h2>
-  <p>Pre-filled with our real Tucson numbers. Change any assumption. The math updates live.</p>
+  <h2 id="calc"><span class="bar"></span>Your earnings — every number is adjustable</h2>
+  <p>Pre-filled with our real Tucson averages and reasonable defaults. Change anything. The math updates live, and the breakdown below shows exactly how each dollar is built.</p>
   <div class="calc">
     <div class="row"><label>Homes you bring</label><input type="range" id="homes" min="1" max="50" value="10"><span class="homeval" id="homesVal">10</span></div>
+
+    <div class="seg">The home</div>
     <div class="row"><label>Gross revenue / home / yr <small>Welgo Tucson avg = $29,314</small></label><input type="number" id="gross" value="29314" step="500"></div>
-    <div class="row"><label>Welgo management fee <small>% of gross (full-service)</small></label><input type="number" id="mgmt" value="18.5" step="0.5"></div>
-    <div class="row"><label>Finder — recurring <small>% of Welgo's fee, ongoing</small></label><input type="number" id="finderPct" value="12" step="1"></div>
-    <div class="row"><label>Finder — signing bonus <small>$ per owner, year 1</small></label><input type="number" id="bounty" value="500" step="100"></div>
-    <div class="row"><label>Boots fee <small>% of gross, homes you run ground on</small></label><input type="number" id="boots" value="7" step="1"></div>
-    <div class="row"><label>Maintenance margin <small>$ / home / yr (your markup)</small></label><input type="number" id="maint" value="1200" step="100"></div>
+    <div class="row"><label>Welgo management fee <small>% of gross, full-service</small></label><input type="number" id="mgmt" value="18.5" step="0.5"></div>
+
+    <div class="seg">Finder — bringing owners</div>
+    <div class="row"><label>Your slice of Welgo's fee <small>% of the fee, recurring</small></label><input type="number" id="finderPct" value="12" step="1"></div>
+    <div class="row"><label>Signing bonus <small>$ per owner, year 1 only</small></label><input type="number" id="bounty" value="500" step="100"></div>
+
+    <div class="seg">Boots — running the ground</div>
+    <div class="row"><label>Boots fee <small>% of gross, homes your crew runs</small></label><input type="number" id="boots" value="7" step="1"></div>
+
+    <div class="seg">Maintenance — your repair margin</div>
+    <div class="row"><label>Maintenance spend / home / yr <small>typical repairs + upkeep</small></label><input type="number" id="maintSpend" value="2500" step="250"></div>
+    <div class="row"><label>Your markup on that work <small>%</small></label><input type="number" id="maintMarkup" value="15" step="1"></div>
+
     <div class="out">
-      <div class="ocard a"><div class="lbl">Path A — Finder Light (refer only)</div><div class="big2" id="aRec">$6,510</div><div class="yr1">recurring / yr · <span id="aYr1">$11,510</span> year 1</div></div>
-      <div class="ocard b"><div class="lbl">Path B — Full Operator (all 3 lines)</div><div class="big2" id="bRec">$39,030</div><div class="yr1">recurring / yr · <span id="bYr1">$44,030</span> year 1</div></div>
+      <div class="ocard a"><div class="lbl">Path A — Finder only</div><div class="big2" id="aRec">$6,510</div><div class="yr1">recurring / yr · <span id="aYr1">$11,510</span> year 1</div></div>
+      <div class="ocard b"><div class="lbl">Path B — Full Operator (all 3)</div><div class="big2" id="bRec">$30,780</div><div class="yr1">recurring / yr · <span id="bYr1">$35,780</span> year 1</div></div>
     </div>
   </div>
 
-  <details>
-    <summary>Show the math</summary>
-    <div class="body">
-      <p>Per home, per year:</p>
-      <p><b>Welgo fee</b> = gross × mgmt% → <code id="mFee">$5,423</code></p>
-      <p><b>Finder recurring</b> = Welgo fee × finder% → <code id="mFinder">$651</code></p>
-      <p><b>Boots</b> = gross × boots% → <code id="mBoots">$2,052</code></p>
-      <p><b>Maintenance</b> = your markup → <code id="mMaint">$1,200</code></p>
-      <hr style="border:none;border-top:1px solid var(--line);margin:12px 0;">
-      <p><b>Path A / home</b> = finder recurring → <code id="mA">$651</code> (+ bonus yr 1)</p>
-      <p><b>Path B / home</b> = finder + boots + maintenance → <code id="mB">$3,903</code> (+ bonus yr 1)</p>
-      <p style="color:var(--sub);">Totals = per-home × homes. Year 1 adds signing bonus × homes. Illustrative + negotiable; exact splits papered once we pick the first units.</p>
-    </div>
-  </details>
+  <details><summary>See the full breakdown (per home, per year)</summary><div class="body">
+    <table>
+      <tr><th>Line</th><th>How it's built</th><th style="text-align:right;">Per home / yr</th></tr>
+      <tr><td>Welgo management fee</td><td>gross × mgmt%</td><td class="r" id="mFee">$5,423</td></tr>
+      <tr><td>Finder (recurring)</td><td>fee × finder%</td><td class="r" id="mFinder">$651</td></tr>
+      <tr><td>Boots</td><td>gross × boots%</td><td class="r" id="mBoots">$2,052</td></tr>
+      <tr><td>Maintenance margin</td><td>spend × markup%</td><td class="r" id="mMaint">$375</td></tr>
+      <tr><td><b>Path A / home</b></td><td>finder only</td><td class="r" id="mA">$651</td></tr>
+      <tr><td><b>Path B / home</b></td><td>finder + boots + maintenance</td><td class="r" id="mB">$3,078</td></tr>
+    </table>
+    <p style="color:var(--sub);margin-top:10px;">Totals = per-home × homes. Year 1 adds the signing bonus once per owner. All rates illustrative and negotiable; we paper exact splits when we pick the first units.</p>
+  </div></details>
 
   <div class="big-money">
     <div>Full Operator at scale</div>
-    <div class="m" id="heroNum">~$195K / yr</div>
+    <div class="m" id="heroNum">~$154K / yr</div>
     <div style="opacity:.85;margin-top:4px;">at 50 homes — your brand, your owners, your crew on the ground, our engine doing the heavy lift.</div>
   </div>
+
+  <h2 id="listing"><span class="bar"></span>Bringing a new listing — what it takes</h2>
+  <p>This is the part you control, and it's light. Here's exactly what happens, what we need from you, and how long it takes to go live.</p>
+  <ol class="steps">
+    <li><span class="t">You introduce the owner.</span> <span class="when">~30 min</span><br>A warm intro and a quick conversation. You're the trusted local name; we bring the numbers. We can join the call or you run it with our one-pager.</li>
+    <li><span class="t">We onboard the home.</span> <span class="when">days 1–7</span><br>Listing copy, photos check, pricing setup, channel connections (Airbnb + Booking + VRBO + direct), guest systems. We do this, not you.</li>
+    <li><span class="t">Your crew sets the ground.</span> <span class="when">days 3–7</span><br>One walkthrough, confirm the cleaning + access plan, log the turnover checklist we provide.</li>
+    <li><span class="t">Home goes live.</span> <span class="when">~1–2 weeks from intro</span><br>Bookings start. Your finder and boots income begins the first month it earns.</li>
+  </ol>
+  <p class="note"><b>Your time per listing:</b> roughly 2–4 hours total, mostly the owner relationship. Welgo absorbs the heavy onboarding. <b>Time to live:</b> typically 1–2 weeks from the owner saying yes.</p>
+
+  <h2><span class="bar"></span>What we ask of you</h2>
+  <div class="gg">
+    <div class="box"><b>Be the local face</b>Own the owner relationship. Quick, honest communication. You're the name they trust.</div>
+    <div class="box"><b>Hold the quality bar</b>Your crew hits our turnover standard (we give you the checklist + photo proof format). Clean home, every guest.</div>
+    <div class="box"><b>Move on maintenance</b>Acknowledge issues fast, route repairs through your vendors, keep homes guest-ready.</div>
+    <div class="box"><b>Bring owners</b>Introduce owners who'd benefit. We handle the pitch with their real numbers.</div>
+  </div>
+  <p class="note">Quality is tracked simply: fast acknowledgements, full turnover photo packs, low complaint rate. Hit the bar and you earn first pick on new homes as we grow. <span class="hl">[Confirm: tie this to the operator green-week / KPI bonus?]</span></p>
 
   <h2><span class="bar"></span>You stay front and center</h2>
   <div class="gg">
@@ -193,18 +221,18 @@
     <a href="mailto:ed@welgo.space?subject=Town%20West%20%C3%97%20Welgo%20Partnership">Start the conversation</a>
   </div>
 
-  <div class="foot">Town West Realty × Welgo. Tucson operator partnership. Numbers modeled on Welgo's live Tucson portfolio; illustrative and negotiable. DRAFT v3 — 2026-06-02.</div>
+  <div class="foot">Town West Realty × Welgo. Tucson operator partnership. Numbers modeled on Welgo's live Tucson portfolio; illustrative and negotiable. DRAFT v4 — 2026-06-02.</div>
 
 </div>
 <script>
   const $ = id => document.getElementById(id);
   const fmt = n => '$' + Math.round(n).toLocaleString();
-  const ids = ['homes','gross','mgmt','finderPct','bounty','boots','maint'];
+  const ids = ['homes','gross','mgmt','finderPct','bounty','boots','maintSpend','maintMarkup'];
   function calc(){
     const homes=+$('homes').value, gross=+$('gross').value||0, mgmt=(+$('mgmt').value||0)/100,
       finderPct=(+$('finderPct').value||0)/100, bounty=+$('bounty').value||0,
-      boots=(+$('boots').value||0)/100, maint=+$('maint').value||0;
-    const fee=gross*mgmt, finder=fee*finderPct, bootsAmt=gross*boots;
+      boots=(+$('boots').value||0)/100, mSpend=+$('maintSpend').value||0, mMark=(+$('maintMarkup').value||0)/100;
+    const fee=gross*mgmt, finder=fee*finderPct, bootsAmt=gross*boots, maint=mSpend*mMark;
     const perA=finder, perB=finder+bootsAmt+maint;
     $('homesVal').textContent=homes;
     $('aRec').textContent=fmt(perA*homes); $('aYr1').textContent=fmt(perA*homes+bounty*homes);
