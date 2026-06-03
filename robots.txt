@@ -1,3 +1,15 @@
 User-agent: *
 Allow: /
-Sitemap: https://edgomberg.github.io/welgo-pages/sitemap.xml
+
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://welgo.space/sitemap.xml
