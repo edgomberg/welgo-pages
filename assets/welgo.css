@@ -1,4 +1,4 @@
-/* Welgo Design System v2 — editorial-luxury (terracotta/cream, Cinzel/Playfair/DM Sans).
+/* Welgo Design System v2 . editorial-luxury (terracotta/cream, Cinzel/Playfair/DM Sans).
    Full-screen video hero, fluid type + space, eased scrim, tonal seamless sections. */
 :root{
   /* Palette (warm desert, refined) */
@@ -70,7 +70,7 @@ img{display:block;max-width:100%}
   .navtoggle{display:inline-block;background:none;border:1px solid var(--w-line);border-radius:6px;padding:8px 12px;font-weight:600;cursor:pointer;font-family:var(--w-body)}
   .nav nav.open{display:flex;position:absolute;top:60px;left:0;right:0;flex-direction:column;background:var(--w-bg);border-bottom:1px solid var(--w-line);padding:16px var(--sec-x);gap:16px}
 }
-/* HERO — full screen */
+/* HERO . full screen */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--w-ink);color:#fff;text-align:center}
 .hero-media{position:absolute;inset:0;z-index:0}
 .hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover}
