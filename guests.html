@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Direct &amp; Save · Welgo Vacation Rentals</title>
+<meta name="description" content="Book Welgo vacation rentals direct in Tucson, Woodland Park, and Manila. No booking fees, guest-loved homes, save up to 15% vs Airbnb and VRBO.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/welgo.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-in">
+    <a class="brand" href="index.html">Wel<b>go</b></a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">Menu</button>
+    <nav id="nav">
+      <a href="guests.html">Book a stay</a>
+      <a href="homeowners.html">Homeowners</a>
+      <a href="about.html">Who we are</a>
+      <a href="operator.html">Operators</a>
+      <a class="btn" href="https://www.welgo.space/welgo/theme/welgo">Book direct</a>
+    </nav>
+  </div>
+</header>
+
+<!-- GUEST HERO (full-bleed, video-ready: poster is a real Welgo home; drop guest-hero.mp4 to upgrade) -->
+<section class="hero">
+  <div class="hero-media">
+    <img src="assets/img/guest-hero.jpeg" alt="Welgo vacation rental home" fetchpriority="high" width="1600" height="900">
+    <!-- VIDEO: Ed to supply assets/guest-hero.mp4 (B-roll: the homes, pool, desert, check-in). Drops in zero-code. -->
+    <video autoplay muted loop playsinline preload="none" poster="assets/img/guest-hero.jpeg" aria-hidden="true">
+      <source src="assets/guest-hero.webm" type="video/webm">
+      <source src="assets/guest-hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-in">
+    <span class="kicker" style="color:var(--w-gold)">Book direct with Welgo</span>
+    <h1 style="margin-top:14px">Skip the fees. Keep the perks. <span class="g">Save up to 15%.</span></h1>
+    <p class="lead">Guest-loved homes in Tucson, Woodland Park, and Manila. Book direct, pay no platform booking fees, and get hotel-standard 24/7 support on every stay.</p>
+    <div class="hero-cta">
+      <a class="btn" href="https://www.welgo.space/welgo/theme/welgo">Book your stay</a>
+      <a class="btn btn-ghost" href="#destinations">Choose a destination</a>
+    </div>
+    <div class="trust-strip">
+      <span><b>No</b> booking fees</span>
+      <span><b>Up to 15%</b> off vs Airbnb / VRBO</span>
+      <span><b>24/7</b> guest support</span>
+    </div>
+  </div>
+</section>
+
+<!-- DESTINATIONS -->
+<section class="sec" id="destinations">
+  <div class="wrap">
+    <h2><span class="bar"></span>Choose your destination</h2>
+    <p class="sub">Every home is verified, guest-loved, and bookable direct.</p>
+    <div class="grid g3" style="margin-top:24px">
+      <a class="dcard" href="https://www.welgo.space/welgo/theme/welgo?cities=Tucson">
+        <img src="assets/img/dest-tucson.jpeg" alt="Tucson vacation rental">
+        <div class="b"><h3>Tucson, Arizona</h3><span>Desert homes, pools, pet-friendly.</span><div class="go">See homes &rarr;</div></div>
+      </a>
+      <a class="dcard" href="https://www.welgo.space/welgo/theme/welgo?cities=Woodland+Park">
+        <img src="assets/img/dest-woodland.jpeg" alt="Woodland Park vacation rental">
+        <div class="b"><h3>Woodland Park, Colorado</h3><span>Mountain escapes near Pikes Peak.</span><div class="go">See homes &rarr;</div></div>
+      </a>
+      <a class="dcard" href="https://www.welgo.space/welgo/theme/welgo?cities=Quezon+City">
+        <img src="assets/img/dest-manila.jpeg" alt="Manila vacation rental">
+        <div class="b"><h3>Manila, Philippines</h3><span>City stays, modern condos.</span><div class="go">See homes &rarr;</div></div>
+      </a>
+    </div>
+    <div class="center" style="margin-top:26px"><a class="btn btn-line" href="https://www.welgo.space/welgo/theme/welgo">See all homes</a></div>
+  </div>
+</section>
+
+<!-- WHY BOOK DIRECT -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>Why book direct with Welgo</h2>
+    <div class="grid g3" style="margin-top:20px">
+      <div class="card"><h3>Save up to 15%</h3><p>No Airbnb or VRBO service fee. The savings go to you, not the platform.</p></div>
+      <div class="card"><h3>Real 24/7 support</h3><p>Hotel-standard guest team. Replies in minutes, any hour, every stay.</p></div>
+      <div class="card"><h3>Verified, guest-loved homes</h3><p>Every home is managed and inspected by Welgo. No surprises at check-in.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECK IN CHILL OUT -->
+<section class="sec">
+  <div class="wrap">
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <h2><span class="bar"></span>Check in. Chill out.</h2>
+        <p class="sub">Self check-in, fast Wi-Fi, fresh hotel linens, and a local team a text away. We run every home so your stay just works.</p>
+        <div style="margin-top:18px"><a class="btn" href="https://www.welgo.space/welgo/theme/welgo">Find your stay</a></div>
+      </div>
+      <div><img src="assets/img/prop1.jpeg" alt="Welgo home interior" style="width:100%;border-radius:var(--w-radius);box-shadow:var(--w-shadow)"></div>
+    </div>
+  </div>
+</section>
+
+<!-- GUEST REVIEWS -->
+<section class="sec sec-soft">
+  <div class="wrap">
+    <h2><span class="bar"></span>What our guests say</h2>
+    <!-- ASSET: Ed to supply 3 real guest reviews (Airbnb/VRBO export). Placeholders below. -->
+    <div class="grid g3" style="margin-top:20px">
+      <div class="quote"><p style="font-size:1rem">"Placeholder guest review. Pull 3 real 5-star quotes from Airbnb/VRBO."</p><div class="by">★★★★★ Guest, Tucson</div></div>
+      <div class="quote"><p style="font-size:1rem">"Placeholder guest review."</p><div class="by">★★★★★ Guest, Woodland Park</div></div>
+      <div class="quote"><p style="font-size:1rem">"Placeholder guest review."</p><div class="by">★★★★★ Guest, Manila</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEED TO KNOW -->
+<section class="sec">
+  <div class="wrap">
+    <h2><span class="bar"></span>Need to know</h2>
+    <details><summary>How do I save by booking direct?</summary><div class="body">Airbnb and VRBO add a guest service fee, usually 12 to 15%. Book on welgo.space and you skip it. Same home, same team, lower total.</div></details>
+    <details><summary>Is the home the same as on Airbnb?</summary><div class="body">Yes. The same Welgo-managed homes, the same photos and reviews, booked direct.</div></details>
+    <details><summary>What if I need help during my stay?</summary><div class="body">Our 24/7 guest team is a text away. Replies in minutes, any hour.</div></details>
+    <details><summary>How do I check in?</summary><div class="body">Self check-in with a code we send before arrival. No keys, no waiting.</div></details>
+    <details><summary>Is my booking protected?</summary><div class="body">Yes. Secure payment and a clear cancellation policy shown at checkout.</div></details>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec dark center">
+  <div class="wrap">
+    <h2>Your next stay, booked direct</h2>
+    <p class="sub" style="margin:10px auto 22px">Guest-loved homes. No booking fees. Up to 15% savings.</p>
+    <a class="btn" href="https://www.welgo.space/welgo/theme/welgo">Book your stay</a>
+  </div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div><a class="brand" href="index.html">Wel<b style="color:var(--w-gold)">go</b></a><p style="color:rgba(255,255,255,.7);max-width:34ch">Book-direct vacation rentals + Tucson rental management. Run like a hotel.</p></div>
+      <div><h4>Guests</h4><ul><li><a href="https://www.welgo.space/welgo/theme/welgo">Book a stay</a></li><li><a href="https://www.welgo.space/welgo/theme/welgo?cities=Tucson">Tucson</a></li><li><a href="https://www.welgo.space/welgo/theme/welgo?cities=Woodland+Park">Woodland Park</a></li><li><a href="https://www.welgo.space/welgo/theme/welgo?cities=Quezon+City">Manila</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="homeowners.html">Homeowners</a></li><li><a href="about.html">Who's behind Welgo</a></li><li><a href="operator.html">Operators</a></li><li><a href="mailto:ed@welgo.space">ed@welgo.space</a></li></ul></div>
+    </div>
+    <div class="fine">Welgo. Book-direct vacation rentals in Tucson, Woodland Park, and Manila. Bookings powered by our secure direct platform.</div>
+  </div>
+</footer>
+</body>
+</html>

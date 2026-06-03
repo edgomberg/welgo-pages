@@ -133,6 +133,14 @@ details .body{padding:0 20px 18px;color:var(--w-sub)}
 .sticky-cta span{font-weight:600;font-size:.95rem}
 .sticky-cta b{color:var(--w-gold)}
 @media(max-width:560px){.sticky-cta span{display:none}}
+/* Destination / property cards (guest) */
+.dcard{border:1px solid var(--w-line);border-radius:var(--w-radius);overflow:hidden;background:#fff;box-shadow:var(--w-shadow);text-decoration:none;color:var(--w-ink);display:block;transition:box-shadow .2s,transform .2s}
+.dcard img{width:100%;height:210px;object-fit:cover;display:block}
+.dcard .b{padding:18px 20px}
+.dcard .b h3{margin-bottom:2px}
+.dcard .b span{color:var(--w-sub);font-size:.92rem}
+.dcard:hover{box-shadow:0 8px 30px rgba(0,0,0,.12);transform:translateY(-2px)}
+.dcard .go{color:var(--w-gold-deep);font-weight:700;font-family:var(--w-head);font-size:.9rem;margin-top:8px;display:inline-block}
 /* Credibility bar */
 .cred{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;justify-content:center;padding:18px 22px;border-bottom:1px solid var(--w-line);background:#fff}
 .cred span{font-size:.92rem;color:var(--w-sub);font-weight:600;display:flex;align-items:center;gap:7px}
