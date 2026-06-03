@@ -122,6 +122,20 @@ h2 .bar{margin-bottom:3px}
 .dcard:hover{box-shadow:var(--w-shadow)}
 .dcard:hover img{transform:scale(1.05)}
 .dcard .go{color:var(--w-gold-deep);font-weight:500;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;margin-top:.7em;display:inline-block}
+/* Partner / customer logo strip */
+.logos{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(1.2rem,3vw,3rem);margin-top:var(--s4)}
+.logo-chip{font-family:var(--w-head);font-weight:500;font-size:clamp(1rem,1.6vw,1.3rem);letter-spacing:.01em;color:var(--w-sub);opacity:.78;display:flex;align-items:center;gap:.5em;transition:opacity .3s,color .3s}
+.logo-chip:hover{opacity:1;color:var(--w-ink)}
+.logo-chip img{height:34px;width:auto;filter:grayscale(1);opacity:.7;transition:filter .3s,opacity .3s}
+.logo-chip:hover img{filter:none;opacity:1}
+.logo-chip .mark{font-family:var(--w-display);font-weight:600;color:var(--w-gold-deep)}
+/* Audience cards (who we work with) */
+.aud{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,2.5vw,2rem);margin-top:var(--s4)}
+@media(max-width:860px){.aud{grid-template-columns:1fr}}
+.aud .a{border:1px solid var(--w-line);border-radius:var(--w-radius);background:var(--w-bg);padding:var(--s4)}
+.aud .a .ic{font-family:var(--w-display);font-weight:600;color:var(--w-gold-deep);font-size:1.1rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.5em}
+.aud .a h3{font-family:var(--w-head);font-weight:400;margin-bottom:.3em}
+.aud .a p{color:var(--w-sub);font-size:.96rem}
 /* Credibility bar */
 .cred{display:flex;flex-wrap:wrap;align-items:center;gap:12px 34px;justify-content:center;padding:20px var(--sec-x);background:var(--w-bg);border-bottom:1px solid var(--w-line)}
 .cred span{font-size:.9rem;color:var(--w-sub);font-weight:400;display:flex;align-items:center;gap:7px}
