@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Max &middot; A flat monthly payment, on management</title>
+<title>Max &middot; A steady monthly check, all yours</title>
 <style>
   :root{--paper:#f6f3ec;--ink:#221f1a;--soft:#6f665b;--sage:#3f6b5a;--rule:#e2dccf;--warm:#efe9dd;--terra:#a8623c;}
   *{box-sizing:border-box;margin:0;padding:0;}
@@ -18,24 +18,23 @@
   section{padding:30px 0;border-top:1px solid var(--rule);}
   section:first-of-type{border-top:none;}
   h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.4rem;font-weight:600;margin-bottom:8px;letter-spacing:-0.01em;}
-  h3{font-size:1.02rem;font-weight:600;color:var(--ink);margin:14px 0 2px;}
+  h3{font-size:1.05rem;font-weight:600;color:var(--ink);margin:0 0 4px;}
   p{color:var(--soft);font-size:1.04rem;margin:10px 0;}
   p strong,p b{color:var(--ink);}
   ul,ol{padding-left:20px;margin:10px 0;}
   li{color:var(--soft);font-size:1.04rem;margin:7px 0;}
   li strong{color:var(--ink);}
-  .case{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:16px 20px;margin:12px 0;}
-  .case h3{margin-top:0;}
+  .opt{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:16px 20px;margin:12px 0;}
+  .opt.pick{border-color:var(--sage);border-width:2px;}
+  .tag{display:inline-block;font-size:.74rem;font-weight:600;color:var(--sage);text-transform:uppercase;letter-spacing:.04em;margin-bottom:4px;}
   table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.98rem;}
   td,th{text-align:left;padding:8px 6px;border-bottom:1px solid var(--rule);}
   td.r,th.r{text-align:right;}
   .sub td{color:var(--soft);}
   .tot td{font-weight:600;color:var(--ink);border-top:2px solid var(--ink);}
   .pay td{font-weight:600;color:var(--sage);}
-  .gap td{font-weight:600;color:var(--terra);}
+  .res td{color:var(--terra);font-weight:600;}
   .note{font-size:.9rem;color:#9a9081;font-style:italic;}
-  .flag{background:var(--warm);border-radius:4px;padding:14px 18px;margin:16px 0;font-size:.95rem;color:var(--soft);}
-  .flag b{color:var(--ink);}
   .ask{background:var(--warm);border-radius:4px;padding:30px 28px;margin:38px 0;}
   .ask a{color:var(--terra);font-weight:600;}
   footer{color:#9a9081;font-size:.82rem;padding:26px 0 54px;border-top:1px solid var(--rule);}
@@ -47,107 +46,86 @@
 
   <header>
     <div class="mark"><b>Max Martin</b> &times; <b>Welgo</b> &middot; Santa Rita + Hoff</div>
-    <h1>A flat monthly payment your bank can rely on, on a management deal.</h1>
-    <p class="lede">Straight walkthrough, no pitch. You get one fixed number every month. Underneath, we run the units as a manager. Here is exactly how that works, who carries the risk, and how it reconciles.</p>
+    <h1>A steady check every month. All of it your money.</h1>
+    <p class="lede">No pitch, just how it works. We run your units, you get a level monthly check your bank can count on, and you keep every dollar the units earn. Here is the plain version, plus a couple of ways you can choose to be paid.</p>
   </header>
 
   <section>
-    <h2>The shape, in three lines</h2>
+    <h2>The idea in plain words</h2>
     <ul>
-      <li><strong>You get a fixed payment every month, same date.</strong> That is the number your bank sees. It does not move with bookings.</li>
-      <li><strong>Underneath, it is management, not a lease.</strong> We collect, run the units, take a fee. You keep ownership, no new personal guarantee.</li>
-      <li><strong>We carry the swing.</strong> Busy months and slow months are our problem to manage, not yours.</li>
+      <li><strong>We pay you a set amount every month, same date.</strong> That is the number your bank sees.</li>
+      <li><strong>We hold a little of your money back into your own reserve.</strong> Think of it as a savings cushion that belongs to you, not us.</li>
+      <li><strong>A slow month, the reserve tops up your check</strong> so it does not drop. A strong month, the reserve fills back up.</li>
+      <li><strong>It is all your money.</strong> We never keep the difference, and we never pay you more than your units actually earn. No gimmick. You see every dollar on a monthly statement.</li>
     </ul>
   </section>
 
   <section>
-    <h2>How the money moves each month</h2>
-    <ol>
-      <li><strong>We collect.</strong> Guest payments land in Welgo's account.</li>
-      <li><strong>We pay the unit's real costs + our fee</strong> (cleaning, utilities, supplies, maintenance, and the 18.75% management fee).</li>
-      <li><strong>We pay you the fixed amount,</strong> on a set date, whatever the month actually did.</li>
-      <li><strong>We reconcile every quarter</strong> (next section).</li>
-    </ol>
-  </section>
+    <h2>The monthly statement, so the counting is clear</h2>
+    <p>Same statement every month. Say your units net <strong>$11,000</strong> in a normal month and your set check is <strong>$8,800</strong> (80%).</p>
 
-  <section>
-    <h2>Who covers the gap when a month is slow?</h2>
-    <p>This is the part that matters. There are two different situations, and they are covered by two different people.</p>
-
-    <div class="case">
-      <h3>1. A timing dip, covered by your own good months</h3>
-      <p>Most slow months are just timing. A strong month earned more than your fixed payment, so we held the extra. When a slow month comes, we pay your fixed number using that held surplus. This is <strong>your own money, paid evenly</strong>. Welgo is not covering anything here, just smoothing the timing so your payment is flat.</p>
-    </div>
-
-    <div class="case">
-      <h3>2. A real shortfall, covered by Welgo</h3>
-      <p>If a <strong>whole quarter</strong> actually earns less than your floor (not just one slow month, the real total falls short), there is no surplus of yours to draw on. <strong>Welgo pays the difference out of its own pocket.</strong> That is the actual guarantee. It is capped, and Welgo only earns it back from future quarters that beat the floor. It is never billed to you. Your payment never moves either way.</p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Reconciliation: the two cases, with numbers</h2>
-    <p>Fixed payment in both examples is $10,000 a month ($30,000 a quarter). "Actual net" is after the unit costs and our fee.</p>
-
-    <h3>Normal quarter (your own money smooths it)</h3>
-    <table>
-      <tr><th>Month</th><th class="r">Actual net</th><th class="r">Paid to you</th></tr>
-      <tr class="sub"><td>Month 1</td><td class="r">$11,500</td><td class="r">$10,000</td></tr>
-      <tr class="sub"><td>Month 2 (slow)</td><td class="r">$8,500</td><td class="r">$10,000</td></tr>
-      <tr class="sub"><td>Month 3</td><td class="r">$12,000</td><td class="r">$10,000</td></tr>
-      <tr class="tot"><td>Quarter total</td><td class="r">$32,000</td><td class="r">$30,000</td></tr>
-      <tr class="pay"><td>Quarter-end true-up to you</td><td class="r"></td><td class="r">+$2,000</td></tr>
-    </table>
-    <p class="note">Units earned $32,000, above the $30,000 floor. Month 2's dip was covered by your own Month 1 and 3 surplus. At quarter end, the $2,000 you earned above the floor is paid to you. Welgo covered nothing; it just timed your money. You received $32,000, all of it.</p>
-
-    <h3>Down quarter (Welgo's guarantee covers it)</h3>
-    <table>
-      <tr><th>Month</th><th class="r">Actual net</th><th class="r">Paid to you</th></tr>
-      <tr class="sub"><td>Month 1</td><td class="r">$9,000</td><td class="r">$10,000</td></tr>
-      <tr class="sub"><td>Month 2</td><td class="r">$8,000</td><td class="r">$10,000</td></tr>
-      <tr class="sub"><td>Month 3</td><td class="r">$8,500</td><td class="r">$10,000</td></tr>
-      <tr class="tot"><td>Quarter total</td><td class="r">$25,500</td><td class="r">$30,000</td></tr>
-      <tr class="gap"><td>Welgo covered (from its own pocket)</td><td class="r"></td><td class="r">$4,500</td></tr>
-    </table>
-    <p class="note">Units earned only $25,500, below the $30,000 floor. You still received $30,000. Welgo paid the $4,500 difference from its own money. That advance is capped, and Welgo only recovers it from later quarters that run above the floor. It is never charged back to you.</p>
-  </section>
-
-  <section>
-    <h2>Your monthly statement (same format every owner gets)</h2>
-    <p>One reconciled statement each month, so you can see where every dollar went.</p>
+    <h3>Normal month</h3>
     <table>
       <tr><th>Line</th><th class="r">Amount</th></tr>
-      <tr><td>Gross booking revenue (nightly)</td><td class="r">A</td></tr>
-      <tr class="sub"><td>&minus; Platform / channel fees</td><td class="r">(b)</td></tr>
-      <tr class="sub"><td>&minus; Cleaning</td><td class="r">(c)</td></tr>
-      <tr class="sub"><td>&minus; Supplies &amp; restock</td><td class="r">(d)</td></tr>
-      <tr class="sub"><td>&minus; Utilities</td><td class="r">(e)</td></tr>
-      <tr class="sub"><td>&minus; Maintenance / repairs</td><td class="r">(f)</td></tr>
-      <tr class="sub"><td>&minus; Management fee (18.75% of revenue)</td><td class="r">(M)</td></tr>
-      <tr class="tot"><td>Actual net for the month</td><td class="r">A &minus; b..f &minus; M</td></tr>
-      <tr class="pay"><td>Paid to you (fixed)</td><td class="r">$10,000</td></tr>
+      <tr><td>Your net for the month (after costs + our fee)</td><td class="r">$11,000</td></tr>
+      <tr class="pay"><td>Paid to you (your set check)</td><td class="r">$8,800</td></tr>
+      <tr class="res"><td>Into your reserve</td><td class="r">+$2,200</td></tr>
+      <tr class="tot"><td>Your reserve balance</td><td class="r">$2,200 and growing</td></tr>
     </table>
+
+    <h3>Slow month</h3>
+    <table>
+      <tr><th>Line</th><th class="r">Amount</th></tr>
+      <tr><td>Your net for the month</td><td class="r">$7,000</td></tr>
+      <tr class="pay"><td>Paid to you (your set check, unchanged)</td><td class="r">$8,800</td></tr>
+      <tr class="res"><td>From your reserve to cover it</td><td class="r">&minus;$1,800</td></tr>
+      <tr class="tot"><td>Your reserve balance</td><td class="r">drops by $1,800</td></tr>
+    </table>
+    <p class="note">Your check stays $8,800 either way. In the slow month, the $1,800 came from your own reserve, not from Welgo. Strong months refill it. Every line shows on your statement, including the running reserve balance.</p>
+  </section>
+
+  <section>
+    <h2>Pick how you want to be paid</h2>
+    <p>All three are your money. The only difference is how much we hold back as your cushion.</p>
+
+    <div class="opt pick">
+      <span class="tag">Most owners pick this</span>
+      <h3>1. Steady 80% + reserve</h3>
+      <p>We pay you a level check at about 80% of your average net. The other 20% builds your reserve, which keeps your check level through slow months. Steadiest for your bank, and you still get the held-back money (it is yours, in reserve, and trued up).</p>
+    </div>
+    <div class="opt">
+      <h3>2. Steadier 90% + thinner reserve</h3>
+      <p>A bigger check at about 90%, smaller cushion. More cash in hand now, but the reserve runs thin, so in a long slow stretch the check has to step down sooner.</p>
+    </div>
+    <div class="opt">
+      <h3>3. Take it all, variable</h3>
+      <p>You take your full net every month, no reserve, no smoothing. Simplest, but the number moves up and down, which your bank may not like.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>The honest part</h2>
+    <p>We do not promise a number bigger than your units earn. If a long stretch genuinely underperforms and your reserve runs out, the set check steps down to match reality, and we show you exactly why, line by line. What we guarantee is the <strong>operations and the consistency</strong>: a level check, a real cushion built from your own strong months, and a clear statement every time. You keep all your profit; you carry the real performance of your own units, the same as you do today.</p>
   </section>
 
   <section>
     <h2>What we sign</h2>
-    <p><strong>One management agreement</strong> with the guaranteed-minimum payment and the quarterly reconciliation written in. Not a lease, no lease-back, no new personal guarantee from you. Plus a <strong>one-page guaranteed-minimum letter</strong> your lender can file. Term 12 months then month-to-month, 60 days notice either side.</p>
+    <p><strong>One management agreement.</strong> It sets your fee (18.75%), your chosen payment option, the reserve, and the monthly statement. Not a lease, no new personal guarantee. Plus a one-page letter your lender can file showing your set monthly amount. Term 12 months, then month to month, 60 days notice either side.</p>
   </section>
 
   <section>
-    <h2>Setting the real floor</h2>
-    <p>The $10,000 above is an example. We set the real floor off your actual numbers, not a guess: we run one real month on one unit in the statement format above, confirm the true net across all eight units, then set a floor we can hold every month. If the numbers support it, the floor matches your current $10,000 so your bank sees no change.</p>
-    <div class="flag"><b>The honest part:</b> your true net depends on real operating costs, especially utilities and cleaning frequency. We confirm it on a real statement before any floor is locked.</div>
+    <h2>Setting your real number</h2>
+    <p>The $11,000 and $8,800 above are an example. We set your real numbers off one real month on one of your units, in the statement format above, so the set check and reserve are built on your actual figures, not a guess.</p>
   </section>
 
   <div class="ask">
     <h2>Next step</h2>
-    <p>We run one real month on one unit, in this exact format, so you see the true net before anything is signed. Fifteen minutes to set it up.</p>
+    <p>Tell us which payment option fits, and we run one real month on one unit so you see your true number before anything is signed. Fifteen minutes.</p>
     <p><a href="max.html">The management offer &rarr;</a> &nbsp; <a href="max-partnership.html">The ownership idea &rarr;</a></p>
   </div>
 
   <footer>
-    Welgo Space LLC &middot; Tucson, AZ &middot; Examples illustrative until real statements are run. Not legal/tax advice. <a href="max.html">Offer</a> &middot; <a href="max-faq.html">FAQ</a>
+    Welgo Space LLC &middot; Tucson, AZ &middot; Example figures until your real statement is run. Not legal/tax advice. <a href="max.html">Offer</a> &middot; <a href="max-faq.html">FAQ</a>
   </footer>
 
 </div>
