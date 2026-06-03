@@ -38,9 +38,29 @@
   .note{font-size:.92rem;color:#9a9081;font-style:italic;}
   footer{color:#9a9081;font-size:.82rem;padding:30px 0 60px;border-top:1px solid var(--rule);}
   footer a{color:var(--sage);}
+  .topnav{position:sticky;top:0;z-index:10;background:rgba(246,243,236,.92);backdrop-filter:saturate(140%) blur(8px);-webkit-backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--rule);}
+  .topnav-in{max-width:680px;margin:0 auto;padding:12px 26px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;}
+  .topnav .brand{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-weight:600;color:var(--ink);text-decoration:none;font-size:1.05rem;margin-right:auto;}
+  .topnav a{color:var(--soft);text-decoration:none;font-size:.9rem;}
+  .topnav a:hover{color:var(--ink);}
+  .topnav a.cta{color:var(--terra);font-weight:600;}
+  @media(max-width:600px){.topnav a{font-size:.82rem;}.topnav-in{gap:8px 12px;}}
 </style>
 </head>
 <body>
+
+<nav class="topnav">
+  <div class="topnav-in">
+    <a class="brand" href="index.html">Wel<b>go</b></a>
+    <a href="#fees">Fees</a>
+    <a href="#guarantees">Guarantees</a>
+    <a href="max-faq.html">FAQ</a>
+    <a href="max-agreement.html">Agreement</a>
+    <a href="homeowners.html">Pricing</a>
+    <a class="cta" href="index.html">Visit welgo.com &rarr;</a>
+  </div>
+</nav>
+
 <div class="wrap">
 
   <header>
@@ -68,7 +88,7 @@
     </ul>
   </section>
 
-  <section>
+  <section id="fees">
     <h2>What it costs, every fee in the open</h2>
     <table>
       <tr><th>Fee</th><th>Rate</th></tr>
@@ -90,7 +110,7 @@
     <p>On top of the fees above, we earn a performance bonus that pays us <strong>only when your units out-earn comparable Tucson homes</strong>, never just because the market went up. We measure your revenue per available night against a fixed set of 8 to 10 comparable listings. When you beat that comp set, we share in 25% of the revenue above it. When you do not beat it, the bonus is zero. It is upside-only for us and fully aligned with you: we make more only when you make more.</p>
   </section>
 
-  <section>
+  <section id="guarantees">
     <h2>The guarantees, we carry the risk</h2>
     <p>We lead with the promises we control, and we cap our exposure to our own fees so a guarantee never costs you and never blows up on us:</p>
     <ul>
