@@ -3,35 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Max &middot; How the management payout works</title>
+<title>Max &middot; A flat monthly payment, on management</title>
 <style>
-  :root{--paper:#f6f3ec;--ink:#221f1a;--soft:#6f665b;--sage:#3f6b5a;--rule:#e2dccf;--warm:#efe9dd;--terra:#a8623c;--red:#9a3b2c;}
+  :root{--paper:#f6f3ec;--ink:#221f1a;--soft:#6f665b;--sage:#3f6b5a;--rule:#e2dccf;--warm:#efe9dd;--terra:#a8623c;}
   *{box-sizing:border-box;margin:0;padding:0;}
   body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:680px;margin:0 auto;padding:0 26px;}
   header{padding:54px 0 8px;}
   .mark{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:.95rem;letter-spacing:.02em;color:var(--soft);}
   .mark b{color:var(--ink);}
-  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:2.1rem;font-weight:600;line-height:1.2;letter-spacing:-0.01em;margin:20px 0 12px;}
-  @media(max-width:600px){h1{font-size:1.7rem;}}
+  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:2.05rem;font-weight:600;line-height:1.2;letter-spacing:-0.01em;margin:20px 0 12px;}
+  @media(max-width:600px){h1{font-size:1.65rem;}}
   .lede{font-size:1.12rem;color:var(--ink);}
-  section{padding:32px 0;border-top:1px solid var(--rule);}
+  section{padding:30px 0;border-top:1px solid var(--rule);}
   section:first-of-type{border-top:none;}
-  h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.4rem;font-weight:600;margin-bottom:6px;letter-spacing:-0.01em;}
-  p{color:var(--soft);font-size:1.04rem;margin:11px 0;}
+  h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.4rem;font-weight:600;margin-bottom:8px;letter-spacing:-0.01em;}
+  h3{font-size:1.02rem;font-weight:600;color:var(--ink);margin:14px 0 2px;}
+  p{color:var(--soft);font-size:1.04rem;margin:10px 0;}
   p strong,p b{color:var(--ink);}
-  ul,ol{padding-left:20px;margin:11px 0;}
+  ul,ol{padding-left:20px;margin:10px 0;}
   li{color:var(--soft);font-size:1.04rem;margin:7px 0;}
   li strong{color:var(--ink);}
-  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:1rem;}
-  td,th{text-align:left;padding:9px 6px;border-bottom:1px solid var(--rule);}
+  .case{background:#fff;border:1px solid var(--rule);border-radius:5px;padding:16px 20px;margin:12px 0;}
+  .case h3{margin-top:0;}
+  table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.98rem;}
+  td,th{text-align:left;padding:8px 6px;border-bottom:1px solid var(--rule);}
   td.r,th.r{text-align:right;}
   .sub td{color:var(--soft);}
   .tot td{font-weight:600;color:var(--ink);border-top:2px solid var(--ink);}
   .pay td{font-weight:600;color:var(--sage);}
+  .gap td{font-weight:600;color:var(--terra);}
   .note{font-size:.9rem;color:#9a9081;font-style:italic;}
   .flag{background:var(--warm);border-radius:4px;padding:14px 18px;margin:16px 0;font-size:.95rem;color:var(--soft);}
   .flag b{color:var(--ink);}
+  .ask{background:var(--warm);border-radius:4px;padding:30px 28px;margin:38px 0;}
+  .ask a{color:var(--terra);font-weight:600;}
   footer{color:#9a9081;font-size:.82rem;padding:26px 0 54px;border-top:1px solid var(--rule);}
   footer a{color:var(--sage);}
 </style>
@@ -41,23 +47,74 @@
 
   <header>
     <div class="mark"><b>Max Martin</b> &times; <b>Welgo</b> &middot; Santa Rita + Hoff</div>
-    <h1>How the management payout works, line by line.</h1>
-    <p class="lede">Straight walkthrough, no pitch. Here is how money flows each month under management, what is in the agreement, and a worked example on one of your units using the same statement format we run for every owner.</p>
+    <h1>A flat monthly payment your bank can rely on, on a management deal.</h1>
+    <p class="lede">Straight walkthrough, no pitch. You get one fixed number every month. Underneath, we run the units as a manager. Here is exactly how that works, who carries the risk, and how it reconciles.</p>
   </header>
 
   <section>
-    <h2>The monthly flow</h2>
-    <p>Every month, for each unit, we run the same statement. Revenue comes in, real operating costs come out, our management fee comes out, and the rest is your payout. Same format, every month, nothing hidden.</p>
+    <h2>The shape, in three lines</h2>
+    <ul>
+      <li><strong>You get a fixed payment every month, same date.</strong> That is the number your bank sees. It does not move with bookings.</li>
+      <li><strong>Underneath, it is management, not a lease.</strong> We collect, run the units, take a fee. You keep ownership, no new personal guarantee.</li>
+      <li><strong>We carry the swing.</strong> Busy months and slow months are our problem to manage, not yours.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>How the money moves each month</h2>
     <ol>
-      <li>Guests book. Gross booking revenue lands (nightly rate; the cleaning fee guests pay is separate and goes to the cleaner).</li>
-      <li>We subtract the real operating costs that month: platform/channel fees, cleaning, supplies and restock, utilities, and any maintenance.</li>
-      <li>We subtract the management fee (a percent of revenue).</li>
-      <li>What remains is your payout. We send it on a fixed date with the statement.</li>
+      <li><strong>We collect.</strong> Guest payments land in Welgo's account.</li>
+      <li><strong>We pay the unit's real costs + our fee</strong> (cleaning, utilities, supplies, maintenance, and the 18.75% management fee).</li>
+      <li><strong>We pay you the fixed amount,</strong> on a set date, whatever the month actually did.</li>
+      <li><strong>We reconcile every quarter</strong> (next section).</li>
     </ol>
   </section>
 
   <section>
-    <h2>The statement format (same as every owner gets)</h2>
+    <h2>Who covers the gap when a month is slow?</h2>
+    <p>This is the part that matters. There are two different situations, and they are covered by two different people.</p>
+
+    <div class="case">
+      <h3>1. A timing dip &mdash; covered by your own good months</h3>
+      <p>Most slow months are just timing. A strong month earned more than your fixed payment, so we held the extra. When a slow month comes, we pay your fixed number using that held surplus. This is <strong>your own money, paid evenly</strong>. Welgo is not covering anything here, just smoothing the timing so your payment is flat.</p>
+    </div>
+
+    <div class="case">
+      <h3>2. A real shortfall &mdash; covered by Welgo</h3>
+      <p>If a <strong>whole quarter</strong> actually earns less than your floor (not just one slow month, the real total falls short), there is no surplus of yours to draw on. <strong>Welgo pays the difference out of its own pocket.</strong> That is the actual guarantee. It is capped, and Welgo only earns it back from future quarters that beat the floor. It is never billed to you. Your payment never moves either way.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Reconciliation: the two cases, with numbers</h2>
+    <p>Fixed payment in both examples is $10,000 a month ($30,000 a quarter). "Actual net" is after the unit costs and our fee.</p>
+
+    <h3>Normal quarter (your own money smooths it)</h3>
+    <table>
+      <tr><th>Month</th><th class="r">Actual net</th><th class="r">Paid to you</th></tr>
+      <tr class="sub"><td>Month 1</td><td class="r">$11,500</td><td class="r">$10,000</td></tr>
+      <tr class="sub"><td>Month 2 (slow)</td><td class="r">$8,500</td><td class="r">$10,000</td></tr>
+      <tr class="sub"><td>Month 3</td><td class="r">$12,000</td><td class="r">$10,000</td></tr>
+      <tr class="tot"><td>Quarter total</td><td class="r">$32,000</td><td class="r">$30,000</td></tr>
+      <tr class="pay"><td>Quarter-end true-up to you</td><td class="r"></td><td class="r">+$2,000</td></tr>
+    </table>
+    <p class="note">Units earned $32,000, above the $30,000 floor. Month 2's dip was covered by your own Month 1 and 3 surplus. At quarter end, the $2,000 you earned above the floor is paid to you. Welgo covered nothing; it just timed your money. You received $32,000, all of it.</p>
+
+    <h3>Down quarter (Welgo's guarantee covers it)</h3>
+    <table>
+      <tr><th>Month</th><th class="r">Actual net</th><th class="r">Paid to you</th></tr>
+      <tr class="sub"><td>Month 1</td><td class="r">$9,000</td><td class="r">$10,000</td></tr>
+      <tr class="sub"><td>Month 2</td><td class="r">$8,000</td><td class="r">$10,000</td></tr>
+      <tr class="sub"><td>Month 3</td><td class="r">$8,500</td><td class="r">$10,000</td></tr>
+      <tr class="tot"><td>Quarter total</td><td class="r">$25,500</td><td class="r">$30,000</td></tr>
+      <tr class="gap"><td>Welgo covered (from its own pocket)</td><td class="r"></td><td class="r">$4,500</td></tr>
+    </table>
+    <p class="note">Units earned only $25,500, below the $30,000 floor. You still received $30,000. Welgo paid the $4,500 difference from its own money. That advance is capped, and Welgo only recovers it from later quarters that run above the floor. It is never charged back to you.</p>
+  </section>
+
+  <section>
+    <h2>Your monthly statement (same format every owner gets)</h2>
+    <p>One reconciled statement each month, so you can see where every dollar went.</p>
     <table>
       <tr><th>Line</th><th class="r">Amount</th></tr>
       <tr><td>Gross booking revenue (nightly)</td><td class="r">A</td></tr>
@@ -66,100 +123,31 @@
       <tr class="sub"><td>&minus; Supplies &amp; restock</td><td class="r">(d)</td></tr>
       <tr class="sub"><td>&minus; Utilities</td><td class="r">(e)</td></tr>
       <tr class="sub"><td>&minus; Maintenance / repairs</td><td class="r">(f)</td></tr>
-      <tr class="tot"><td>Operating expenses</td><td class="r">B = b+c+d+e+f</td></tr>
-      <tr class="sub"><td>&minus; Management fee (% of revenue)</td><td class="r">(M)</td></tr>
-      <tr class="pay"><td>Your payout</td><td class="r">A &minus; B &minus; M</td></tr>
+      <tr class="sub"><td>&minus; Management fee (18.75% of revenue)</td><td class="r">(M)</td></tr>
+      <tr class="tot"><td>Actual net for the month</td><td class="r">A &minus; b..f &minus; M</td></tr>
+      <tr class="pay"><td>Paid to you (fixed)</td><td class="r">$10,000</td></tr>
     </table>
-    <p class="note">This is the exact line structure of the monthly homeowner statement Welgo already runs for its other owners. Payout = revenue minus operating expenses minus management fee.</p>
   </section>
 
   <section>
-    <h2>Worked example: one Santa Rita unit, one month</h2>
-    <p>Using real trailing-12-month booking data for your Santa Rita Unit 3 (about $41,650 a year, ~$3,470 a month gross). The expense lines below are <strong>illustrative</strong> until we run your actual statements. They are what we would expect for a unit at this revenue, not your confirmed numbers.</p>
-    <table>
-      <tr><th>Line</th><th class="r">Month (illustrative)</th></tr>
-      <tr><td>Gross booking revenue (real)</td><td class="r">$3,470</td></tr>
-      <tr class="sub"><td>&minus; Platform / channel fees (~3%)</td><td class="r">($105)</td></tr>
-      <tr class="sub"><td>&minus; Cleaning</td><td class="r">($450)</td></tr>
-      <tr class="sub"><td>&minus; Supplies &amp; restock</td><td class="r">($180)</td></tr>
-      <tr class="sub"><td>&minus; Utilities</td><td class="r">($350)</td></tr>
-      <tr class="sub"><td>&minus; Maintenance / repairs</td><td class="r">($200)</td></tr>
-      <tr class="tot"><td>Operating expenses</td><td class="r">($1,285)</td></tr>
-      <tr class="sub"><td>&minus; Management fee (18.75% of revenue)</td><td class="r">($651)</td></tr>
-      <tr class="pay"><td>Your payout</td><td class="r">~$1,534</td></tr>
-    </table>
-    <p>At this illustration, payout is about 44% of revenue. Four Santa Rita units at similar levels would be roughly <strong>$5,500 to $6,500 a month</strong>; all eight units (Santa Rita + Hoff) roughly <strong>$10,000 to $13,000 a month</strong>, depending on the real expense lines and who carries utilities.</p>
-    <div class="flag"><b>This is the number that decides the deal.</b> The honest answer on your true payout depends on the real operating costs, especially utilities and cleaning frequency. We confirm it by running one real month on your actual statements before any guarantee number is locked.</div>
+    <h2>What we sign</h2>
+    <p><strong>One management agreement</strong> with the guaranteed-minimum payment and the quarterly reconciliation written in. Not a lease, no lease-back, no new personal guarantee from you. Plus a <strong>one-page guaranteed-minimum letter</strong> your lender can file. Term 12 months then month-to-month, 60 days notice either side.</p>
   </section>
 
   <section>
-    <h2>Where the money sits, and how you still get a flat payment</h2>
-    <p>Bookings swing month to month. Your payment does not. Here is exactly how that works.</p>
-    <ol>
-      <li><strong>Welgo collects.</strong> Guests pay through the listings. The payouts land in Welgo's account, not yours. Welgo is the manager handling the money, the same as any full-service manager.</li>
-      <li><strong>Welgo pays the bills.</strong> Out of what it collects, Welgo pays the unit's real costs (cleaning, utilities, supplies, maintenance) and keeps its management fee.</li>
-      <li><strong>Welgo pays you a fixed amount, on a fixed date.</strong> Regardless of how that specific month booked, you get the same number. That is the figure your bank sees.</li>
-      <li><strong>Welgo absorbs the swing.</strong> A strong month, Welgo holds the extra. A weak month, Welgo covers your fixed payment out of that held cushion and recovers it from the next strong month. You never feel the variance.</li>
-    </ol>
-    <p>So you get paid like a landlord (flat, predictable, bankable), while the business underneath runs like management (variable, fee-based). Welgo carries the timing risk, not you.</p>
+    <h2>Setting the real floor</h2>
+    <p>The $10,000 above is an example. We set the real floor off your actual numbers, not a guess: we run one real month on one unit in the statement format above, confirm the true net across all eight units, then set a floor we can hold every month. If the numbers support it, the floor matches your current $10,000 so your bank sees no change.</p>
+    <div class="flag"><b>The honest part:</b> your true net depends on real operating costs, especially utilities and cleaning frequency. We confirm it on a real statement before any floor is locked.</div>
   </section>
 
-  <section>
-    <h2>Reconciliation: a 3-month example</h2>
-    <p>Say your fixed payment is $10,000 a month. Your units' actual net (after costs and our fee) moves around. Watch how you still get a flat $10,000 and end up with every dollar you earned.</p>
-    <table>
-      <tr><th>Month</th><th class="r">Units' actual net</th><th class="r">Paid to you</th><th class="r">Welgo cushion</th></tr>
-      <tr><td>Month 1</td><td class="r">$11,500</td><td class="r">$10,000</td><td class="r">+$1,500</td></tr>
-      <tr><td>Month 2 (slow)</td><td class="r">$8,500</td><td class="r">$10,000</td><td class="r">&minus;$1,500</td></tr>
-      <tr><td>Month 3</td><td class="r">$12,000</td><td class="r">$10,000</td><td class="r">+$2,000</td></tr>
-      <tr class="tot"><td>Quarter total</td><td class="r">$32,000</td><td class="r">$30,000</td><td class="r">+$2,000</td></tr>
-      <tr class="pay"><td>Quarter true-up paid to you</td><td class="r"></td><td class="r">+$2,000</td><td class="r">$0</td></tr>
-    </table>
-    <p>You received a flat $10,000 every month (bank sees steady), and at quarter end the $2,000 you earned above the floor is trued-up to you. If a quarter had finished below the floor, the shortfall stays Welgo's to recover from later surplus, never billed back to you, and capped. Your management fee to Welgo is already inside "actual net," so this is purely about smoothing the timing of money you earned.</p>
-  </section>
-
-  <section>
-    <h2>What we sign (and what we do not)</h2>
-    <p><strong>One document: a management agreement</strong> with a guaranteed-minimum-payment clause and a reconciliation schedule built in. Not a lease. We are your manager, not your tenant, so there is no new rent obligation and no new personal guarantee from you.</p>
-    <p>Alongside it, a <strong>one-page guaranteed-minimum letter</strong> your lender can hold, stating the fixed amount and that it is contractually committed. That is the piece your bank actually files.</p>
-    <p>We do not sign a lease or a lease-back. If your specific lender will only count income from a lease, that is a financing question we solve on your side (a short-term-rental-aware lender accepts a management agreement plus payment history), not by Welgo taking back a fixed-rent liability.</p>
-  </section>
-
-  <section>
-    <h2>What is in the agreement</h2>
-    <ul>
-      <li><strong>Management fee:</strong> 18.75% of nightly booking revenue.</li>
-      <li><strong>Operating costs:</strong> platform fees, cleaning, supplies, utilities, maintenance, passed through at cost on the statement (no markup on utilities; supplies carry a 12% procurement margin; maintenance a 15% coordination markup).</li>
-      <li><strong>Guaranteed minimum:</strong> a floor we pay you first each month, on a fixed date, before our fee. Set once we confirm your real payout. Documented for your bank.</li>
-      <li><strong>True-up:</strong> each quarter we reconcile to actual and pay anything above the floor.</li>
-      <li><strong>Term:</strong> 12 months, then month to month. 60 days notice either side.</li>
-      <li><strong>You keep ownership.</strong> This is management, not a lease. No new personal guarantee.</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>The guarantee, set honestly</h2>
-    <p>Your bank wants a steady number. Today that is $10,000. The plan: we run one real month on one unit, confirm the true payout across all eight, then set a guaranteed floor we can actually hold every month. If the real payout supports it, the floor matches your $10,000 so your bank sees no change. If the real costs come in higher than the illustration, we set the floor where the numbers actually land and show you exactly why, line by line.</p>
-    <p>No floor gets promised on a guess. It gets set on your real statement.</p>
-  </section>
-
-  <section>
-    <h2>What we need from you to run the real month</h2>
-    <ul>
-      <li>Owner access (or co-host access) to one Santa Rita unit so we pull the real revenue and costs.</li>
-      <li>Your current monthly utilities and any service contracts on that unit.</li>
-      <li>What your lender needs to see for the guaranteed-minimum letter.</li>
-    </ul>
-  </section>
-
-  <div class="ask" style="background:var(--warm);border-radius:4px;padding:30px 28px;margin:38px 0;">
+  <div class="ask">
     <h2>Next step</h2>
-    <p>We run one real month on one unit, in this exact format, and you see the true payout before anything is signed. Fifteen minutes to set it up.</p>
-    <p><a href="max.html" style="color:var(--terra);font-weight:600;">The management offer &rarr;</a> &nbsp; <a href="max-partnership.html" style="color:var(--terra);font-weight:600;">The ownership idea &rarr;</a></p>
+    <p>We run one real month on one unit, in this exact format, so you see the true net before anything is signed. Fifteen minutes to set it up.</p>
+    <p><a href="max.html">The management offer &rarr;</a> &nbsp; <a href="max-partnership.html">The ownership idea &rarr;</a></p>
   </div>
 
   <footer>
-    Welgo Space LLC &middot; Tucson, AZ &middot; Worked example illustrative until real statements are run. Not legal/tax advice. <a href="max.html">Offer</a> &middot; <a href="max-faq.html">FAQ</a>
+    Welgo Space LLC &middot; Tucson, AZ &middot; Examples illustrative until real statements are run. Not legal/tax advice. <a href="max.html">Offer</a> &middot; <a href="max-faq.html">FAQ</a>
   </footer>
 
 </div>
