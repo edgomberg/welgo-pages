@@ -1,11 +1,12 @@
 /* Welgo Design System v1. Locked tokens (gold/ink, Jakarta/Inter). One accent. */
 :root{
-  --w-gold:#eda800;--w-gold-dark:#d08700;--w-gold-deep:#a65f00;
-  --w-ink:#202020;--w-bg:#ffffff;--w-bg-soft:#fafafa;--w-line:#ededed;
-  --w-sub:#646464;--w-sub-2:#838383;--w-green:#00a63e;--w-red:#d32f2f;
-  --w-head:'Plus Jakarta Sans',sans-serif;--w-body:'Inter',sans-serif;
+  /* Terracotta / warm-desert theme (absorbed from welgo-tucson-stays 2026-06-02). --w-gold kept as the accent var name; value is now terracotta. */
+  --w-gold:#c17b4a;--w-gold-dark:#a8673d;--w-gold-deep:#a8673d;
+  --w-ink:#241f1a;--w-bg:#faf6f0;--w-bg-soft:#f3ece1;--w-line:#e7ded0;
+  --w-sub:#6b6258;--w-sub-2:#938a7e;--w-green:#248a17;--w-red:#d32f2f;
+  --w-display:'Cinzel',serif;--w-head:'Playfair Display',serif;--w-body:'DM Sans',sans-serif;
   --w-radius:14px;--w-radius-sm:10px;
-  --w-shadow:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);
+  --w-shadow:0 1px 3px rgba(60,40,20,.06),0 8px 24px rgba(60,40,20,.06);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
@@ -50,9 +51,13 @@ a{color:var(--w-gold-deep)}
 .hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover}
 .hero-media video{display:none}
 @media(min-width:768px){.hero-media video{display:block}}
+/* Full-bleed YouTube background banner (cover-fit, no controls). Poster img under it as fallback. */
+.hero-yt{position:absolute;inset:0;z-index:0;overflow:hidden;background:var(--w-ink)}
+.hero-yt iframe{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:177.78vh;min-width:100%;height:56.25vw;min-height:100%;border:0;pointer-events:none}
+.hero-yt .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-1}
 .hero-overlay{position:absolute;inset:0;background:rgba(32,32,32,.62);z-index:1}
 .hero-in{position:relative;z-index:2;max-width:1040px;margin:0 auto;padding:96px 22px 80px}
-.hero h1{color:#fff;max-width:18ch}
+.hero h1{color:#fff;max-width:20ch;font-family:var(--w-display);text-transform:uppercase;letter-spacing:.02em;font-weight:700;line-height:1.1}
 .hero h1 .g{color:var(--w-gold)}
 .hero .lead{color:rgba(255,255,255,.86);font-size:1.18rem;max-width:54ch;margin:16px 0 26px}
 .hero-cta{display:flex;gap:12px;flex-wrap:wrap}
