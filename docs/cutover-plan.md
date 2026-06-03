@@ -1,5 +1,16 @@
 # welgo.space cutover plan (PROPOSED, not executed)
 
+## SHIPPED 2026-06-02 (live, tested)
+
+The full unified site is LIVE and working at **https://edgomberg.github.io/welgo-pages/** (GitHub Pages, `main`). Every page returns HTTP 200, CSS + images load, calculator works, guest booking links resolve to the live HostAI engine.
+
+- Guest booking: the "Book a stay" / destination links go to the existing live HostAI booking engine (`welgo.space/welgo/theme/welgo?cities=...`). Real bookings work. We did not rebuild the reservation system (HostAI owns it).
+- This does NOT touch the live `welgo.space` domain. `welgo.space` is still the old HostAI guest site on Cloudflare. The cutover below is the only remaining step, and it needs Ed's explicit approval (DNS = irreversible external action).
+
+---
+
+
+
 Current live `welgo.space` is the legacy guest direct-booking site (Cloudflare-hosted, built by Edward Cruz). This v1 rebuild is the homeowner-acquisition site on the `feat/homeowner-site` branch of `welgo-pages` (GitHub Pages). Nothing here touches the live domain until Ed approves.
 
 ## Preview first (no DNS change)
