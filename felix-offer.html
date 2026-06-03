@@ -84,7 +84,7 @@
   <div class="subnav">
     <a href="townwest-credibility.html">→ Who's behind Welgo</a>
     <a href="welgo-company-offer.html">→ The bigger play (operator-owner)</a>
-    <a href="#how">→ How it works</a>
+    <a href="#passive">→ Hand it off, stay passive</a>
     <a href="#calc">→ Your earnings calculator</a>
     <a href="index.html">→ What your owners get</a>
   </div>
@@ -170,6 +170,23 @@
     <div style="opacity:.85;margin-top:4px;">about 5× what your STR book nets you today, plus your brand intact and your nights back.</div>
   </div>
 
+  <h2 id="passive"><span class="bar"></span>Or the simplest path: hand it off, stay passive</h2>
+  <p>You said you want to focus on one thing. This is that version. You run nothing. You make the introduction, stay the name your owner trusts, and collect. A Spanish-speaking local partner is your owner's day-to-day face, so the cultural fit you would hand to another operator stays inside our partnership. Welgo runs the whole engine. You keep income with zero work.</p>
+  <div class="calc">
+    <div class="row"><label>Homes you hand off</label><input type="range" id="pHomes" min="1" max="50" value="19"><span class="homeval" id="pHomesVal">19</span></div>
+    <div class="row"><label>Gross revenue per home / yr</label><input type="number" id="pGross" value="29314" step="500"></div>
+    <div class="row"><label>Welgo management fee <small>% of gross, full-service</small></label><input type="number" id="pMgmt" value="18.5" step="0.5"></div>
+    <div class="row"><label>Your finder slice <small>% of Welgo's fee, recurring, passive</small></label><input type="number" id="pFinder" value="10" step="1"></div>
+    <div class="out">
+      <div class="ocard b"><div class="lbl">Your income, doing nothing</div><div class="big2" id="pFelix">$10,303</div><div class="yr1">recurring / yr, passive</div></div>
+      <div class="ocard a"><div class="lbl">Your owner's local Hispanic contact is paid</div><div class="big2" id="pRafael">$23,826</div><div class="yr1">to care for them on the ground</div></div>
+    </div>
+    <p class="note" style="margin-top:18px;">Welgo runs everything else: pricing, 24/7 guests, channels, reviews, cleaning, inspections. You keep the relationship and the check. <span class="hl" id="pBig">At 50 homes that is about $27,100 a year for zero work.</span></p>
+  </div>
+
+  <h2><span class="bar"></span>And it helps your long-term rentals too</h2>
+  <p>Welgo Brain is the AI operations system behind all of this, and it is not only for short-term. On your long-term rental side it can take the busywork off your plate: tenant screening, maintenance ticketing, rent-collection ops, owner reporting, fast lead response. The same engine that runs your STR gives your LTR business leverage. That is the side of your shop you are keeping, and working together makes it run lighter too.</p>
+
   <h2 id="how"><span class="bar"></span>How we start: prove it on your worst units first</h2>
   <p>You earn the full 15% yourself today. Asking you to switch on faith is not the deal. Here is the deal.</p>
   <ol class="steps">
@@ -231,6 +248,16 @@
     $('mA').textContent=fmt(bootsAmt+maint); $('mB').textContent=fmt(homes>0?bTot/homes:0)+' blended';
   }
   ids.forEach(i=>$(i).addEventListener('input',calc)); calc();
+  const pIds=['pHomes','pGross','pMgmt','pFinder'];
+  function pCalc(){
+    const h=+$('pHomes').value, g=+$('pGross').value||0, m=(+$('pMgmt').value||0)/100, fp=(+$('pFinder').value||0)/100;
+    const fee=g*m, felix=fee*fp, rafael=g*0.03 + 2500*0.15;
+    $('pHomesVal').textContent=h;
+    $('pFelix').textContent=fmt(felix*h);
+    $('pRafael').textContent=fmt(rafael*h);
+    $('pBig').textContent='At 50 homes that is about '+fmt(fee*fp*50)+' a year for zero work.';
+  }
+  pIds.forEach(i=>$(i).addEventListener('input',pCalc)); pCalc();
 </script>
 </body>
 </html>
