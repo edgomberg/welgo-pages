@@ -1,0 +1,19 @@
+name: IndexNow auto-submit
+on:
+  push:
+    branches: [main]
+    paths: ['**/*.html', 'sitemap.xml']
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Submit changed URLs to IndexNow
+        run: |
+          sleep 90  # let GitHub Pages publish
+          KEY=4a75dfc1d5553a4de5cfc801da094560
+          URLS=$(grep -oE 'https://welgo.space/[^<]+' sitemap.xml | sed 's/.*/"&"/' | paste -sd, -)
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"welgo.space\",\"key\":\"$KEY\",\"keyLocation\":\"https://welgo.space/$KEY.txt\",\"urlList\":[$URLS]}" \
+            -w "IndexNow HTTP %{http_code}\n"
