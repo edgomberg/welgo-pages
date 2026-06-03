@@ -3,42 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Max &middot; Your $10,000, guaranteed, on management</title>
+<title>Max &middot; How the management payout works</title>
 <style>
-  :root{--paper:#f6f3ec;--ink:#221f1a;--soft:#6f665b;--sage:#3f6b5a;--rule:#e2dccf;--warm:#efe9dd;--terra:#a8623c;}
+  :root{--paper:#f6f3ec;--ink:#221f1a;--soft:#6f665b;--sage:#3f6b5a;--rule:#e2dccf;--warm:#efe9dd;--terra:#a8623c;--red:#9a3b2c;}
   *{box-sizing:border-box;margin:0;padding:0;}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.62;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:680px;margin:0 auto;padding:0 26px;}
   header{padding:54px 0 8px;}
   .mark{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:.95rem;letter-spacing:.02em;color:var(--soft);}
   .mark b{color:var(--ink);}
-  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:2.3rem;font-weight:600;line-height:1.18;letter-spacing:-0.01em;margin:22px 0 14px;}
-  @media(max-width:600px){h1{font-size:1.85rem;}}
-  .lede{font-size:1.18rem;color:var(--ink);}
-  section{padding:36px 0;border-top:1px solid var(--rule);}
+  h1{font-family:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;font-size:2.1rem;font-weight:600;line-height:1.2;letter-spacing:-0.01em;margin:20px 0 12px;}
+  @media(max-width:600px){h1{font-size:1.7rem;}}
+  .lede{font-size:1.12rem;color:var(--ink);}
+  section{padding:32px 0;border-top:1px solid var(--rule);}
   section:first-of-type{border-top:none;}
-  h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.5rem;font-weight:600;margin-bottom:6px;letter-spacing:-0.01em;}
-  p{color:var(--soft);font-size:1.06rem;margin:12px 0;}
+  h2{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.4rem;font-weight:600;margin-bottom:6px;letter-spacing:-0.01em;}
+  p{color:var(--soft);font-size:1.04rem;margin:11px 0;}
   p strong,p b{color:var(--ink);}
-  .num{color:var(--sage);font-weight:600;}
-  .big{font-family:"Iowan Old Style",Palatino,Georgia,serif;font-size:1.6rem;color:var(--ink);border-left:3px solid var(--sage);padding:6px 0 6px 20px;margin:18px 0;}
-  ul{padding-left:20px;margin:12px 0;}
-  li{color:var(--soft);font-size:1.06rem;margin:8px 0;}
+  ul,ol{padding-left:20px;margin:11px 0;}
+  li{color:var(--soft);font-size:1.04rem;margin:7px 0;}
   li strong{color:var(--ink);}
   table{width:100%;border-collapse:collapse;margin:14px 0;font-size:1rem;}
-  td,th{text-align:left;padding:10px 4px;border-bottom:1px solid var(--rule);}
+  td,th{text-align:left;padding:9px 6px;border-bottom:1px solid var(--rule);}
   td.r,th.r{text-align:right;}
-  td.r{color:var(--sage);font-weight:600;}
-  details{border-top:1px solid var(--rule);}
-  summary{cursor:pointer;padding:16px 0;font-weight:600;color:var(--ink);font-size:1.05rem;list-style:none;display:flex;justify-content:space-between;}
-  summary::-webkit-details-marker{display:none;}
-  summary::after{content:"+";color:var(--sage);font-size:1.4rem;}
-  details[open] summary::after{content:"\2013";}
-  .d{padding:0 0 18px;}
+  .sub td{color:var(--soft);}
+  .tot td{font-weight:600;color:var(--ink);border-top:2px solid var(--ink);}
+  .pay td{font-weight:600;color:var(--sage);}
   .note{font-size:.9rem;color:#9a9081;font-style:italic;}
-  .ask{background:var(--warm);border-radius:4px;padding:34px 28px;margin:40px 0;}
-  .ask a{color:var(--terra);font-weight:600;}
-  footer{color:#9a9081;font-size:.82rem;padding:28px 0 56px;border-top:1px solid var(--rule);}
+  .flag{background:var(--warm);border-radius:4px;padding:14px 18px;margin:16px 0;font-size:.95rem;color:var(--soft);}
+  .flag b{color:var(--ink);}
+  footer{color:#9a9081;font-size:.82rem;padding:26px 0 54px;border-top:1px solid var(--rule);}
   footer a{color:var(--sage);}
 </style>
 </head>
@@ -47,73 +41,92 @@
 
   <header>
     <div class="mark"><b>Max Martin</b> &times; <b>Welgo</b> &middot; Santa Rita + Hoff</div>
-    <h1>A guaranteed monthly number for your bank. And more in your pocket than the lease pays you.</h1>
-    <p class="lede">You might be reading this thinking it is just Welgo trying to stop paying you a steady rent. It is the opposite. Here is how your bank keeps seeing a steady number, and you end up ahead of the $10,000 you get today.</p>
+    <h1>How the management payout works, line by line.</h1>
+    <p class="lede">Straight walkthrough, no pitch. Here is how money flows each month under management, what is in the agreement, and a worked example on one of your units using the same statement format we run for every owner.</p>
   </header>
 
   <section>
-    <h2>The real problem, said plainly</h2>
-    <p>The switch to management is happening. That part is settled. But it sounds like the thing that actually matters to you is not the structure, it is that your <strong>lender needs to see a steady number land every month</strong>, like rent, or the loan gets uncomfortable.</p>
-    <p>So we built the deal around that. A guaranteed floor lands on a fixed date for your bank. We just change what sits behind it, and the realistic number is higher than your lease.</p>
+    <h2>The monthly flow</h2>
+    <p>Every month, for each unit, we run the same statement. Revenue comes in, real operating costs come out, our management fee comes out, and the rest is your payout. Same format, every month, nothing hidden.</p>
+    <ol>
+      <li>Guests book. Gross booking revenue lands (nightly rate; the cleaning fee guests pay is separate and goes to the cleaner).</li>
+      <li>We subtract the real operating costs that month: platform/channel fees, cleaning, supplies and restock, utilities, and any maintenance.</li>
+      <li>We subtract the management fee (a percent of revenue).</li>
+      <li>What remains is your payout. We send it on a fixed date with the statement.</li>
+    </ol>
   </section>
 
   <section>
-    <h2>The guarantee</h2>
-    <p class="big">$10,000 per month, guaranteed, on a fixed date. Realistically ~$12,000. Documented for your bank.</p>
+    <h2>The statement format (same as every owner gets)</h2>
+    <table>
+      <tr><th>Line</th><th class="r">Amount</th></tr>
+      <tr><td>Gross booking revenue (nightly)</td><td class="r">A</td></tr>
+      <tr class="sub"><td>&minus; Platform / channel fees</td><td class="r">(b)</td></tr>
+      <tr class="sub"><td>&minus; Cleaning</td><td class="r">(c)</td></tr>
+      <tr class="sub"><td>&minus; Supplies &amp; restock</td><td class="r">(d)</td></tr>
+      <tr class="sub"><td>&minus; Utilities</td><td class="r">(e)</td></tr>
+      <tr class="sub"><td>&minus; Maintenance / repairs</td><td class="r">(f)</td></tr>
+      <tr class="tot"><td>Operating expenses</td><td class="r">B = b+c+d+e+f</td></tr>
+      <tr class="sub"><td>&minus; Management fee (% of revenue)</td><td class="r">(M)</td></tr>
+      <tr class="pay"><td>Your payout</td><td class="r">A &minus; B &minus; M</td></tr>
+    </table>
+    <p class="note">This is the exact line structure of the monthly homeowner statement Welgo already runs for its other owners. Payout = revenue minus operating expenses minus management fee.</p>
+  </section>
+
+  <section>
+    <h2>Worked example: one Santa Rita unit, one month</h2>
+    <p>Using real trailing-12-month booking data for your Santa Rita Unit 3 (about $41,650 a year, ~$3,470 a month gross). The expense lines below are <strong>illustrative</strong> until we run your actual statements. They are what we would expect for a unit at this revenue, not your confirmed numbers.</p>
+    <table>
+      <tr><th>Line</th><th class="r">Month (illustrative)</th></tr>
+      <tr><td>Gross booking revenue (real)</td><td class="r">$3,470</td></tr>
+      <tr class="sub"><td>&minus; Platform / channel fees (~3%)</td><td class="r">($105)</td></tr>
+      <tr class="sub"><td>&minus; Cleaning</td><td class="r">($450)</td></tr>
+      <tr class="sub"><td>&minus; Supplies &amp; restock</td><td class="r">($180)</td></tr>
+      <tr class="sub"><td>&minus; Utilities</td><td class="r">($350)</td></tr>
+      <tr class="sub"><td>&minus; Maintenance / repairs</td><td class="r">($200)</td></tr>
+      <tr class="tot"><td>Operating expenses</td><td class="r">($1,285)</td></tr>
+      <tr class="sub"><td>&minus; Management fee (18.75% of revenue)</td><td class="r">($651)</td></tr>
+      <tr class="pay"><td>Your payout</td><td class="r">~$1,534</td></tr>
+    </table>
+    <p>At this illustration, payout is about 44% of revenue. Four Santa Rita units at similar levels would be roughly <strong>$5,500 to $6,500 a month</strong>; all eight units (Santa Rita + Hoff) roughly <strong>$10,000 to $13,000 a month</strong>, depending on the real expense lines and who carries utilities.</p>
+    <div class="flag"><b>This is the number that decides the deal.</b> The honest answer on your true payout depends on the real operating costs, especially utilities and cleaning frequency. We confirm it by running one real month on your actual statements before any guarantee number is locked.</div>
+  </section>
+
+  <section>
+    <h2>What is in the agreement</h2>
     <ul>
-      <li><strong>The floor matches your lease, so nothing drops for your bank.</strong> The $10,000 is the same number you collect today, now contractually guaranteed. Run right, your eight units (Santa Rita + Hoff) net about $12,000 a month, so realistically you take more than the lease pays. The $10,000 is the worst case. You keep everything above it.</li>
-      <li><strong>We carry the gap, not you.</strong> If a month ever comes in under $10,000, Welgo covers the difference so your payment never moves. Your bank sees a steady number, every month.</li>
-      <li><strong>You keep the units and the ownership.</strong> This is management, not a lease. No new personal guarantee from you.</li>
+      <li><strong>Management fee:</strong> 18.75% of nightly booking revenue.</li>
+      <li><strong>Operating costs:</strong> platform fees, cleaning, supplies, utilities, maintenance, passed through at cost on the statement (no markup on utilities; supplies carry a 12% procurement margin; maintenance a 15% coordination markup).</li>
+      <li><strong>Guaranteed minimum:</strong> a floor we pay you first each month, on a fixed date, before our fee. Set once we confirm your real payout. Documented for your bank.</li>
+      <li><strong>True-up:</strong> each quarter we reconcile to actual and pay anything above the floor.</li>
+      <li><strong>Term:</strong> 12 months, then month to month. 60 days notice either side.</li>
+      <li><strong>You keep ownership.</strong> This is management, not a lease. No new personal guarantee.</li>
     </ul>
-    <p>Would it be unreasonable to take more than your lease pays you, and still hand your bank a guaranteed floor?</p>
   </section>
 
   <section>
-    <h2>Why we can guarantee it without gambling</h2>
-    <p>Because the units already earn above $10,000 when they are run right. The floor sits below what they realistically produce, so it is a number we expect to clear every month, not a bet we hope to win.</p>
-
-    <details>
-      <summary>See the math, your real units</summary>
-      <div class="d">
-        <p class="note">Built on your actual Hostaway booking history, trailing 12 months, accommodation revenue only (cleaning and tax stripped out, since those are pass-throughs). Net-to-owner is an estimate pending a final reconciliation against the books.</p>
-        <table>
-          <tr><th>Your portfolio, trailing 12 months</th><th class="r">Per year</th><th class="r">Per month</th></tr>
-          <tr><td>Santa Rita (4 units) accommodation revenue</td><td class="r">~$111,000</td><td class="r">~$9,250</td></tr>
-          <tr><td>Hoff (4 units) accommodation revenue</td><td class="r">~$93,000</td><td class="r">~$7,750</td></tr>
-          <tr><td><strong>Total accommodation revenue</strong></td><td class="r"><strong>~$204,000</strong></td><td class="r"><strong>~$17,000</strong></td></tr>
-          <tr><td>Less Welgo fees + supplies (~30%)</td><td class="r">-$61,000</td><td class="r">-$5,000</td></tr>
-          <tr><td><strong>Estimated net to you</strong></td><td class="r"><strong>~$143,000</strong></td><td class="r"><strong>~$12,000</strong></td></tr>
-          <tr><td>Your guaranteed floor (= your current rent)</td><td class="r">$120,000</td><td class="r">$10,000</td></tr>
-          <tr><td><strong>Cushion above the floor</strong></td><td class="r"><strong>~$23,000</strong></td><td class="r"><strong>~$2,000</strong></td></tr>
-        </table>
-        <p>The floor is about 83% of the realistic net, so there is roughly $2,000 a month of headroom above your guarantee, and your bank sees the same $10,000 it sees today. That is why Welgo can promise it without a wild bet, and why you keep the upside above it. Cleaning is paid by guests. You still cover your own mortgage, taxes, insurance, and utilities, the same as today.</p>
-      </div>
-    </details>
+    <h2>The guarantee, set honestly</h2>
+    <p>Your bank wants a steady number. Today that is $10,000. The plan: we run one real month on one unit, confirm the true payout across all eight, then set a guaranteed floor we can actually hold every month. If the real payout supports it, the floor matches your $10,000 so your bank sees no change. If the real costs come in higher than the illustration, we set the floor where the numbers actually land and show you exactly why, line by line.</p>
+    <p>No floor gets promised on a guess. It gets set on your real statement.</p>
   </section>
 
   <section>
-    <h2>How the money actually moves (kept simple)</h2>
+    <h2>What we need from you to run the real month</h2>
     <ul>
-      <li><strong>Fixed date, every month.</strong> Your $10,000 is disbursed first, before Welgo takes its fee. Our fee waits in line behind your floor.</li>
-      <li><strong>One clean statement.</strong> Each month you get a single reconciled statement: what the units earned, the fees, your payment. Your bank gets a guaranteed-minimum letter it can rely on.</li>
-      <li><strong>Quarterly true-up.</strong> Every quarter we reconcile to what the units actually earned and pay you anything above the floor.</li>
-      <li><strong>Automated.</strong> The disbursement and the statement run on a schedule, not by hand, so the $10,000 never depends on someone remembering to send it.</li>
+      <li>Owner access (or co-host access) to one Santa Rita unit so we pull the real revenue and costs.</li>
+      <li>Your current monthly utilities and any service contracts on that unit.</li>
+      <li>What your lender needs to see for the guaranteed-minimum letter.</li>
     </ul>
   </section>
 
-  <section>
-    <h2>What you do</h2>
-    <p>One thing: tell us what your lender needs to see. A guaranteed-minimum letter, a payment history, a specific form. We build the deal so it satisfies that, and you keep your $10,000 without re-arguing it every year.</p>
-  </section>
-
-  <div class="ask">
+  <div class="ask" style="background:var(--warm);border-radius:4px;padding:30px 28px;margin:38px 0;">
     <h2>Next step</h2>
-    <p>Fifteen minutes. You confirm the number your bank needs and we confirm the units clear it. If they do, you keep your $10,000, guaranteed, and pick up the upside above it.</p>
-    <p><a href="max.html">See the full management offer &rarr;</a></p>
+    <p>We run one real month on one unit, in this exact format, and you see the true payout before anything is signed. Fifteen minutes to set it up.</p>
+    <p><a href="max.html" style="color:var(--terra);font-weight:600;">The management offer &rarr;</a> &nbsp; <a href="max-partnership.html" style="color:var(--terra);font-weight:600;">The ownership idea &rarr;</a></p>
   </div>
 
   <footer>
-    Welgo Space LLC &middot; Tucson, AZ &middot; Estimate for discussion, not a signed offer or legal/tax advice. <a href="max.html">Offer</a> &middot; <a href="max-faq.html">FAQ</a>
+    Welgo Space LLC &middot; Tucson, AZ &middot; Worked example illustrative until real statements are run. Not legal/tax advice. <a href="max.html">Offer</a> &middot; <a href="max-faq.html">FAQ</a>
   </footer>
 
 </div>
