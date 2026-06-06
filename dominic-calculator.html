@@ -29,10 +29,10 @@
       <div class="section-head">
         <div class="eyebrow">Operator calculator</div>
         <h1>Change the model yourself.</h1>
-        <p class="muted">This calculator shows the operator lane, repair margin, optional listings-under-Welgo upside, and the possible value of Dominic's ownership. It is a planning tool, not a signed offer.</p>
+        <p class="muted">This calculator shows the operator lane, repair margin, listings-under-Welgo upside, direct-booking economics, resolution revenue, upsells, CAC, LTV, and possible Dominic ownership value. It is a planning tool, not a signed offer.</p>
       </div>
       <div class="calc-panel">
-        <div class="calc-row"><label for="domHomes">Homes in the lane <small>Default is 23 because that is Ed's current preferred external count. Reconcile before legal docs.</small></label><input type="range" id="domHomes" min="1" max="100" value="23"><span class="calc-value" id="domHomesVal">23</span></div>
+        <div class="calc-row"><label for="domHomes">Homes in the lane <small>Default is 23 because that is Ed's current preferred external count. Reconcile before legal docs.</small></label><input type="range" id="domHomes" min="1" max="140" value="23"><span class="calc-value" id="domHomesVal">23</span></div>
         <div class="calc-seg">Revenue assumptions</div>
         <div class="calc-row"><label for="domGross">Gross revenue per home / yr <small>Working planning number. Not an Airsight export.</small></label><input type="number" id="domGross" value="31000" step="500"></div>
         <div class="calc-row"><label for="domBoots">Local operator fee <small>Base field execution lane.</small></label><input type="number" id="domBoots" value="6" step="0.5"></div>
@@ -43,18 +43,34 @@
         <div class="calc-row"><label for="domFinder">Listings-under-Welgo share <small>Working assumption only. Confirm before sending as a term.</small></label><input type="number" id="domFinder" value="10" step="1"></div>
         <div class="calc-seg">LTV, CAC, and company value</div>
         <div class="calc-row"><label for="domWelgoFee">Welgo management fee <small>Revenue Welgo AZ earns from each listing before costs.</small></label><input type="number" id="domWelgoFee" value="18.5" step="0.5"></div>
-        <div class="calc-row"><label for="domMargin">Contribution margin <small>After central ops and support costs.</small></label><input type="number" id="domMargin" value="35" step="1"></div>
-        <div class="calc-row"><label for="domRetention">Retention years <small>How long each listing stays with the company.</small></label><input type="number" id="domRetention" value="3" step="0.5"></div>
-        <div class="calc-row"><label for="domCacInput">CAC per listing <small>Owner acquisition, onboarding, photos, setup, and local launch cost.</small></label><input type="number" id="domCacInput" value="1500" step="250"></div>
-        <div class="calc-row"><label for="domMultiple">Company value multiple <small>Multiple on annual contribution profit.</small></label><input type="number" id="domMultiple" value="4" step="0.5"></div>
+        <div class="calc-row"><label for="domDirectFee">Direct-booking channel fee <small>Direct mix adds 5 points per 10 homes, capped at 70%.</small></label><input type="number" id="domDirectFee" value="12" step="0.5"></div>
+        <div class="calc-row"><label for="domResolutionRate">Resolution revenue <small>Additional revenue from issue resolution, restocking, and local fixes.</small></label><input type="number" id="domResolutionRate" value="5" step="0.5"></div>
+        <div class="calc-row"><label for="domUpsellBase">Upsell revenue base <small>Guest and owner upsells before scale effects.</small></label><input type="number" id="domUpsellBase" value="2" step="0.5"></div>
+        <div class="calc-row"><label for="domUpsellScale">Upsell lift per 10 homes <small>Model caps total upsell revenue at 15% of gross.</small></label><input type="number" id="domUpsellScale" value="1" step="0.5"></div>
+        <div class="calc-row"><label for="domBaseMargin">Base contribution margin <small>After central ops and support costs.</small></label><input type="number" id="domBaseMargin" value="30" step="1"></div>
+        <div class="calc-row"><label for="domMarginStep">Margin lift per 10 homes <small>Scale improves route density and central cost absorption.</small></label><input type="number" id="domMarginStep" value="2" step="0.5"></div>
+        <div class="calc-row"><label for="domMaxMargin">Max contribution margin <small>Caps the scale benefit.</small></label><input type="number" id="domMaxMargin" value="55" step="1"></div>
+        <div class="calc-row"><label for="domRetention">Retention years <small>How long each listing stays with the company.</small></label><input type="number" id="domRetention" value="4" step="0.5"></div>
+        <div class="calc-row"><label for="domCacInput">CAC per listing <small>Owner acquisition, onboarding, photos, setup, and local launch cost.</small></label><input type="number" id="domCacInput" value="1800" step="250"></div>
+        <div class="calc-row"><label for="domLowMultiple">Low valuation multiple <small>Conservative PM-company cash-flow multiple.</small></label><input type="number" id="domLowMultiple" value="3" step="0.25"></div>
+        <div class="calc-row"><label for="domHighMultiple">High valuation multiple <small>Better business if contracts, team, systems, and direct bookings are real.</small></label><input type="number" id="domHighMultiple" value="5.5" step="0.25"></div>
+        <div class="calc-row"><label for="domAssetPerListing">Transferable asset value / listing <small>Owner contracts, playbooks, direct-booking setup, data, and local operating bench.</small></label><input type="number" id="domAssetPerListing" value="1250" step="250"></div>
         <div class="calc-row"><label for="domOwnership">Dominic ownership <small>Potential equity share if he earns into the company path.</small></label><input type="number" id="domOwnership" value="10" step="1"></div>
         <div class="calc-output">
           <div class="result"><div class="label">Field lane</div><div class="big" id="domFieldTotal">$57K</div><div class="caption">local fee + quality bonus</div></div>
           <div class="result"><div class="label">With maintenance</div><div class="big" id="domOperatorTotal">$66K</div><div class="caption">field lane + repair margin</div></div>
           <div class="result dark"><div class="label">With listing share</div><div class="big" id="domFullTotal">$137K</div><div class="caption">if the listing path is confirmed</div></div>
-          <div class="result"><div class="label">Listing LTV</div><div class="big" id="domLtv">$6K</div><div class="caption">per listing contribution. LTV:CAC <span id="domLtvCac">4.0x</span></div></div>
-          <div class="result"><div class="label">CAC</div><div class="big" id="domCac">$1.5K</div><div class="caption">cost to acquire and launch one listing</div></div>
-          <div class="result dark"><div class="label">Dominic equity value</div><div class="big" id="domEquityValue">$18K</div><div class="caption"><span id="domOwnershipLabel">10%</span> of estimated AZ company value</div></div>
+          <div class="result"><div class="label">Direct booking mix</div><div class="big" id="domDirectShare">10%</div><div class="caption">adds 5 points per 10 homes. Cap is 70%</div></div>
+          <div class="result"><div class="label">Direct booking revenue</div><div class="big" id="domDirectRevenue">$9K</div><div class="caption">direct mix x gross x direct fee</div></div>
+          <div class="result"><div class="label">Resolution revenue</div><div class="big" id="domResolutionRevenue">$36K</div><div class="caption">working assumption is 5% of gross</div></div>
+          <div class="result"><div class="label">Upsell revenue</div><div class="big" id="domUpsellRevenue">$28K</div><div class="caption"><span id="domUpsellRate">4%</span> of gross in this scenario</div></div>
+          <div class="result"><div class="label">Scale margin</div><div class="big" id="domScaleMargin">34%</div><div class="caption">margin improves as the book grows</div></div>
+          <div class="result"><div class="label">Company revenue</div><div class="big" id="domCompanyRevenue">$205K</div><div class="caption">PM fees + direct + resolutions + upsells</div></div>
+          <div class="result"><div class="label">Annual contribution</div><div class="big" id="domAnnualContribution">$70K</div><div class="caption">company revenue after scale margin</div></div>
+          <div class="result"><div class="label">Listing LTV</div><div class="big" id="domLtv">$12K</div><div class="caption">per listing contribution. LTV:CAC <span id="domLtvCac">6.5x</span></div></div>
+          <div class="result"><div class="label">CAC</div><div class="big" id="domCac">$1.8K</div><div class="caption">cost to acquire and launch one listing</div></div>
+          <div class="result"><div class="label">Transferable assets</div><div class="big" id="domAssetValue">$29K</div><div class="caption">contracts, systems, data, and operating bench</div></div>
+          <div class="result dark"><div class="label">Dominic equity value</div><div class="big" id="domEquityValue">$24K to $41K</div><div class="caption"><span id="domOwnershipLabel">10%</span> of estimated AZ company value</div></div>
         </div>
       </div>
 
@@ -64,59 +80,23 @@
           <tr><td>Field lane</td><td>Homes x gross x local operator fee, plus quality bonus.</td></tr>
           <tr><td>Maintenance</td><td>Homes x annual repair spend x markup. Model cap is 15%.</td></tr>
           <tr><td>Listings share</td><td>Homes x gross x listing-under-Welgo share. This needs Ed confirmation.</td></tr>
-          <tr><td>Listing LTV</td><td>Gross per home x Welgo fee x contribution margin x retention years.</td></tr>
+          <tr><td>Direct bookings</td><td>Direct share starts from scale: 5 points per 10 homes, capped at 70%. Direct revenue is gross x direct share x direct-booking fee.</td></tr>
+          <tr><td>Resolution revenue</td><td>Working assumption is 5% of gross revenue from issue resolution, restocking, and local fixes.</td></tr>
+          <tr><td>Upsells</td><td>Base upsell rate plus a scale lift per 10 homes, capped at 15% of gross.</td></tr>
+          <tr><td>Scale margin</td><td>Base contribution margin plus margin lift per 10 homes, capped by the max margin input.</td></tr>
+          <tr><td>Listing LTV</td><td>Annual contribution per listing x retention years.</td></tr>
           <tr><td>CAC</td><td>Editable cost to acquire and launch one listing.</td></tr>
-          <tr><td>Company value</td><td>Annual contribution profit x value multiple. Current estimate: <strong id="domCompanyValue">$185K</strong>.</td></tr>
-          <tr><td>Dominic equity value</td><td>Company value x Dominic ownership percent.</td></tr>
+          <tr><td>Company value</td><td>Annual contribution profit x low and high valuation multiples, plus transferable operating assets. Current estimate: <strong id="domCompanyValue">$237K to $411K</strong>.</td></tr>
+          <tr><td>Dominic equity value</td><td>Company value range x Dominic ownership percent.</td></tr>
         </table>
       </div></details>
 
-      <p class="note">Do not call this an Airsight model. Do not call this final compensation. If we say PropCo here, it means the Arizona company value from managed-listing economics, not real-estate value from owned homes.</p>
+      <p class="note">Do not call this an Airsight model. Do not call this final compensation. The company value here is Welgo AZ managed-listing company value, not owned-real-estate value. Real diligence would still need contracts, owner concentration, churn, assignability, team dependency, liabilities, tax, and legal review.</p>
     </div>
   </section>
 </main>
 
 <footer class="footer"><div class="wrap">Dominic calculator. Private draft. Numbers are editable working assumptions.</div></footer>
-<script>
-  (function(){
-    var ids = ['domHomes','domGross','domBoots','domBonus','domMaintSpend','domMaintMarkup','domFinder','domWelgoFee','domMargin','domRetention','domCacInput','domMultiple','domOwnership'];
-    var fmt = function(n){ return '$' + Math.round(n).toLocaleString(); };
-    var fmtShort = function(n){ return n >= 1000000 ? '$' + (n / 1000000).toFixed(1).replace('.0','') + 'M' : n >= 1000 ? '$' + (n / 1000).toFixed(1).replace('.0','') + 'K' : fmt(n); };
-    var el = function(id){ return document.getElementById(id); };
-    function calc(){
-      var homes = +el('domHomes').value || 0;
-      var gross = +el('domGross').value || 0;
-      var boots = (+el('domBoots').value || 0) / 100;
-      var bonus = (+el('domBonus').value || 0) / 100;
-      var spend = +el('domMaintSpend').value || 0;
-      var markup = Math.min(+el('domMaintMarkup').value || 0, 15) / 100;
-      var finder = (+el('domFinder').value || 0) / 100;
-      var welgoFee = (+el('domWelgoFee').value || 0) / 100;
-      var margin = (+el('domMargin').value || 0) / 100;
-      var retention = +el('domRetention').value || 0;
-      var cac = +el('domCacInput').value || 0;
-      var multiple = +el('domMultiple').value || 0;
-      var ownership = (+el('domOwnership').value || 0) / 100;
-      var field = homes * gross * (boots + bonus);
-      var maintenance = homes * spend * markup;
-      var listingsShare = homes * gross * finder;
-      var annualContribution = homes * gross * welgoFee * margin;
-      var ltv = gross * welgoFee * margin * retention;
-      var companyValue = annualContribution * multiple;
-      el('domHomesVal').textContent = homes;
-      el('domFieldTotal').textContent = fmt(field);
-      el('domOperatorTotal').textContent = fmt(field + maintenance);
-      el('domFullTotal').textContent = fmt(field + maintenance + listingsShare);
-      el('domLtv').textContent = fmtShort(ltv);
-      el('domCac').textContent = fmtShort(cac);
-      el('domLtvCac').textContent = cac > 0 ? (ltv / cac).toFixed(1).replace('.0','') + 'x' : 'n/a';
-      el('domCompanyValue').textContent = fmtShort(companyValue);
-      el('domEquityValue').textContent = fmtShort(companyValue * ownership);
-      el('domOwnershipLabel').textContent = Math.round(ownership * 100) + '%';
-    }
-    ids.forEach(function(id){ el(id).addEventListener('input', calc); });
-    calc();
-  })();
-</script>
+<script src="assets/dominic-calculator.js"></script>
 </body>
 </html>
