@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dominic × Welgo · Operator Partnership</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{--gold:#eda800;--gold-dark:#d08700;--gold-deep:#a65f00;--ink:#202020;--bg:#ffffff;--soft:#fafafa;--line:#ededed;--sub:#646464;--sub2:#838383;--fh:'Plus Jakarta Sans',sans-serif;--fb:'Inter',sans-serif;--r:14px;--rs:10px;--sh:0 1px 3px rgba(0,0,0,.06),0 8px 24px rgba(0,0,0,.05);}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:var(--fb);color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:960px;margin:0 auto;padding:52px 24px;}
+  h1,h2,h3,h4{font-family:var(--fh);letter-spacing:-.01em;}
+  h1{font-size:2.6rem;font-weight:800;line-height:1.08;margin-bottom:14px;} h1 .g{color:var(--gold-deep);}
+  h2{font-size:1.5rem;font-weight:700;margin:52px 0 10px;} h3{font-size:1.05rem;font-weight:700;}
+  p{margin:10px 0;max-width:800px;} a{color:var(--gold-deep);}
+  .pill{display:inline-block;background:var(--soft);border:1px solid var(--line);color:var(--gold-deep);font-family:var(--fh);font-weight:700;font-size:.78rem;padding:6px 14px;border-radius:999px;margin-bottom:20px;letter-spacing:.05em;}
+  .sub{color:var(--sub);font-size:1.14rem;max-width:790px;}
+  .bar{display:inline-block;width:26px;height:3px;background:var(--gold);border-radius:2px;vertical-align:middle;margin-right:10px;}
+  .subnav{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 8px;}
+  .subnav a{background:#fff;border:1px solid var(--line);border-radius:var(--rs);padding:10px 16px;text-decoration:none;color:var(--ink);font-family:var(--fh);font-weight:600;font-size:.92rem;}
+  .subnav a:hover{border-color:var(--gold);color:var(--gold-deep);}
+  .dark{background:var(--ink);color:#fff;border-radius:var(--r);padding:38px;margin-top:24px;}
+  .dark h2{margin-top:0;color:#fff;} .dark .g{color:var(--gold);} .dark p{color:#dcdcdc;}
+  .vrow{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px;}
+  .vcell{border:1px solid #3a3a3a;border-radius:var(--rs);padding:16px 18px;}
+  .vcell .from{color:var(--sub2);font-size:.85rem;} .vcell .to{color:var(--gold);font-weight:700;font-family:var(--fh);font-size:1.05rem;margin-top:3px;}
+  .gg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px;}
+  .pay{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px;}
+  .box,.pcard{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);}
+  .box b{display:block;margin-bottom:6px;color:var(--gold-deep);font-family:var(--fh);}
+  .pcard{border-top:4px solid var(--gold);}
+  .pcard .n{font-size:1.7rem;font-weight:800;color:var(--gold-deep);font-family:var(--fh);}
+  .pcard p{font-size:.9rem;color:var(--sub);}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.94rem;}
+  th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-weight:700;color:var(--sub);font-size:.78rem;text-transform:uppercase;letter-spacing:.03em;font-family:var(--fh);}
+  td.r{text-align:right;font-family:var(--fh);font-weight:700;} td.big{font-size:1.15rem;color:var(--gold-deep);}
+  .big-money{background:var(--ink);color:#fff;border-radius:var(--r);padding:28px;margin-top:18px;text-align:center;}
+  .big-money .m{font-size:2.4rem;font-weight:800;font-family:var(--fh);} .big-money .m span{color:var(--gold);}
+  .note{background:var(--soft);border:1px solid var(--line);border-radius:var(--rs);padding:16px 18px;margin-top:16px;font-size:.95rem;}
+  .ladder{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px;}
+  .rung{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:var(--r);padding:18px 20px;box-shadow:var(--sh);}
+  .rung .num{font-family:var(--fh);font-weight:800;font-size:1.3rem;color:var(--gold-deep);min-width:28px;}
+  .rung .t{font-family:var(--fh);font-weight:700;}
+  .rung.live{border-left-color:var(--ink);}
+  .rung .tag{font-family:var(--fh);font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--gold-deep);}
+  .steps{counter-reset:s;list-style:none;margin-top:8px;}
+  .steps li{counter-increment:s;padding:12px 0 12px 42px;position:relative;border-top:1px solid var(--line);}
+  .steps li:first-child{border-top:none;}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:11px;width:28px;height:28px;background:var(--gold);color:var(--ink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--fh);font-weight:800;font-size:.85rem;}
+  .steps .t{font-family:var(--fh);font-weight:700;} .steps .when{color:var(--gold-deep);font-size:.85rem;font-weight:600;}
+  .cta{margin-top:44px;background:var(--ink);color:#fff;border-radius:var(--r);padding:34px;text-align:center;}
+  .cta a{display:inline-block;margin-top:16px;background:var(--gold);color:var(--ink);text-decoration:none;font-family:var(--fh);font-weight:700;padding:13px 28px;border-radius:var(--rs);}
+  .cta a:hover{background:var(--gold-dark);}
+  .foot{color:var(--sub2);font-size:.82rem;margin-top:44px;border-top:1px solid var(--line);padding-top:16px;}
+  @media(max-width:760px){.gg,.pay,.vrow{grid-template-columns:1fr;}h1{font-size:2rem;}.wrap{padding:38px 18px;}.dark{padding:28px 22px;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="pill">DOMINIC × WELGO · TUCSON OPERATOR PARTNERSHIP</div>
+  <h1>Run the ground.<br>Own the upside in <span class="g">Welgo Arizona.</span></h1>
+  <p class="sub">Dominic, you seem to have the part most people fake: real local field capacity. Cleaning, handyman coverage, inspections, and Tucson judgment. Welgo has the operating engine: pricing, channels, guest ops, owner reporting, and the AI layer we are building around quality control. I want to test if those two pieces fit.</p>
+
+  <div class="subnav">
+    <a href="townwest-credibility.html">Who's behind Welgo</a>
+    <a href="operator-program.html">Operator program</a>
+    <a href="felix-offer.html">Felix version</a>
+    <a href="#hundred">100-listing picture</a>
+    <a href="#next">Next step</a>
+  </div>
+
+  <div class="dark">
+    <h2><span class="g">This is not a vendor quote.</span> It is a working test.</h2>
+    <p>I am taking on 3 new listings from Max and likely 2 from Felix while exploring local operator partnerships. The bottleneck is not another PM pitch. It is whether one local person can own quality on the ground while Welgo runs the engine behind it.</p>
+    <p>If you can walk a unit and immediately see what creates a bad review, what the cleaner missed, what the owner needs to hear, and what the remote team needs to fix, there may be something real here.</p>
+    <div class="vrow">
+      <div class="vcell"><div class="from">Today</div><div class="to">Welgo has the engine, but local field depth is the constraint</div></div>
+      <div class="vcell"><div class="from">With you</div><div class="to">Local quality control becomes a real operating layer</div></div>
+      <div class="vcell"><div class="from">Today</div><div class="to">Cleaning and maintenance can be one-off work</div></div>
+      <div class="vcell"><div class="from">With you</div><div class="to">They become part of a bigger Tucson growth machine</div></div>
+      <div class="vcell"><div class="from">Today</div><div class="to">Operators fight for small fees</div></div>
+      <div class="vcell"><div class="from">With Welgo</div><div class="to">You can earn across units, owners, repairs, and company value</div></div>
+    </div>
+  </div>
+
+  <h2><span class="bar"></span>The proof: Welgo's Tucson book</h2>
+  <div class="pay">
+    <div class="pcard"><div class="n">26</div><h3>Tucson homes</h3><p>Current Welgo proof base from our live Tucson portfolio.</p></div>
+    <div class="pcard"><div class="n">61%</div><h3>Occupancy</h3><p>Real operating number from the same market we would scale in.</p></div>
+    <div class="pcard"><div class="n">$29.3K</div><h3>Gross / home / yr</h3><p>About $762K total annualized Tucson gross across the current book.</p></div>
+  </div>
+
+  <h2><span class="bar"></span>Why you may be the right kind of operator</h2>
+  <div class="gg">
+    <div class="box"><b>You know the ground</b>Cleaning standards, handyman coverage, inspections, supplies, access, and real field judgment. That is the part no software replaces.</div>
+    <div class="box"><b>Your family cleaning capacity matters</b>If the cleaning company wants more profitable work, Welgo can turn cleaning into a route-density and quality-control business, not just per-clean labor.</div>
+    <div class="box"><b>You can sell from experience</b>You can talk to owners from the field: what breaks, what guests complain about, what bad operators miss, and what better management changes.</div>
+    <div class="box"><b>You are not just looking for tasks</b>The interesting path is operator, CEO, or buyer. Small work first. Bigger structure only if the field test proves it.</div>
+  </div>
+
+  <h2><span class="bar"></span>How you get paid if we start small</h2>
+  <p>Same locked operator model as the Felix structure, adjusted for your role. You do local ground. Welgo runs the engine.</p>
+  <table>
+    <tr><th>Line</th><th>What it means</th><th style="text-align:right;">Example / rule</th></tr>
+    <tr><td>Boots</td><td>You run field execution, inspections, cleaner accountability, access, and local follow-up.</td><td class="r">6% of gross + up to 2% quality bonus</td></tr>
+    <tr><td>Cleaning</td><td>Your family cleaning company can own routes where quality and economics work.</td><td class="r">Cleaning margin stays with operator</td></tr>
+    <tr><td>Maintenance</td><td>Your team handles small repairs and coordinates vendors.</td><td class="r">Markup capped at 15%</td></tr>
+    <tr><td>Finder</td><td>You bring owners or operators into the engine.</td><td class="r">10% / 12% / 15% of Welgo fee</td></tr>
+    <tr><td>Growth</td><td>Good operators get first pick on new homes.</td><td class="r">Route priority for green weeks</td></tr>
+  </table>
+  <p class="note">The first goal is not to negotiate every line. It is to test whether you can own quality on a few real homes. If yes, the economics can scale.</p>
+
+  <h2 id="hundred"><span class="bar"></span>The 100-listing picture</h2>
+  <p>At 100 listings, this stops being a side relationship. It becomes a Tucson operating company.</p>
+  <table>
+    <tr><th>Line</th><th style="text-align:right;">At 100 homes / yr</th></tr>
+    <tr><td>Portfolio gross revenue</td><td class="r">$2,931,400</td></tr>
+    <tr><td>Welgo management fee pool at 18.5%</td><td class="r">$542,309</td></tr>
+    <tr><td>Ground operator boots at 6%</td><td class="r">$175,884</td></tr>
+    <tr><td>Ground operator boots with green bonus at 8%</td><td class="r">$234,512</td></tr>
+    <tr><td>Stepped finder on owners brought in</td><td class="r">~$76,000</td></tr>
+    <tr><td>Maintenance margin at $2,500/home and 15%</td><td class="r">$37,500</td></tr>
+    <tr><td class="big"><b>Operator cash path</b></td><td class="r big">~$289K to $348K / yr</td></tr>
+  </table>
+  <div class="big-money">
+    <div>If this works at 100 homes</div>
+    <div class="m">$542K <span>fee pool</span></div>
+    <div style="opacity:.85;margin-top:4px;">before equity, acquisition, or CEO structure. Numbers use current Welgo Tucson averages and are illustrative.</div>
+  </div>
+
+  <h2><span class="bar"></span>The company-level conversation</h2>
+  <p>There are two bigger paths if the field test works.</p>
+  <div class="ladder">
+    <div class="rung live"><div class="num">1</div><div><span class="tag">Immediate</span><div class="t">Operator trial</div>You inspect one unit, then take a small number of homes where your cleaning and inspection standards can prove themselves.</div></div>
+    <div class="rung"><div class="num">2</div><div><span class="tag">Bigger</span><div class="t">CEO / operator of Welgo AZ</div>You own the ground, field team, vendors, cleaner network, inspections, and local owner experience. Welgo keeps the engine, systems, growth, and back office.</div></div>
+    <div class="rung"><div class="num">3</div><div><span class="tag">Straight offer</span><div class="t">$85K acquisition conversation</div>I would consider selling Welgo AZ to the right operator, or structuring a buy-in where you step into the CEO/operator seat and we keep growing together.</div></div>
+  </div>
+
+  <h2><span class="bar"></span>The acquisition engine we can build behind you</h2>
+  <p>The bigger play is not waiting for owners to call. It is building a disciplined pipeline around underperforming Tucson STRs.</p>
+  <div class="gg">
+    <div class="box"><b>Find weak listings</b>Manual review and licensed market tools. Bad photos, bad pricing, poor reviews, dead calendars, weak title, missing amenities.</div>
+    <div class="box"><b>Score the upside</b>Compare against Welgo's Tucson averages and local comps. Identify which owners have enough gap to care.</div>
+    <div class="box"><b>Make a practical offer</b>Management, arbitrage, wholesale buy, or operator partnership. Not one pitch for every owner.</div>
+    <div class="box"><b>Use the same foundation for the team</b>The pipeline becomes reusable for Felix, Max, operators, cleaners, brokers, and future AZ growth.</div>
+  </div>
+  <p class="note">Important: we do not need to scrape Airbnb with bots. We can use manual review, public business sources, licensed market-data tools, and owner/referral channels.</p>
+
+  <h2 id="next"><span class="bar"></span>How we start</h2>
+  <p>No overtalking. Walk the unit first. See the machine from the inside.</p>
+  <ol class="steps">
+    <li><span class="t">Meet Shannon at one Tucson unit.</span> <span class="when">tomorrow</span><br>Walk it like you were responsible for reviews, cleaner accountability, and owner trust.</li>
+    <li><span class="t">Tell me the first 10 things you notice.</span> <span class="when">same visit</span><br>What creates a bad review, what matters now, what can wait, who you would call, what you would tell the cleaner.</li>
+    <li><span class="t">Pick the right first lane.</span> <span class="when">after walk</span><br>Cleaning support, inspection trial, operator trial, CEO conversation, or acquisition conversation.</li>
+    <li><span class="t">If the fit is real, take on a small cluster.</span> <span class="when">week 1</span><br>Likely a few units where quality control matters now, not a broad promise across the whole portfolio.</li>
+  </ol>
+
+  <h2><span class="bar"></span>What I need to verify with you</h2>
+  <div class="gg">
+    <div class="box"><b>Capacity</b>How many units your cleaning and handyman bench can actually support without breaking quality.</div>
+    <div class="box"><b>Standards</b>Your inspection checklist, cleaner accountability process, and photo proof habit.</div>
+    <div class="box"><b>Owner trust</b>Whether you can communicate clearly with owners, not just execute tasks.</div>
+    <div class="box"><b>Business appetite</b>Whether you want vendor income, operator upside, CEO responsibility, or a company purchase conversation.</div>
+  </div>
+
+  <div class="cta">
+    <div style="font-size:1.4rem;font-weight:700;font-family:var(--fh);">Walk one unit. Then we decide if this is small or serious.</div>
+    <div style="opacity:.85;margin-top:6px;">Inspection first. Structure second. No fake certainty.</div>
+    <a href="mailto:ed@welgo.space?subject=Dominic%20%C3%97%20Welgo%20Operator%20Partnership">Start the conversation</a>
+  </div>
+
+  <div class="foot">Dominic × Welgo. Tucson operator partnership. Numbers modeled on Welgo's live Tucson portfolio; illustrative and negotiable. Draft for review, 2026-06-06. No send without Ed approval.</div>
+</div>
+</body>
+</html>
